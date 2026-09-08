@@ -11,39 +11,39 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 const inter = Inter({ subsets: ['latin'] });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.bettinasosa.com';
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.liamcassano.com';
 
 const metaDescription =
   'Creative Builder · Software Engineer · Design Engineer. Product, code & craft.';
 
-const ogImagePath = '/images/Bettina_s%20portfolio.jpeg';
+const ogImagePath = '/images/liam_s%20portfolio.jpeg';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Bettina's portfolio",
-    template: "%s | Bettina's portfolio"
+    default: "liam's portfolio",
+    template: "%s | liam's portfolio"
   },
   description: metaDescription,
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: "Bettina's portfolio",
-    title: "Bettina's portfolio",
+    siteName: "liam's portfolio",
+    title: "liam's portfolio",
     description: metaDescription,
     images: [
       {
         url: ogImagePath,
         width: 1200,
         height: 630,
-        alt: "Bettina — Creative Builder, Software Engineer, Design Engineer"
+        alt: "liam — Creative Builder, Software Engineer, Design Engineer"
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Bettina's portfolio",
+    title: "liam's portfolio",
     description: metaDescription,
     images: [ogImagePath]
   },

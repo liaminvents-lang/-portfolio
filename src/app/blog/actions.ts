@@ -1,7 +1,7 @@
 import { blogPostSchema, type BlogPost } from './types';
 import { z } from 'zod';
 
-const MEDIUM_USERNAME = 'bettinasosarohl';
+const MEDIUM_USERNAME = 'liamcassanorohl';
 const TWITTER_USERNAME = 'bettysrohl';
 
 const EXTERNAL_POSTS: BlogPost[] = [
@@ -14,7 +14,7 @@ const EXTERNAL_POSTS: BlogPost[] = [
     publishedAt: '2025-11-04T00:00:00.000Z',
     heroImage: '/images/blog/stablecoin.png',
     author: {
-      name: 'Bettina Sosa',
+      name: 'liam cassano',
       handle: 'myosin'
     }
   }

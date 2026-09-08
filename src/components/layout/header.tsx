@@ -22,6 +22,7 @@ export default function Header() {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+
     gsap.to(button.current, {
       scrollTrigger: {
         trigger: document.documentElement,
@@ -49,41 +50,41 @@ export default function Header() {
     <>
       <div
         ref={header}
-        className="absolute top-0 z-20 box-border flex w-full items-center p-4 font-light text-white mix-blend-difference lg:p-8"
+        className="absolute top-0 z-20 box-border flex w-full items-center p-4 font-semibold text-black lg:p-8"
       >
         <div className="flex lg:pr-56">
-          <Link href={'/'} className="group z-10 flex items-center space-x-2">
+          <Link href={'/'} className="group z-10 flex items-center space-x-3">
             <Magnetic>
-              <Image
-                height={32}
-                width={32}
-                src="/images/logo.jpg"
-                alt="Bettinas logo"
-                priority
-              />
+              <div className="relative z-20 mix-blend-difference">
+                <Image
+                  height={32}
+                  width={32}
+                  src="/images/logo.png"
+                  alt="liam cassano logo"
+                  className="h-8 w-8 object-contain"
+                  priority
+                />
+              </div>
             </Magnetic>
-            {!isMobile() && (
-              <>
-                <div className="hover:rotate-[360deg]">©</div>
-                <div className="relative flex overflow-hidden">
-                  <div className="ease-custom-cubic transition-transform duration-500 group-hover:translate-x-[-100%]">
-                    coded by
-                  </div>
-                  <div className="ease-custom-cubic px-1 transition-transform duration-500 group-hover:translate-x-[-65px]">
-                    Bettina
-                  </div>
 
-                  <div
-                    className="ease-custom-cubic
-              translate-x-full transition-transform duration-500 group-hover:translate-x-[-65px]"
-                  >
-                    Sosa
-                  </div>
+            {!isMobile() && (
+              <div className="relative flex overflow-hidden">
+                <div className="ease-custom-cubic transition-transform duration-500 group-hover:translate-x-[-100%]">
+                  designed by
                 </div>
-              </>
+
+                <div className="ease-custom-cubic px-1 transition-transform duration-500 group-hover:translate-x-[-84px]">
+                  liam
+                </div>
+
+                <div className="ease-custom-cubic translate-x-full transition-transform duration-500 group-hover:translate-x-[-84px]">
+                  cassano
+                </div>
+              </div>
             )}
           </Link>
         </div>
+
         {!isMobile() && (
           <div className="flex flex-1 items-center justify-between font-semibold">
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
@@ -96,16 +97,18 @@ export default function Header() {
                 </Magnetic>
               </div>
             </div>
+
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
               <div className="flex flex-col">
                 <Magnetic>
-                  <Link href={'/web'}>Web Gallery</Link>
+                  <Link href={'/research'}>Research</Link>
                 </Magnetic>
                 <Magnetic>
-                  <Link href={'/blog'}>Blog</Link>
+                  <Link href={'/archive'}>Archive</Link>
                 </Magnetic>
               </div>
             </div>
+
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
               <Magnetic>
                 <div className="flex">
@@ -117,11 +120,13 @@ export default function Header() {
           </div>
         )}
       </div>
+
       {!isMobile() && (
         <div ref={button} className="fixed right-0 z-20 scale-0 transform">
           <Menu />
         </div>
       )}
+
       {isMobile() && (
         <div className="fixed right-2 z-20 transform">
           <Menu />

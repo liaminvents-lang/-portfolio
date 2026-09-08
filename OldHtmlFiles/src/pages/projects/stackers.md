@@ -2,7 +2,7 @@
 title: 'StackeRs'
 subtitle: 'Sustainable packaging'
 description: 'Sustainable solutions for the lifecycle of baby care products'
-author: 'Bettina Sosa'
+author: 'liam cassano'
 isImage: 'false'
 image: 'https://www.youtube.com/embed/Dz2JouO5LuI?autoplay=1&controls=0&rel=0&loop=1&modestbranding'
 slides:

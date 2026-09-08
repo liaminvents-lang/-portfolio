@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowDownRight } from 'lucide-react';
 import SlidingImages from '@/components/home/SlidingImages';
@@ -6,42 +7,58 @@ import ContrastCursor from '@/components/animations/cursor/contrastCursor';
 import { LetterCollision } from '@/components/animations/textAnimations/scrollText';
 import Magnetic from '@/components/animations/magnetic';
 import Hero from '@/components/home/hero';
-import Description from '@/components/home/Description/description';
 
 const slider1 = [
   {
     color: 'white',
-    src: 'stylesync/pca.png'
+    src: 'acadia.JPG'
   },
   {
     color: 'white',
-    src: 'stylesync/diagram.png'
+    src: 'thegripper.PNG'
   },
   {
-    color: '#21242b',
-    src: 'catapult-trading/dashboard.png'
+    color: 'white',
+    src: 'woodnrock.png'
   },
   {
-    color: '#21242b',
-    src: 'm31/controller.jpg'
+    color: 'white',
+    src: 'Picture3.png'
+  },
+  {
+    color: 'white',
+    src: 'Picture2.png'
+  },
+  {
+    color: 'white',
+    src: 'Picture1.jpg'
+  },
+  {
+    color: 'white',
+    src: 'mirrorwall.png'
   }
 ];
+
 const slider2 = [
   {
-    color: '#d4e3ec',
-    src: 'm31/specs.png'
-  },
-  {
-    color: '#9289BD',
-    src: 'axo/prototype.png'
+    color: 'white',
+    src: 'robotmadepart2.JPG'
   },
   {
     color: 'white',
-    src: 'm31/app.png'
+    src: 'UBCsalafront.JPG'
   },
   {
     color: 'white',
-    src: 'stylesync/hero.svg'
+    src: 'robotmadeuoft.JPG'
+  },
+  {
+    color: 'white',
+    src: 'geosphere.JPG'
+  },
+  {
+    color: 'white',
+    src: 'Claywall.jpg'
   }
 ];
 
@@ -52,22 +69,19 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window?.scrollY > 0) {
-        setShowScrollButton(false);
-      } else {
-        setShowScrollButton(true);
-      }
+      setShowScrollButton(window.scrollY === 0);
     };
 
-    window?.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window?.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const scrollToHero = () => {
     const heroSection = document.getElementById('hero');
+
     if (heroSection) {
       heroSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -76,6 +90,7 @@ export default function Home() {
   return (
     <div ref={scrollContainerRef} className="overflow-x-hidden">
       <LetterCollision />
+
       {showScrollButton && (
         <Magnetic>
           <div
@@ -83,16 +98,19 @@ export default function Home() {
             onClick={scrollToHero}
           >
             <p>Scroll</p>
-
             <ArrowDownRight strokeWidth={3} className="size-6" />
           </div>
         </Magnetic>
       )}
+
       <div id="hero" ref={heroRef}>
         <Hero />
       </div>
-      <Description />
-      <SlidingImages slider1={slider1} slider2={slider2} />
+
+      <div className="pt-16 sm:pt-20 lg:pt-24">
+        <SlidingImages slider1={slider1} slider2={slider2} />
+      </div>
+
       <ContrastCursor isActive={false} text={'Go to project'} />
     </div>
   );

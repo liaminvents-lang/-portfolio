@@ -23,7 +23,7 @@ export const repos: Repo[] = [
     name: 'telegram-ai-bot',
     description:
       'A production-ready Telegram bot template with OpenAI integration. Perfect for building conversational AI experiences.',
-    url: 'https://github.com/bettinasosa/telegram-bot-template',
+    url: 'https://github.com/liamcassano/telegram-bot-template',
     language: 'TypeScript',
     tags: ['Template', 'AI', 'Bot'],
     featured: true
@@ -32,14 +32,14 @@ export const repos: Repo[] = [
     name: 'portfolio',
     description:
       'This website! Built with Next.js 14, GSAP animations, and a custom design system.',
-    url: 'https://github.com/bettinasosa/portfolio',
+    url: 'https://github.com/liamcassano/portfolio',
     language: 'TypeScript',
     tags: ['Next.js', 'GSAP', 'Design']
   },
   {
     name: 'mpc-voting-contract',
     description: 'A MPC voting contract.',
-    url: 'https://github.com/bettinasosa/voting-contract',
+    url: 'https://github.com/liamcassano/voting-contract',
     language: 'Rust',
     tags: ['Web3', 'Smart Contracts']
   }
@@ -111,7 +111,7 @@ export default function OpenSourceShowcase() {
           <p className="text-xs text-foreground/50">Templates & repos</p>
         </div>
         <Link
-          href="https://github.com/bettinasosa"
+          href="https://github.com/liamcassano"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center gap-1.5 rounded-full border border-foreground/10 px-2.5 py-1 text-[11px] text-foreground/70 transition-all hover:border-foreground/30 hover:text-foreground"

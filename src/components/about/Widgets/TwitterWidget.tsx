@@ -27,14 +27,14 @@ export default function TwitterWidget() {
         <div className="relative h-12 w-12 overflow-hidden rounded-full">
           <Image
             src="/images/profile2.jpg"
-            alt="Bettina"
+            alt="liam"
             fill
             className="object-cover"
             sizes="48px"
           />
         </div>
         <div>
-          <h3 className="font-semibold text-foreground">Bettina Sosa</h3>
+          <h3 className="font-semibold text-foreground">liam cassano</h3>
           <p className="text-sm text-foreground/60">@bettysrohl</p>
         </div>
       </div>

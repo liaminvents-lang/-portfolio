@@ -2,7 +2,7 @@
 title: 'Astra'
 subtitle: 'Holographic arcade'
 description: 'Gamify space with ASTRA, a holographic arcade console'
-author: 'Bettina Sosa'
+author: 'liam cassano'
 isImage: 'true'
 image: '/assets/astra/gizmo.png'
 slides: [ "/assets/astra/giz1.png" ]

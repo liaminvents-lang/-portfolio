@@ -4,39 +4,37 @@ import { MutableRefObject, useEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const creativity = 'Creativity ';
-const is = 'is ';
-const my = 'my ';
-const craft = 'craft';
-const sentence3 = 'abstract thinking is my passion';
+const line1 = 'Architecture';
+const line2 = 'Robotics';
+const line3 = 'Research';
 
 function getRandomSpeed() {
-  const randomDecimal = Math.random();
-  return 0.8 + randomDecimal * (1.5 - 0.8); // Increased speed range
+  return 0.8 + Math.random() * 0.7;
 }
+
 function getRandomRotation() {
-  return Math.random() * 60 - 30; // Random rotation between -30 and 30 degrees
+  return Math.random() * 60 - 30;
 }
 
 const animateLettersOnScroll = (containerRef: MutableRefObject<any>) => {
   const lettersContainer = containerRef.current;
   const letterElements = lettersContainer?.querySelectorAll('.letter');
 
-  letterElements.forEach((letter: Element, index: number) => {
+  letterElements.forEach((letter: Element) => {
     gsap.to(letter, {
       y: (i, el) =>
-        (1 - parseFloat(el.getAttribute('data-speed'))) *
-        ScrollTrigger.maxScroll(window),
+        (1 - parseFloat(el.getAttribute('data-speed') || '1')) *
+        window.innerHeight,
       ease: 'power2.out',
       duration: 0.8,
+      rotation: getRandomRotation(),
       scrollTrigger: {
-        trigger: document.documentElement,
-        start: 0,
-        end: window.innerHeight,
+        trigger: containerRef.current,
+        start: 'top top',
+        end: '+=500',
         invalidateOnRefresh: true,
-        scrub: 0.5
-      },
-      rotation: getRandomRotation()
+        scrub: 0.35
+      }
     });
   });
 };
@@ -45,10 +43,10 @@ function LetterDisplay({ word }: { word: string }) {
   return word.split('').map((letter, index) => (
     <div
       key={index}
-      className="letter text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] "
+      className="letter text-5xl font-semibold xs:text-[64px] xs:leading-none md:text-[84px] lg:text-[105px] xl:text-[130px]"
       data-speed={getRandomSpeed()}
     >
-      {letter}
+      {letter === ' ' ? '\u00A0' : letter}
     </div>
   ));
 }
@@ -58,25 +56,28 @@ export function LetterCollision() {
 
   useEffect(() => {
     if (!containerRef.current) return;
+
     animateLettersOnScroll(containerRef);
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
-    <div ref={containerRef} className="ml-8 scroll-smooth">
-      <div className="-mt-28 mb-36 flex h-screen flex-col justify-end lg:mb-24">
-        <div className="flex flex-wrap p-0">
-          <LetterDisplay word={creativity} />
-          <div className="w-2 xs:w-4 sm:w-10"></div>
-          <LetterDisplay word={is} />
-        </div>
+    <div ref={containerRef} className="ml-20">
+      <div className="flex h-screen flex-col justify-center translate-y-10">
         <div className="flex flex-wrap">
-          <LetterDisplay word={my} />
-          <div className="w-2 xs:w-4 sm:w-10"></div>
-          <LetterDisplay word={craft} />
+          <LetterDisplay word={line1} />
         </div>
-      </div>
-      <div className="flex flex-wrap">
-        <LetterDisplay word={sentence3} />
+
+        <div className="flex flex-wrap">
+          <LetterDisplay word={line2} />
+        </div>
+
+        <div className="flex flex-wrap">
+          <LetterDisplay word={line3} />
+        </div>
       </div>
     </div>
   );
