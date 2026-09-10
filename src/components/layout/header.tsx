@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -53,7 +54,10 @@ export default function Header() {
         className="absolute top-0 z-20 box-border flex w-full items-center p-4 font-semibold text-black lg:p-8"
       >
         <div className="flex lg:pr-56">
-          <Link href={'/'} className="group z-10 flex items-center space-x-3">
+          <Link
+            href="/"
+            className="group z-10 flex items-center space-x-3"
+          >
             <Magnetic>
               <div className="relative z-20 mix-blend-difference">
                 <Image
@@ -87,42 +91,66 @@ export default function Header() {
 
         {!isMobile() && (
           <div className="flex flex-1 items-center justify-between font-semibold">
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <div className="flex flex-col">
-                <Magnetic>
-                  <Link href={'/about'}>About</Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link href={'/projects'}>Projects</Link>
-                </Magnetic>
-              </div>
-            </div>
+
+            {/* LEFT NAV */}
 
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
               <div className="flex flex-col">
                 <Magnetic>
-                  <Link href={'/research'}>Research</Link>
+                  <Link href="/about">
+                    About
+                  </Link>
                 </Magnetic>
+
                 <Magnetic>
-                  <Link href={'/archive'}>Archive</Link>
+                  <Link href="/projects">
+                    Projects
+                  </Link>
                 </Magnetic>
               </div>
             </div>
+
+            {/* MIDDLE NAV */}
+
+            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
+              <div className="flex flex-col">
+                <Magnetic>
+                  <Link href="/side-projects">
+                    Side Projects
+                  </Link>
+                </Magnetic>
+
+                <Magnetic>
+                  <Link href="/press">
+                    Press
+                  </Link>
+                </Magnetic>
+              </div>
+            </div>
+
+            {/* CONTACT */}
 
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
               <Magnetic>
                 <div className="flex">
-                  <Link href={'/contact'}>Contact</Link>
+                  <Link href="/contact">
+                    Contact
+                  </Link>
+
                   <ArrowUpRight size={18} />
                 </div>
               </Magnetic>
             </div>
+
           </div>
         )}
       </div>
 
       {!isMobile() && (
-        <div ref={button} className="fixed right-0 z-20 scale-0 transform">
+        <div
+          ref={button}
+          className="fixed right-0 z-20 scale-0 transform"
+        >
           <Menu />
         </div>
       )}
