@@ -31,7 +31,6 @@ export function ProjectCard({
 
   const card = (
     <div className="group h-full overflow-hidden rounded-2xl border border-foreground/10 bg-background shadow-sm">
-
       {/* IMAGE */}
 
       <div
@@ -53,27 +52,24 @@ export function ProjectCard({
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center">
-            <p className="text-sm text-foreground/30">
-              No image
-            </p>
+            <p className="text-xs text-foreground/30">No image</p>
           </div>
         )}
       </div>
 
       {/* CONTENT */}
 
-      <div className="flex min-h-[280px] flex-col p-6 sm:p-8">
-
-        <h2 className="m-0 text-2xl font-semibold leading-[1.1] tracking-tight">
+      <div className="flex min-h-[190px] flex-col p-5">
+        <h2 className="m-0 text-xl font-semibold leading-[1.1] tracking-tight">
           {title}
         </h2>
 
-        <p className="m-0 mt-5 text-base leading-[1.55] text-foreground/65">
+        <p className="m-0 mt-3 text-sm leading-[1.5] text-foreground/65">
           {description}
         </p>
 
         {publishedAt && (
-          <p className="m-0 mt-4 text-xs text-foreground/40">
+          <p className="m-0 mt-3 text-xs text-foreground/40">
             {publishedAt.toLocaleDateString('en-CA', {
               year: 'numeric',
               month: 'long',
@@ -82,8 +78,8 @@ export function ProjectCard({
           </p>
         )}
 
-        <div className="mt-auto pt-8">
-          <span className="inline-flex items-center gap-3 rounded-full border border-foreground/20 px-5 py-3 text-sm font-medium transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
+        <div className="mt-auto pt-5">
+          <span className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-4 py-2 text-sm font-medium transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
             {buttonText}
 
             <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -91,7 +87,6 @@ export function ProjectCard({
             </span>
           </span>
         </div>
-
       </div>
     </div>
   );

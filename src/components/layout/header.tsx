@@ -121,8 +121,8 @@ export default function Header() {
                 </Magnetic>
 
                 <Magnetic>
-                  <Link href="/press">
-                    Press
+                  <Link href="/recognition">
+                    Recognition
                   </Link>
                 </Magnetic>
               </div>

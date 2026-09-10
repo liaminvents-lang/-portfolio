@@ -8,8 +8,6 @@ import Layout from '@/components/layout';
 import { ModalContext } from './modalContext';
 
 const projects = [
-  // SELECTED WORK
-
   {
     title: 'Robotic Wire Tying for Discrete Assembly',
     src: 'wiretie.png',
@@ -73,9 +71,6 @@ const projects = [
     tag: 'Interactive Installation · Fabrication',
     color: '#ffffff'
   },
-
-  // DESIGN-BUILD PAVILIONS
-
   {
     title: 'Aeolian Soundscapes / Timber Tectonics',
     src: '',
@@ -155,52 +150,86 @@ export default function ProjectsHome() {
   return (
     <ModalContext.Provider value={{ modal, setModal }}>
       <Layout title="">
-        {/* SELECTED WORK */}
+        <main className="w-full pb-24">
+          {/* SELECTED WORK */}
 
-        <div className="px-5 pb-8 pt-4">
-          <h1 className="m-0 text-5xl font-normal tracking-tight lg:text-7xl">
-            Selected Work
-          </h1>
-        </div>
+          <section className="px-5 pb-10 pt-4">
+            <h1 className="m-0 text-5xl font-normal tracking-tight lg:text-7xl">
+              Selected Work
+            </h1>
 
-        <div className="m-0 overflow-hidden">
-          {selectedWork.map((project, index) => (
-            <Link href={project.href} key={project.title}>
-              <ProjectLink
-                index={index}
-                title={project.title}
-                tag={project.tag}
-              />
-            </Link>
-          ))}
-        </div>
+            <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <p className="m-0 max-w-[760px] text-base leading-[1.6] text-foreground/50">
+                Selected research, architecture, robotic fabrication, and
+                material investigations developed through design, testing, and
+                making.
+              </p>
 
-        {/* DESIGN-BUILD PAVILIONS */}
+              <a
+                href="#selected-projects"
+                className="w-fit border-b border-foreground pb-1 text-sm transition-opacity hover:opacity-50"
+              >
+                view projects ↓
+              </a>
+            </div>
+          </section>
 
-        <div className="px-5 pb-8 pt-24 lg:pt-32">
-          <h2 className="m-0 text-5xl font-normal tracking-tight lg:text-7xl">
-            Design-Build Pavilions
-          </h2>
+          <div className="mx-5 border-t border-foreground/40" />
 
-          <p className="m-0 mt-5 max-w-[700px] text-base leading-[1.6] text-foreground/50">
-            Selected projects contributed to through robotic fabrication and
-            assembly.
-          </p>
-        </div>
+          <section id="selected-projects" className="pt-10">
+            <div className="m-0 overflow-hidden">
+              {selectedWork.map((project, index) => (
+                <Link href={project.href} key={project.title}>
+                  <ProjectLink
+                    index={index}
+                    title={project.title}
+                    tag={project.tag}
+                  />
+                </Link>
+              ))}
+            </div>
+          </section>
 
-        <div className="m-0 overflow-hidden">
-          {designBuildPavilions.map((project, index) => (
-            <Link href={project.href} key={project.title}>
-              <ProjectLink
-                index={index + selectedWorkCount}
-                title={project.title}
-                tag={project.tag}
-              />
-            </Link>
-          ))}
-        </div>
+          {/* DESIGN-BUILD PAVILIONS */}
 
-        <Modal projects={projects} />
+          <section className="px-5 pb-10 pt-24 lg:pt-32">
+            <h2 className="m-0 text-5xl font-normal tracking-tight lg:text-7xl">
+              Design-Build Pavilions
+            </h2>
+
+            <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <p className="m-0 max-w-[760px] text-base leading-[1.6] text-foreground/50">
+                Selected projects contributed to through robotic fabrication
+                and assembly.
+              </p>
+
+              <a
+                href="#design-build-projects"
+                className="w-fit border-b border-foreground pb-1 text-sm transition-opacity hover:opacity-50"
+              >
+                view projects ↓
+              </a>
+            </div>
+          </section>
+
+          <div className="mx-5 border-t border-foreground/40" />
+
+          <section id="design-build-projects" className="pt-10">
+            <div className="m-0 overflow-hidden">
+              {designBuildPavilions.map((project, index) => (
+                <Link href={project.href} key={project.title}>
+                  <ProjectLink
+                    index={index + selectedWorkCount}
+                    title={project.title}
+                    tag={project.tag}
+                  />
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <Modal projects={projects} />
+        </main>
       </Layout>
     </ModalContext.Provider>
   );

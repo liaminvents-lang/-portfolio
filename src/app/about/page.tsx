@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Layout from '@/components/layout';
 import AnimatedSection from '@/components/about/AnimatedSection';
 import TextReveal from '@/components/about/TextReveal';
@@ -61,16 +62,16 @@ const experience = [
 
 const publications = [
   {
-    type: 'Publication Placeholder',
+    type: 'Conference Presentation · 2025',
     title: 'ACADIA',
     description:
-      'Placeholder for upcoming computational design, robotic fabrication, and material systems publication work.'
+      'Material Feedback in Robotic Steam Bending: A Quantitative Approach to Wood Forming. Presented at ACADIA 2025.'
   },
   {
-    type: 'Research Placeholder',
+    type: 'Research Collaboration · IEEE Submission',
     title: 'MannLab',
     description:
-      'Placeholder for autonomous sensing systems and robotics research connected to water quality monitoring and responsive sensing technologies.'
+      'Collaborated on the development of an autonomous robotic sensing platform for water-quality monitoring, integrating navigation, environmental sensing, and responsive data collection. Research submitted to IEEE.'
   }
 ];
 
@@ -98,9 +99,36 @@ const certifications = [
 export default function About() {
   return (
     <div className="relative overflow-hidden">
-      <Layout title="About Me">
+      <Layout title="">
         <div>
-          <section className="grid items-center gap-10 py-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
+          {/* HEADER */}
+
+          <section className="px-5 pb-10 pt-4">
+            <h1 className="m-0 text-5xl font-normal tracking-tight lg:text-7xl">
+              About Me
+            </h1>
+
+            <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <p className="m-0 max-w-[760px] text-base leading-[1.6] text-foreground/50">
+                Architecture, robotics, fabrication, research, and visual
+                storytelling developed through physical systems, prototypes,
+                and built work.
+              </p>
+
+              <a
+                href="#experience"
+                className="w-fit border-b border-foreground pb-1 text-sm transition-opacity hover:opacity-50"
+              >
+                view experience ↓
+              </a>
+            </div>
+          </section>
+
+          <div className="mx-5 border-t border-foreground/40" />
+
+          {/* INTRO */}
+
+          <section className="grid items-center gap-10 px-5 py-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
             <AnimatedSection animation="fade-right">
               <div className="relative aspect-square w-full max-w-lg overflow-hidden rounded-3xl">
                 <Image
@@ -117,7 +145,7 @@ export default function About() {
             <div className="space-y-8">
               <AnimatedSection animation="fade-up">
                 <TextReveal
-                  text="Architecture student working across robotics, fabrication, material research, and visual storytelling. I’m interested in how design ideas move from drawings and code into physical systems, prototypes, and built experiences."
+                  text="I work across architecture, robotics, fabrication, material research, and visual storytelling. I’m interested in how design ideas move from drawings and code into physical systems, prototypes, and built experiences."
                   className="text-xl font-medium leading-relaxed text-foreground/90 sm:text-2xl"
                   as="p"
                   highlightWords={[
@@ -164,9 +192,13 @@ export default function About() {
             </div>
           </section>
 
-          <section className="py-16">
+          {/* EXPERIENCE / PUBLICATIONS / CERTIFICATIONS / EDUCATION */}
+
+          <section id="experience" className="py-16">
             <AnimatedSection animation="fade-up">
               <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+                {/* LEFT COLUMN */}
+
                 <div className="min-w-0">
                   <div className="mb-8">
                     <h2 className="text-xl font-bold text-foreground sm:text-2xl">
@@ -203,8 +235,12 @@ export default function About() {
                   </div>
                 </div>
 
+                {/* RIGHT COLUMN */}
+
                 <div className="min-w-0">
                   <div className="space-y-10 lg:sticky lg:top-32">
+                    {/* PUBLICATIONS */}
+
                     <AnimatedSection animation="fade-up">
                       <div className="mb-8">
                         <h2 className="text-xl font-bold text-foreground sm:text-2xl">
@@ -232,6 +268,8 @@ export default function About() {
                         </div>
                       </div>
                     </AnimatedSection>
+
+                    {/* CERTIFICATIONS */}
 
                     <AnimatedSection animation="fade-up" delay={0.1}>
                       <div className="mb-8">
@@ -261,6 +299,8 @@ export default function About() {
                       </div>
                     </AnimatedSection>
 
+                    {/* EDUCATION */}
+
                     <AnimatedSection animation="fade-up" delay={0.2}>
                       <div className="mb-8">
                         <h2 className="text-xl font-bold text-foreground sm:text-2xl">
@@ -269,15 +309,14 @@ export default function About() {
                       </div>
 
                       <div className="rounded-2xl border border-foreground/5 bg-white p-6 shadow-sm sm:p-8">
-                        <p className="mb-6 text-foreground/70">
-                          At{' '}
+                        <p className="mb-6 leading-relaxed text-foreground/70">
                           <span className="font-semibold text-foreground">
-                            University of Toronto
+                            University of Toronto · Bachelor of Arts in
+                            Architectural Studies · 2026
                           </span>
-                          , I am pursuing a Bachelor of Arts in Architecture,
-                          with a focus on computational design, robotic
-                          fabrication, material systems, and design-build
-                          research.
+                          <br />
+                          Focused on computational design, robotic fabrication,
+                          material systems, and design-build research.
                         </p>
 
                         <div className="mb-4 rounded-2xl border border-foreground/5 bg-foreground/[0.03] p-5">
@@ -316,7 +355,8 @@ export default function About() {
 
                         <div className="flex flex-wrap gap-3">
                           <div className="rounded-full border border-foreground/10 px-4 py-2 text-sm">
-                            Daniels Faculty of Architecture
+                            Daniels Faculty of Architecture, Landscape, and
+                            Design
                           </div>
 
                           <div className="rounded-full border border-foreground/10 px-4 py-2 text-sm">
@@ -336,6 +376,34 @@ export default function About() {
                           </div>
                         </div>
                       </div>
+                    </AnimatedSection>
+
+                    {/* TOOLS */}
+
+                    <AnimatedSection animation="fade-up" delay={0.3}>
+                      <Link
+                        href="/tools"
+                        className="group flex items-center justify-between rounded-2xl border border-foreground/5 bg-white p-6 shadow-sm transition-all duration-300 hover:border-foreground/15 sm:p-8"
+                      >
+                        <div>
+                          <p className="mb-2 text-sm text-foreground/40">
+                            Workflow
+                          </p>
+
+                          <h2 className="m-0 text-xl font-bold text-foreground sm:text-2xl">
+                            Tools I Use
+                          </h2>
+
+                          <p className="m-0 mt-2 text-sm text-foreground/60">
+                            Software, machines, robotics, fabrication tools, and
+                            production equipment.
+                          </p>
+                        </div>
+
+                        <span className="ml-8 text-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                          ↗
+                        </span>
+                      </Link>
                     </AnimatedSection>
                   </div>
                 </div>
