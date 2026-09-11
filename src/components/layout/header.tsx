@@ -29,30 +29,46 @@ export default function Header() {
         trigger: document.documentElement,
         start: 0,
         end: window.innerHeight,
+
         onLeave: () => {
           gsap.to(button.current, {
             scale: 1,
             duration: 0.25,
-            ease: 'power1.out'
+            ease: 'power1.out',
           });
         },
+
         onEnterBack: () => {
           gsap.to(button.current, {
             scale: 0,
             duration: 0.25,
-            ease: 'power1.out'
+            ease: 'power1.out',
           });
-        }
-      }
+        },
+      },
     });
   }, []);
 
   return (
     <>
+      {/* =====================================================
+          SITE UNDER CONSTRUCTION BANNER
+      ===================================================== */}
+
+      <div className="absolute left-0 top-0 z-30 flex h-8 w-full items-center justify-center bg-[#FF5A1F] px-4 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-black sm:text-xs">
+        Site under construction — check back daily for updates
+      </div>
+
+      {/* =====================================================
+          HEADER
+      ===================================================== */}
+
       <div
         ref={header}
-        className="absolute top-0 z-20 box-border flex w-full items-center p-4 font-semibold text-black lg:p-8"
+        className="absolute top-8 z-20 box-border flex w-full items-center p-4 font-semibold text-black lg:p-8"
       >
+        {/* LOGO / NAME */}
+
         <div className="flex lg:pr-56">
           <Link
             href="/"
@@ -91,7 +107,6 @@ export default function Header() {
 
         {!isMobile() && (
           <div className="flex flex-1 items-center justify-between font-semibold">
-
             {/* LEFT NAV */}
 
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
@@ -141,22 +156,29 @@ export default function Header() {
                 </div>
               </Magnetic>
             </div>
-
           </div>
         )}
       </div>
 
+      {/* =====================================================
+          DESKTOP MENU BUTTON
+      ===================================================== */}
+
       {!isMobile() && (
         <div
           ref={button}
-          className="fixed right-0 z-20 scale-0 transform"
+          className="fixed right-0 top-8 z-20 scale-0 transform"
         >
           <Menu />
         </div>
       )}
 
+      {/* =====================================================
+          MOBILE MENU BUTTON
+      ===================================================== */}
+
       {isMobile() && (
-        <div className="fixed right-2 z-20 transform">
+        <div className="fixed right-2 top-8 z-20 transform">
           <Menu />
         </div>
       )}
