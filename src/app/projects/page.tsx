@@ -51,7 +51,7 @@ const projects = [
   },
   {
     title: 'Robotic Wire Tying for Discrete Assembly',
-    src: '/images/wiretie.png',
+    src: '/images/wiretie.jpg',
     description:
       'Sensor-integrated connection-making for automated and multi-robot assembly.',
     href: '/projects/robotic-wire-tying',
@@ -61,7 +61,7 @@ const projects = [
   },
   {
     title: 'Digital Joinery for Irregular Materials',
-    src: '',
+    src: '/images/woodnrock.png',
     description:
       'Custom computational joinery developed for irregular and found material geometries.',
     href: '/projects/readymade',
@@ -71,7 +71,7 @@ const projects = [
   },
   {
     title: 'Imago Machina',
-    src: '',
+    src: '/images/mirrorwall.png',
     description:
       'An interactive installation exploring computation, physical systems, and responsive environments.',
     href: '/projects/imago-machina',
@@ -89,7 +89,7 @@ const projects = [
     src: '',
     description:
       'Full-scale architectural installations developed through computational design and robotic fabrication.',
-    href: '/projects/aeolian-soundscapes-timber-tectonics',
+    href: '/projects/aeolian-soundscapes',
     categories: ['Design-Build', 'Robotic Fabrication', 'Timber'],
     year: '2025',
     group: 'design-build',
@@ -126,7 +126,7 @@ const projects = [
   },
   {
     title: 'Robot Made 2024 · U of T',
-    src: '',
+    src: '/images/robotmadeuoft.JPG',
     description:
       'Full-scale design-build fabrication developed through the University of Toronto Robot Made program.',
     href: '/projects/robot-made-2024-uoft',
@@ -136,7 +136,7 @@ const projects = [
   },
   {
     title: 'Robot Made 2025 · U of T',
-    src: '',
+    src: '/images/robotmadepart2.JPG',
     description:
       'Full-scale robotic design-build fabrication developed at the University of Toronto.',
     href: '/projects/robot-made-2025-uoft',
@@ -146,9 +146,9 @@ const projects = [
   },
   {
     title: 'Robot Made 2025 · UBC SALA',
-    src: '',
+    src: '/images/DSC03407.jpg',
     description:
-      'Full-scale robotic design-build fabrication developed with UBC SALA.',
+      'Full-scale robotic design-build fabrication developed at UBC SALA.',
     href: '/projects/robot-made-2025-ubc-sala',
     categories: ['Design-Build', 'Robotic Fabrication', 'Assembly'],
     year: '2025',
