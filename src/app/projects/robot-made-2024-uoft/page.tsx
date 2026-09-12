@@ -3,13 +3,30 @@
 import Layout from '@/components/layout';
 import Image from 'next/image';
 
+/* =====================================================
+   PROJECT IMAGES
+===================================================== */
+
+const projectImages = [
+  'Day 22.JPG',
+  'Day 21.JPG',
+  'Day 19.JPG',
+  'Day 11.JPG',
+  'Day 18.JPG',
+  'Day 17.JPG',
+  'Day 16.JPG',
+  'Day 15.JPG',
+  'Day 13.JPG',
+  'Day 12.JPG',
+];
+
 export default function RobotMade2024UofTPage() {
   return (
     <Layout title="">
       <main className="w-full">
 
         {/* =====================================================
-            HERO IMAGE
+            HERO
         ===================================================== */}
 
         <section className="w-full px-5 pt-5 sm:px-8 sm:pt-8 lg:px-12 lg:pt-10">
@@ -49,9 +66,9 @@ export default function RobotMade2024UofTPage() {
               <div className="flex items-end lg:col-span-5">
 
                 <p className="m-0 max-w-[650px] text-xl leading-[1.45] sm:text-2xl">
-                  A collaborative design-build project exploring full-scale
-                  timber construction through computational design, robotic
-                  fabrication, and physical assembly.
+                  A collaborative full-scale design-build project developed
+                  through computational design, robotic fabrication, and
+                  hands-on assembly.
                 </p>
 
               </div>
@@ -69,6 +86,7 @@ export default function RobotMade2024UofTPage() {
           <div className="mx-auto grid w-full max-w-[1800px] grid-cols-2 lg:grid-cols-5">
 
             <div className="border-r border-foreground/20 py-5 pr-5">
+
               <p className="m-0 text-xs text-foreground/40">
                 Type
               </p>
@@ -76,9 +94,11 @@ export default function RobotMade2024UofTPage() {
               <p className="m-0 mt-2 text-sm">
                 Design-Build
               </p>
+
             </div>
 
             <div className="border-r border-foreground/20 px-5 py-5">
+
               <p className="m-0 text-xs text-foreground/40">
                 Program
               </p>
@@ -86,9 +106,11 @@ export default function RobotMade2024UofTPage() {
               <p className="m-0 mt-2 text-sm">
                 Robot Made
               </p>
+
             </div>
 
             <div className="border-r border-foreground/20 px-5 py-5">
+
               <p className="m-0 text-xs text-foreground/40">
                 Institution
               </p>
@@ -96,9 +118,11 @@ export default function RobotMade2024UofTPage() {
               <p className="m-0 mt-2 text-sm">
                 University of Toronto
               </p>
+
             </div>
 
             <div className="border-r border-foreground/20 px-5 py-5">
+
               <p className="m-0 text-xs text-foreground/40">
                 Year
               </p>
@@ -106,9 +130,11 @@ export default function RobotMade2024UofTPage() {
               <p className="m-0 mt-2 text-sm">
                 2024
               </p>
+
             </div>
 
             <div className="px-5 py-5">
+
               <p className="m-0 text-xs text-foreground/40">
                 Role
               </p>
@@ -116,13 +142,15 @@ export default function RobotMade2024UofTPage() {
               <p className="m-0 mt-2 text-sm">
                 Fabrication + Assembly
               </p>
+
             </div>
 
           </div>
         </section>
 
         {/* =====================================================
-            OVERVIEW + ROLE
+            01 + 02
+            OVERVIEW + MY ROLE
         ===================================================== */}
 
         <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
@@ -153,25 +181,23 @@ export default function RobotMade2024UofTPage() {
                     <div className="sm:col-span-9">
 
                       <p className="m-0 text-2xl leading-[1.25] sm:text-3xl">
-                        Robot Made 2024 explored how computational design and
-                        industrial robotic fabrication could be integrated
-                        into a collaborative full-scale design-build workflow.
+                        Robot Made 2024 explored the relationship between
+                        computational design, robotic fabrication, and
+                        full-scale timber construction.
                       </p>
 
                       <div className="mt-7 grid gap-6 sm:grid-cols-2">
 
                         <p className="m-0 text-sm leading-[1.7] text-foreground/60">
-                          The project moved between digital design, material
-                          preparation, robotic fabrication, and physical
-                          construction to produce a full-scale timber
-                          structure.
+                          The project translated computationally generated
+                          geometry into a system of unique timber components
+                          produced through digital and robotic fabrication.
                         </p>
 
                         <p className="m-0 text-sm leading-[1.7] text-foreground/60">
                           Fabricated components were brought together through
-                          a collaborative assembly process, connecting robotic
-                          production with the realities of full-scale
-                          construction.
+                          collaborative full-scale assembly, connecting the
+                          digital workflow directly to physical construction.
                         </p>
 
                       </div>
@@ -211,10 +237,10 @@ export default function RobotMade2024UofTPage() {
                       </p>
 
                       <p className="m-0 mt-6 max-w-[600px] text-sm leading-[1.7] text-foreground/60">
-                        I worked as part of the fabrication and assembly team,
-                        contributing to the production and construction of the
-                        full-scale structure and working directly with the
-                        fabricated components during assembly.
+                        I contributed to the fabrication and physical assembly
+                        of the project, working as part of the team responsible
+                        for producing, preparing, and constructing the
+                        full-scale timber system.
                       </p>
 
                     </div>
@@ -231,15 +257,13 @@ export default function RobotMade2024UofTPage() {
         </section>
 
         {/* =====================================================
-            CREDITS
+            03 — CREDITS
         ===================================================== */}
 
         <section className="border-t border-foreground/20 px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
           <div className="mx-auto w-full max-w-[1800px]">
 
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-10">
-
-              {/* LABEL */}
 
               <div className="lg:col-span-3">
 
@@ -253,101 +277,66 @@ export default function RobotMade2024UofTPage() {
 
               </div>
 
-              {/* CREDIT CONTENT */}
-
               <div className="lg:col-span-9">
 
                 {/* PROJECT LEADS */}
 
-                <div className="grid gap-8 border-b border-foreground/20 pb-10 sm:grid-cols-4">
+                <div className="grid gap-10 border-b border-foreground/20 pb-10 sm:grid-cols-2 lg:grid-cols-3">
 
                   <div>
+
                     <p className="m-0 text-xs text-foreground/40">
                       Project Leads
                     </p>
-                  </div>
 
-                  <div className="sm:col-span-3">
-                    <div className="grid gap-x-10 gap-y-2 text-sm sm:grid-cols-3">
-                      <p className="m-0">Nicholas Hoban</p>
-                      <p className="m-0">AnnaLisa Meyboom</p>
-                      <p className="m-0">Aryan Rezaei Rad</p>
+                    <div className="mt-4 space-y-1.5 text-sm">
+
+                      <p className="m-0">
+                        Nicholas Hoban
+                      </p>
+
+                      <p className="m-0">
+                        AnnaLisa Meyboom
+                      </p>
+
+                      <p className="m-0">
+                        Aryan Rezaei Rad
+                      </p>
+
                     </div>
+
                   </div>
 
                 </div>
 
                 {/* FABRICATION + ASSEMBLY */}
 
-                <div className="grid gap-8 pt-10 sm:grid-cols-4">
+                <div className="pt-10">
 
-                  <div>
-                    <p className="m-0 text-xs text-foreground/40">
-                      Fabrication + Assembly
-                    </p>
-                  </div>
+                  <p className="m-0 text-xs text-foreground/40">
+                    Fabrication + Assembly
+                  </p>
 
-                  <div className="sm:col-span-3">
+                  <div className="mt-5 grid gap-x-10 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
 
-                    <div className="grid gap-x-10 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
+                    <p className="m-0">Ala Mohammadi</p>
+                    <p className="m-0">Amirhossein Heidari</p>
+                    <p className="m-0">Annie Song</p>
 
-                      <p className="m-0">
-                        Ala Mohammadi
-                      </p>
+                    <p className="m-0">Caroline Guirguis</p>
+                    <p className="m-0">Jagteshwar Singh</p>
+                    <p className="m-0">Jaya Xue</p>
 
-                      <p className="m-0">
-                        Amirhossein Heidari
-                      </p>
+                    <p className="m-0">Julia Paulson</p>
+                    <p className="m-0">Jun Heng Tan</p>
+                    <p className="m-0 font-medium">Liam Cassano</p>
 
-                      <p className="m-0">
-                        Annie Song
-                      </p>
+                    <p className="m-0">Sarah Mak</p>
+                    <p className="m-0">Yixuan Zhang</p>
+                    <p className="m-0">Zhelun Li</p>
 
-                      <p className="m-0">
-                        Caroline Guirguis
-                      </p>
-
-                      <p className="m-0">
-                        Jagteshwar Singh
-                      </p>
-
-                      <p className="m-0">
-                        Jaya Xue
-                      </p>
-
-                      <p className="m-0">
-                        Julia Paulson
-                      </p>
-
-                      <p className="m-0">
-                        Jun Heng Tan
-                      </p>
-
-                      <p className="m-0 font-medium">
-                        Liam Cassano
-                      </p>
-
-                      <p className="m-0">
-                        Sarah Mak
-                      </p>
-
-                      <p className="m-0">
-                        Yixuan Zhang
-                      </p>
-
-                      <p className="m-0">
-                        Zhelun Li
-                      </p>
-
-                      <p className="m-0">
-                        Rahul Sehijpaul
-                      </p>
-
-                      <p className="m-0">
-                        Paul Kozak
-                      </p>
-
-                    </div>
+                    <p className="m-0">Rahul Sehijpaul</p>
+                    <p className="m-0">Paul Kozak</p>
 
                   </div>
 
@@ -361,60 +350,74 @@ export default function RobotMade2024UofTPage() {
         </section>
 
         {/* =====================================================
-            PROJECT IMAGES
+            04 — PROJECT IMAGES
         ===================================================== */}
 
-        <section className="border-t border-foreground/20 px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
-          <div className="mx-auto w-full max-w-[1800px]">
+        <section className="border-t border-foreground/20 py-20 lg:py-24">
 
-            <div className="mb-10 grid gap-6 lg:grid-cols-12">
+          {/* SECTION HEADER */}
 
-              <div className="lg:col-span-3">
+          <div className="px-5 sm:px-8 lg:px-12">
+            <div className="mx-auto w-full max-w-[1800px]">
 
-                <p className="m-0 text-xs text-foreground/40">
-                  04
-                </p>
+              <div className="mb-10 grid gap-6 lg:grid-cols-12">
 
-                <p className="m-0 mt-2 text-sm">
-                  Project Images
-                </p>
+                <div className="lg:col-span-3">
+
+                  <p className="m-0 text-xs text-foreground/40">
+                    04
+                  </p>
+
+                  <p className="m-0 mt-2 text-sm">
+                    Project Images
+                  </p>
+
+                </div>
+
+                <div className="lg:col-span-9">
+
+                  <p className="m-0 max-w-[600px] text-sm leading-[1.6] text-foreground/50">
+                    Fabrication and assembly from Robot Made 2024 at the
+                    University of Toronto.
+                  </p>
+
+                </div>
 
               </div>
 
             </div>
+          </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
+          {/* =====================================================
+              FULL-WIDTH IMAGE FIELD
+          ===================================================== */}
 
-              <div className="relative aspect-[4/3] overflow-hidden bg-foreground/[0.04]">
-                <Image
-                  src="/images/robotmadeuoft-01.JPG"
-                  alt="Robot Made fabrication"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          <div className="w-full px-2 sm:px-3 lg:px-4">
 
-              <div className="relative aspect-[4/3] overflow-hidden bg-foreground/[0.04]">
-                <Image
-                  src="/images/robotmadeuoft-02.JPG"
-                  alt="Robot Made assembly"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+            <div className="columns-1 gap-2 sm:columns-2 sm:gap-3 lg:columns-4 lg:gap-4">
 
-              <div className="relative aspect-[16/9] overflow-hidden bg-foreground/[0.04] md:col-span-2">
-                <Image
-                  src="/images/robotmadeuoft-03.JPG"
-                  alt="Robot Made 2024 completed structure"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {projectImages.map((image, index) => (
+                <div
+                  key={image}
+                  className="mb-2 break-inside-avoid overflow-hidden bg-foreground/[0.04] sm:mb-3 lg:mb-4"
+                >
+
+                  <Image
+                    src={`/images/${image}`}
+                    alt={`Robot Made 2024 U of T — ${index + 1}`}
+                    width={2000}
+                    height={1400}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="h-auto w-full"
+                  />
+
+                </div>
+              ))}
 
             </div>
 
           </div>
+
         </section>
 
       </main>

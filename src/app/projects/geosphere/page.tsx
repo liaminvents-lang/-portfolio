@@ -3,6 +3,29 @@
 import Layout from '@/components/layout';
 import Image from 'next/image';
 
+/* =====================================================
+   PROJECT IMAGES
+===================================================== */
+
+const projectImages = [
+  'DSC02671-Enhanced-NR 2.JPG',
+  'DSC02854-2-Enhanced-NR.JPG',
+  'DSC02884-2-Enhanced-NR 2.JPG',
+  'DSC02891-Enhanced-NR 2.JPG',
+  'DSC02893-Enhanced-NR-2 2.JPG',
+  'DSC02949-Enhanced-NR 3.JPG',
+  'DSC02949-Enhanced-NR 4.jpg',
+  'DSC02970-Enhanced-NR 4.JPG',
+  'DSC03024-2-Enhanced-NR-2 2.JPG',
+  'DJI_0008.JPG',
+  'DJI_0014.JPG',
+  'DJI_0019.JPG',
+];
+
+/* =====================================================
+   PAGE
+===================================================== */
+
 export default function GeospherePage() {
   return (
     <Layout title="">
@@ -13,13 +36,13 @@ export default function GeospherePage() {
         ===================================================== */}
 
         <section className="w-full">
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
+          <div className="relative aspect-video w-full overflow-hidden bg-black">
             <iframe
-              src="https://player.vimeo.com/video/1226115925?autoplay=1&muted=1&loop=1&background=1&autopause=0&title=0&byline=0&portrait=0"
-              className="absolute left-1/2 top-1/2 h-[115%] w-[115%] -translate-x-1/2 -translate-y-1/2"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
+              src="https://player.vimeo.com/video/1226115925?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&background=1"
               title="Geosphere"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="absolute inset-0 h-full w-full border-0"
             />
           </div>
         </section>
@@ -40,7 +63,7 @@ export default function GeospherePage() {
                 </p>
 
                 <h1 className="m-0 mt-4 max-w-[1200px] text-5xl font-normal leading-[0.95] tracking-tight sm:text-6xl lg:text-8xl">
-                  Geosphere: Beyond Single-Use Reciprocal Frame Structures
+                  Geosphere
                 </h1>
 
               </div>
@@ -48,9 +71,9 @@ export default function GeospherePage() {
               <div className="flex items-end lg:col-span-5">
 
                 <p className="m-0 max-w-[650px] text-xl leading-[1.45] sm:text-2xl">
-                  A full-scale timber installation exploring reciprocal frame
-                  construction, reusable assembly systems, and collaborative
-                  fabrication for Lumière: The Art of Light.
+                  A full-scale illuminated timber installation developed for
+                  the 2024 Lumière: The Art of Light exhibition at Ontario
+                  Place.
                 </p>
 
               </div>
@@ -71,7 +94,6 @@ export default function GeospherePage() {
               <p className="m-0 text-xs text-foreground/40">
                 Type
               </p>
-
               <p className="m-0 mt-2 text-sm">
                 Design-Build Installation
               </p>
@@ -81,7 +103,6 @@ export default function GeospherePage() {
               <p className="m-0 text-xs text-foreground/40">
                 Exhibition
               </p>
-
               <p className="m-0 mt-2 text-sm">
                 Lumière: The Art of Light
               </p>
@@ -91,7 +112,6 @@ export default function GeospherePage() {
               <p className="m-0 text-xs text-foreground/40">
                 Location
               </p>
-
               <p className="m-0 mt-2 text-sm">
                 Ontario Place, Toronto
               </p>
@@ -101,7 +121,6 @@ export default function GeospherePage() {
               <p className="m-0 text-xs text-foreground/40">
                 Year
               </p>
-
               <p className="m-0 mt-2 text-sm">
                 2024
               </p>
@@ -111,7 +130,6 @@ export default function GeospherePage() {
               <p className="m-0 text-xs text-foreground/40">
                 Role
               </p>
-
               <p className="m-0 mt-2 text-sm">
                 Fabrication + Assembly
               </p>
@@ -121,7 +139,7 @@ export default function GeospherePage() {
         </section>
 
         {/* =====================================================
-            OVERVIEW + ROLE
+            01 + 02 — OVERVIEW + MY ROLE
         ===================================================== */}
 
         <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
@@ -129,7 +147,7 @@ export default function GeospherePage() {
 
             <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">
 
-              {/* OVERVIEW */}
+              {/* 01 — OVERVIEW */}
 
               <div className="lg:col-span-7">
 
@@ -141,7 +159,6 @@ export default function GeospherePage() {
                       <p className="m-0 text-xs text-foreground/40">
                         01
                       </p>
-
                       <p className="m-0 mt-2 text-sm">
                         Project Overview
                       </p>
@@ -150,25 +167,25 @@ export default function GeospherePage() {
                     <div className="sm:col-span-9">
 
                       <p className="m-0 text-2xl leading-[1.25] sm:text-3xl">
-                        Geosphere investigates how reciprocal timber frame
-                        systems can be designed for repeated assembly,
-                        disassembly, and reuse.
+                        Geosphere explores reciprocal timber construction
+                        through a full-scale illuminated installation developed
+                        for Lumière: The Art of Light.
                       </p>
 
                       <div className="mt-7 grid gap-6 sm:grid-cols-2">
 
                         <p className="m-0 text-sm leading-[1.7] text-foreground/60">
-                          Developed for Lumière: The Art of Light, the
-                          installation uses a reciprocal structural system in
-                          which individual timber members collectively form a
-                          larger self-supporting spatial structure.
+                          The project combined computational design with
+                          full-scale fabrication to produce a self-supporting
+                          timber structure composed of repeating interconnected
+                          members.
                         </p>
 
                         <p className="m-0 text-sm leading-[1.7] text-foreground/60">
-                          The project combines computational design,
-                          prefabrication, and full-scale assembly while
-                          considering how temporary installations can move
-                          beyond single-use construction.
+                          Integrated lighting transformed the structure after
+                          dark, emphasizing its geometry and creating a
+                          changing relationship between the installation,
+                          landscape, and surrounding exhibition.
                         </p>
 
                       </div>
@@ -181,7 +198,7 @@ export default function GeospherePage() {
 
               </div>
 
-              {/* ROLE */}
+              {/* 02 — MY ROLE */}
 
               <div className="lg:col-span-5">
 
@@ -189,11 +206,10 @@ export default function GeospherePage() {
 
                   <div className="grid gap-8 sm:grid-cols-12 lg:block">
 
-                    <div className="sm:col-span-3 lg:col-span-auto">
+                    <div className="sm:col-span-3">
                       <p className="m-0 text-xs text-foreground/40">
                         02
                       </p>
-
                       <p className="m-0 mt-2 text-sm">
                         My Role
                       </p>
@@ -206,10 +222,10 @@ export default function GeospherePage() {
                       </p>
 
                       <p className="m-0 mt-6 max-w-[600px] text-sm leading-[1.7] text-foreground/60">
-                        I contributed to the fabrication and assembly of the
-                        timber structure, working with the team to prepare
-                        components, construct the reciprocal frame, and install
-                        the completed project on site.
+                        I contributed to the fabrication and physical assembly
+                        of the installation, working as part of the team
+                        responsible for translating the digital design into a
+                        full-scale built structure.
                       </p>
 
                     </div>
@@ -226,7 +242,7 @@ export default function GeospherePage() {
         </section>
 
         {/* =====================================================
-            CREDITS
+            03 — CREDITS
         ===================================================== */}
 
         <section className="border-t border-foreground/20 px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
@@ -235,25 +251,21 @@ export default function GeospherePage() {
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-10">
 
               <div className="lg:col-span-3">
-
                 <p className="m-0 text-xs text-foreground/40">
                   03
                 </p>
-
                 <p className="m-0 mt-2 text-sm">
                   Credits
                 </p>
-
               </div>
 
               <div className="lg:col-span-9">
 
-                <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+                {/* PROJECT + DESIGN LEADS */}
 
-                  {/* PROJECT LEADS */}
+                <div className="grid gap-10 border-b border-foreground/20 pb-10 sm:grid-cols-2">
 
                   <div>
-
                     <p className="m-0 text-xs text-foreground/40">
                       Project Leads
                     </p>
@@ -264,13 +276,9 @@ export default function GeospherePage() {
                       <p className="m-0">Rahul Sehijpaul</p>
                       <p className="m-0">Paul Kozak</p>
                     </div>
-
                   </div>
 
-                  {/* DESIGN LEADS */}
-
                   <div>
-
                     <p className="m-0 text-xs text-foreground/40">
                       Design Leads
                     </p>
@@ -279,72 +287,61 @@ export default function GeospherePage() {
                       <p className="m-0">John Nguyen</p>
                       <p className="m-0">Nicholas Hoban</p>
                     </div>
-
-                  </div>
-
-                  {/* FABRICATION 1 */}
-
-                  <div>
-
-                    <p className="m-0 text-xs text-foreground/40">
-                      Fabrication + Assembly
-                    </p>
-
-                    <div className="mt-4 space-y-1.5 text-sm">
-                      <p className="m-0">Cameron Manore</p>
-                      <p className="m-0 font-medium">Liam Cassano</p>
-                      <p className="m-0">Sadi Wali</p>
-                      <p className="m-0">Selina Almadanat</p>
-                      <p className="m-0">Yuuko Kosage Li-Han</p>
-                      <p className="m-0">Zhenxiao Yang</p>
-                    </div>
-
-                  </div>
-
-                  {/* FABRICATION 2 */}
-
-                  <div>
-
-                    <p className="m-0 text-xs text-transparent">
-                      Fabrication
-                    </p>
-
-                    <div className="mt-4 space-y-1.5 text-sm">
-                      <p className="m-0">Ala Mohammadi</p>
-                      <p className="m-0">Sophia de Uria</p>
-                      <p className="m-0">Mucteba Core</p>
-                      <p className="m-0">Shannon Dacanay</p>
-                      <p className="m-0">Olivia Carson</p>
-                      <p className="m-0">Nicole Quesnelle</p>
-                    </div>
-
                   </div>
 
                 </div>
 
-                {/* SUPPORT */}
+                {/* FABRICATION + ASSEMBLY */}
 
-                <div className="mt-12 border-t border-foreground/20 pt-6">
+                <div className="border-b border-foreground/20 py-10">
 
-                  <div className="grid gap-6 sm:grid-cols-4">
+                  <p className="m-0 text-xs text-foreground/40">
+                    Fabrication + Assembly
+                  </p>
 
-                    <div>
-                      <p className="m-0 text-xs text-foreground/40">
-                        Funded + Supported By
-                      </p>
-                    </div>
+                  <div className="mt-5 grid gap-x-10 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
+                    <p className="m-0">Cameron Manore</p>
+                    <p className="m-0 font-medium">Liam Cassano</p>
+                    <p className="m-0">Sadi Wali</p>
 
-                    <div className="sm:col-span-3">
-                      <p className="m-0 text-sm">
-                        Ontario Ministry of Infrastructure
-                      </p>
+                    <p className="m-0">Selina Almadanat</p>
+                    <p className="m-0">Yuuko Kosage Li-Han</p>
+                    <p className="m-0">Zhenxiao Yang</p>
 
-                      <p className="m-0 mt-2 max-w-[800px] text-sm text-foreground/60">
-                        University of Toronto — John H. Daniels Faculty of
-                        Architecture, Landscape, and Design
-                      </p>
-                    </div>
+                    <p className="m-0">Ala Mohammadi</p>
+                    <p className="m-0">Sophia de Uria</p>
+                    <p className="m-0">Mucteba Core</p>
 
+                    <p className="m-0">Shannon Dacanay</p>
+                    <p className="m-0">Olivia Carson</p>
+                    <p className="m-0">Nicole Quesnelle</p>
+                  </div>
+
+                </div>
+
+                {/* FUNDING */}
+
+                <div className="grid gap-10 pt-10 sm:grid-cols-2">
+
+                  <div>
+                    <p className="m-0 text-xs text-foreground/40">
+                      Funded By
+                    </p>
+
+                    <p className="m-0 mt-4 text-sm">
+                      Ontario Ministry of Infrastructure
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="m-0 text-xs text-foreground/40">
+                      Supported By
+                    </p>
+
+                    <p className="m-0 mt-4 max-w-[520px] text-sm leading-[1.6]">
+                      University of Toronto — John H. Daniels Faculty of
+                      Architecture, Landscape, and Design
+                    </p>
                   </div>
 
                 </div>
@@ -357,58 +354,67 @@ export default function GeospherePage() {
         </section>
 
         {/* =====================================================
-            PHOTOS
+            04 — PROJECT IMAGES
         ===================================================== */}
 
-        <section className="border-t border-foreground/20 px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
-          <div className="mx-auto w-full max-w-[1800px]">
+        <section className="border-t border-foreground/20 py-20 lg:py-24">
 
-            <div className="mb-10 grid gap-6 lg:grid-cols-12">
+          {/* HEADER */}
 
-              <div className="lg:col-span-3">
-                <p className="m-0 text-xs text-foreground/40">
-                  04
-                </p>
+          <div className="px-5 sm:px-8 lg:px-12">
+            <div className="mx-auto w-full max-w-[1800px]">
 
-                <p className="m-0 mt-2 text-sm">
-                  Project Images
-                </p>
+              <div className="mb-10 grid gap-6 lg:grid-cols-12">
+
+                <div className="lg:col-span-3">
+                  <p className="m-0 text-xs text-foreground/40">
+                    04
+                  </p>
+
+                  <p className="m-0 mt-2 text-sm">
+                    Project Images
+                  </p>
+                </div>
+
+                <div className="lg:col-span-9">
+                  <p className="m-0 max-w-[650px] text-sm leading-[1.6] text-foreground/50">
+                    Fabrication, assembly, and installation of Geosphere for
+                    Lumière: The Art of Light at Ontario Place.
+                  </p>
+                </div>
+
               </div>
 
             </div>
+          </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
+          {/* =====================================================
+              FULL-WIDTH 4-COLUMN GALLERY
+          ===================================================== */}
 
-              <div className="relative aspect-[4/3] overflow-hidden bg-foreground/[0.04]">
-                <Image
-                  src="/images/geosphere-01.jpg"
-                  alt="Geosphere reciprocal timber structure"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          <div className="w-full px-2 sm:px-3 lg:px-4">
 
-              <div className="relative aspect-[4/3] overflow-hidden bg-foreground/[0.04]">
-                <Image
-                  src="/images/geosphere-02.jpg"
-                  alt="Geosphere fabrication and assembly"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+            <div className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4 lg:gap-4">
 
-              <div className="relative aspect-[16/9] overflow-hidden bg-foreground/[0.04] md:col-span-2">
-                <Image
-                  src="/images/geosphere-03.jpg"
-                  alt="Completed Geosphere installation"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {projectImages.map((image, index) => (
+                <div
+                  key={image}
+                  className="relative aspect-[4/5] w-full overflow-hidden bg-foreground/[0.04]"
+                >
+                  <Image
+                    src={`/images/${image}`}
+                    alt={`Geosphere — ${index + 1}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
 
             </div>
 
           </div>
+
         </section>
 
       </main>

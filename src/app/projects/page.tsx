@@ -9,6 +9,10 @@ import Layout from '@/components/layout';
 ===================================================== */
 
 const projects = [
+  /* =====================================================
+     SELECTED WORK
+  ===================================================== */
+
   {
     title: 'Material Feedback in Robotic Steam Bending',
     src: '/images/acadia.JPG',
@@ -31,7 +35,7 @@ const projects = [
   },
   {
     title: 'Learning Through London Mews',
-    src: '',
+    src: '/images/DSC09652 copy.jpg',
     description:
       'Architectural research exploring learning, community, and the spatial conditions of the London mews.',
     href: '/projects/learning-through-london-mews',
@@ -41,22 +45,12 @@ const projects = [
   },
   {
     title: 'Solar Responsive Tower',
-    src: '',
+    src: '/images/280tower.jpeg',
     description:
       'A responsive facade system developed through computational design and environmental analysis.',
     href: '/projects/solar-responsive-tower',
     categories: ['Architecture', 'Computational Design', 'Environment'],
     year: '2024',
-    group: 'selected',
-  },
-  {
-    title: 'Robotic Wire Tying for Discrete Assembly',
-    src: '/images/wiretie.jpg',
-    description:
-      'Sensor-integrated connection-making for automated and multi-robot assembly.',
-    href: '/projects/robotic-wire-tying',
-    categories: ['Robotics', 'Fabrication', 'Research'],
-    year: '2026',
     group: 'selected',
   },
   {
@@ -79,6 +73,16 @@ const projects = [
     year: '2024',
     group: 'selected',
   },
+  {
+    title: 'Robotic Wire Tying for Discrete Assembly',
+    src: '/images/rebartie.png',
+    description:
+      'Sensor-integrated connection-making for automated and multi-robot assembly.',
+    href: '/projects/robotic-wire-tying',
+    categories: ['Robotics', 'Fabrication', 'Research'],
+    year: '2026',
+    group: 'selected',
+  },
 
   /* =====================================================
      DESIGN-BUILD
@@ -86,17 +90,18 @@ const projects = [
 
   {
     title: 'Aeolian Soundscapes / Timber Tectonics',
-    src: '',
+    src: '/images/Aeolian.jpg',
     description:
       'Full-scale architectural installations developed through computational design and robotic fabrication.',
-    href: '/projects/aeolian-soundscapes',
+    href: '/projects/aeolian-soundscapes-timber-tectonics',
     categories: ['Design-Build', 'Robotic Fabrication', 'Timber'],
     year: '2025',
     group: 'design-build',
+    imageClassName: 'object-cover object-[center_70%]',
   },
   {
     title: 'Geosphere: Beyond Single-Use Reciprocal Frame Structures',
-    src: '',
+    src: '/images/geosphere.JPG',
     description:
       'A full-scale reciprocal frame structure investigating reusable timber assembly systems.',
     href: '/projects/geosphere',
@@ -106,7 +111,7 @@ const projects = [
   },
   {
     title: 'Lucid Frequencies',
-    src: '',
+    src: '/images/lucid.jpg',
     description:
       'A full-scale architectural installation developed through digital and robotic fabrication.',
     href: '/projects/lucid-frequencies',
@@ -116,7 +121,7 @@ const projects = [
   },
   {
     title: 'Resonance in Pottery: Acoustic Clay Vases',
-    src: '',
+    src: '/images/clayphoto.png',
     description:
       'Architectural ceramic fabrication exploring acoustic performance through robotically fabricated clay forms.',
     href: '/projects/resonance-in-pottery',
@@ -175,6 +180,18 @@ function ProjectRow({
   project: (typeof projects)[number];
   index: number;
 }) {
+  const isMews =
+    project.title === 'Learning Through London Mews';
+
+  const isSolar =
+    project.title === 'Solar Responsive Tower';
+
+  const isJoinery =
+    project.title === 'Digital Joinery for Irregular Materials';
+
+  const specialThumbnail =
+    isMews || isSolar || isJoinery;
+
   return (
     <Link
       href={project.href}
@@ -185,21 +202,69 @@ function ProjectRow({
         {/* IMAGE */}
 
         <div className="lg:col-span-5">
-          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[18px] bg-foreground/[0.035] ring-1 ring-foreground/10">
+          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[18px] bg-white ring-1 ring-foreground/10">
 
             {project.src ? (
-              <Image
-                src={project.src}
-                alt={project.title}
-                fill
-                sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-              />
+              specialThumbnail ? (
+                <div className="flex h-full w-full items-center justify-center overflow-hidden">
+
+                  {/* LONDON MEWS */}
+
+                  {isMews && (
+                    <Image
+                      src={project.src}
+                      alt={project.title}
+                      width={1600}
+                      height={1000}
+                      className="h-[108%] w-[108%] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                    />
+                  )}
+
+                  {/* SOLAR */}
+
+                  {isSolar && (
+                    <Image
+                      src={project.src}
+                      alt={project.title}
+                      width={1600}
+                      height={1000}
+                      className="h-[108%] w-[108%] -translate-y-[3%] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                    />
+                  )}
+
+                  {/* DIGITAL JOINERY */}
+
+                  {isJoinery && (
+                    <Image
+                      src={project.src}
+                      alt={project.title}
+                      width={1400}
+                      height={1000}
+                      className="h-[88%] w-[88%] object-contain object-center"
+                    />
+                  )}
+
+                </div>
+              ) : (
+                <Image
+                  src={project.src}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className={
+                    project.imageClassName
+                      ? `${project.imageClassName} transition-transform duration-700 ease-out group-hover:scale-[1.015]`
+                      : 'object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.015]'
+                  }
+                />
+              )
             ) : (
-              <div className="flex h-full w-full items-end p-5">
+              <div className="flex h-full w-full items-end bg-white p-5">
+
                 <p className="m-0 text-xs text-foreground/25">
                   Project image
                 </p>
+
               </div>
             )}
 
@@ -229,11 +294,13 @@ function ProjectRow({
           <div className="mt-8">
 
             <span className="inline-flex items-center rounded-full border border-foreground/25 px-5 py-2.5 text-sm transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
+
               View Project
 
               <span className="ml-4 transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
+
             </span>
 
           </div>
@@ -275,13 +342,14 @@ function ProjectRow({
 export default function ProjectsHome() {
   return (
     <Layout title="">
-      <main className="w-full pb-24">
+      <main className="w-full bg-white pb-24">
 
         {/* =====================================================
             PAGE INTRO
         ===================================================== */}
 
         <section className="px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-20 lg:pt-16">
+
           <div className="mx-auto grid w-full max-w-[1800px] gap-10 lg:grid-cols-12">
 
             <div className="lg:col-span-5">
@@ -307,6 +375,7 @@ export default function ProjectsHome() {
             </div>
 
           </div>
+
         </section>
 
         {/* =====================================================
@@ -314,6 +383,7 @@ export default function ProjectsHome() {
         ===================================================== */}
 
         <section className="px-5 sm:px-8 lg:px-12">
+
           <div className="mx-auto w-full max-w-[1800px]">
 
             <div className="grid gap-6 pb-8 lg:grid-cols-12 lg:pb-10">
@@ -338,6 +408,7 @@ export default function ProjectsHome() {
             </div>
 
             <div>
+
               {selectedWork.map((project, index) => (
                 <ProjectRow
                   key={project.title}
@@ -345,11 +416,13 @@ export default function ProjectsHome() {
                   index={index}
                 />
               ))}
+
             </div>
 
             <div className="border-t border-foreground/20" />
 
           </div>
+
         </section>
 
         {/* =====================================================
@@ -357,6 +430,7 @@ export default function ProjectsHome() {
         ===================================================== */}
 
         <section className="px-5 pt-28 sm:px-8 lg:px-12 lg:pt-36">
+
           <div className="mx-auto w-full max-w-[1800px]">
 
             <div className="grid gap-6 pb-8 lg:grid-cols-12 lg:pb-10">
@@ -381,6 +455,7 @@ export default function ProjectsHome() {
             </div>
 
             <div>
+
               {designBuild.map((project, index) => (
                 <ProjectRow
                   key={project.title}
@@ -388,11 +463,13 @@ export default function ProjectsHome() {
                   index={index + selectedWork.length}
                 />
               ))}
+
             </div>
 
             <div className="border-t border-foreground/20" />
 
           </div>
+
         </section>
 
       </main>
