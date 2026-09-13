@@ -17,24 +17,17 @@ const projects = [
     title: 'Wood Steamer Cart',
     description:
       'Mobile steam-generation system developed for full-scale robotic wood bending experiments.',
-    imagePath: '',
+    imagePath: '/images/wood steamer render.png',
     link: '/projects/custom-steamer'
   },
   {
-
-  id: 'compression-strap',
-
-  title: 'Compression Strap',
-
-  description:
-
-    'Custom compression system developed to control timber deformation during steam bending.',
-
-  imagePath: '/images/compression.png',
-
-  link: '/projects/compression-strap'
-
-},
+    id: 'compression-strap',
+    title: 'Compression Strap',
+    description:
+      'Custom compression system developed to control timber deformation during steam bending.',
+    imagePath: '/images/compression.png',
+    link: '/projects/compression-strap'
+  },
   {
     id: 'robotic-heat-gun-tool',
     title: 'Robotic Heat Gun Tool',
@@ -48,7 +41,7 @@ const projects = [
     title: 'Rebar Gripper',
     description:
       'Custom UR end-effector integrating robotic gripping with depth-camera sensing for rebar manipulation.',
-    imagePath: '',
+    imagePath: '/images/urgriprender.png',
     link: '/projects/rebar-gripper'
   },
   {
