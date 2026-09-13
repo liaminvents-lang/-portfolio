@@ -8,37 +8,35 @@ import Image from 'next/image';
 ===================================================== */
 
 const projectImages = [
-  'IMG_4450.JPG',
-  'IMG_4443.JPG',
-  'IMG_4433.JPG',
-  'IMG_4407.JPG',
-  'IMG_4401.JPG',
-  'IMG_4396.JPG',
-  'IMG_4372.JPG',
-  'IMG_4370.JPG',
-  'IMG_4367.JPG',
-  'IMG_4362.JPG',
-  'IMG_4359.JPG',
-  '7956E262-AF71-47D2-A5D4-B7E94BA75A49.JPG',
+  'IMG_2320.JPG',
+  'IMG_2315.JPG',
+  'IMG_2316.JPG',
+  'IMG_2314 2.JPG',
+  'IMG_1438.JPG',
+  'IMG_1429.JPG',
+  'IMG_1425.JPG',
+  'IMG_1422.JPG',
+  'IMG_1421.JPG',
 ];
 
-export default function AeolianSoundscapesPage() {
+export default function LucidFrequenciesPage() {
   return (
     <Layout title="">
       <main className="w-full">
 
         {/* =====================================================
-            HERO VIDEO
+            HERO
         ===================================================== */}
 
-        <section className="w-full">
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
-            <iframe
-              src="https://player.vimeo.com/video/1226115707?autoplay=1&muted=1&loop=1&background=1&autopause=0&title=0&byline=0&portrait=0"
-              className="absolute left-1/2 top-1/2 h-[115%] w-[115%] -translate-x-1/2 -translate-y-1/2"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              title="Aeolian Soundscapes"
+        <section className="w-full px-5 pt-5 sm:px-8 sm:pt-8 lg:px-12 lg:pt-10">
+          <div className="relative mx-auto aspect-[16/9] w-full max-w-[1800px] overflow-hidden bg-foreground/[0.04]">
+            <Image
+              src="/images/lucid.jpg"
+              alt="Lucid Frequencies"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
             />
           </div>
         </section>
@@ -49,7 +47,6 @@ export default function AeolianSoundscapesPage() {
 
         <section className="px-5 pb-16 pt-20 sm:px-8 lg:px-12 lg:pb-20 lg:pt-24">
           <div className="mx-auto w-full max-w-[1800px]">
-
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-10">
 
               <div className="lg:col-span-7">
@@ -59,7 +56,7 @@ export default function AeolianSoundscapesPage() {
                 </p>
 
                 <h1 className="m-0 mt-4 max-w-[1200px] text-5xl font-normal leading-[0.95] tracking-tight sm:text-6xl lg:text-8xl">
-                  Aeolian Soundscapes / Timber Tectonics
+                  Lucid Frequencies
                 </h1>
 
               </div>
@@ -67,15 +64,14 @@ export default function AeolianSoundscapesPage() {
               <div className="flex items-end lg:col-span-5">
 
                 <p className="m-0 max-w-[650px] text-xl leading-[1.45] sm:text-2xl">
-                  A full-scale timber installation developed through
-                  computational design, robotic fabrication, and collaborative
-                  assembly for Lumière: The Art of Light.
+                  A full-scale temporary installation developed through
+                  computational design, digital fabrication, integrated
+                  lighting, and collaborative assembly.
                 </p>
 
               </div>
 
             </div>
-
           </div>
         </section>
 
@@ -92,27 +88,27 @@ export default function AeolianSoundscapesPage() {
               </p>
 
               <p className="m-0 mt-2 text-sm">
-                Design-Build Installation
+                Design-Build
               </p>
             </div>
 
             <div className="border-r border-foreground/20 px-5 py-5">
               <p className="m-0 text-xs text-foreground/40">
-                Exhibition
+                Project
               </p>
 
               <p className="m-0 mt-2 text-sm">
-                Lumière: The Art of Light
+                Lucid Frequencies
               </p>
             </div>
 
             <div className="border-r border-foreground/20 px-5 py-5">
               <p className="m-0 text-xs text-foreground/40">
-                Location
+                Institution
               </p>
 
               <p className="m-0 mt-2 text-sm">
-                Ontario Place, Toronto
+                University of Toronto
               </p>
             </div>
 
@@ -122,7 +118,7 @@ export default function AeolianSoundscapesPage() {
               </p>
 
               <p className="m-0 mt-2 text-sm">
-                2023
+                2026
               </p>
             </div>
 
@@ -132,7 +128,7 @@ export default function AeolianSoundscapesPage() {
               </p>
 
               <p className="m-0 mt-2 text-sm">
-                Fabrication + Assembly
+                Fabrication + Assembly + Electrical
               </p>
             </div>
 
@@ -171,23 +167,24 @@ export default function AeolianSoundscapesPage() {
                     <div className="sm:col-span-9">
 
                       <p className="m-0 text-2xl leading-[1.25] sm:text-3xl">
-                        Aeolian Soundscapes explores the relationship between
-                        timber, movement, light, and sound through a full-scale
-                        architectural installation.
+                        Lucid Frequencies explored temporary architecture as
+                        a reusable system rather than a single-use object.
                       </p>
 
                       <div className="mt-7 grid gap-6 sm:grid-cols-2">
 
                         <p className="m-0 text-sm leading-[1.7] text-foreground/60">
-                          The project was developed as part of Lumière: The Art
-                          of Light at Ontario Place and combined computational
-                          design with full-scale fabrication and assembly.
+                          The installation developed a reciprocal-frame
+                          structure composed of repeatable timber members,
+                          allowing a complex full-scale geometry to emerge
+                          through the assembly of discrete components.
                         </p>
 
                         <p className="m-0 text-sm leading-[1.7] text-foreground/60">
-                          The installation was produced collaboratively by a
-                          team working across digital fabrication, timber
-                          assembly, and on-site construction.
+                          Designed around assembly, disassembly, transport,
+                          and reconfiguration, the project investigated how
+                          temporary structures could operate as reusable
+                          material systems across multiple deployments.
                         </p>
 
                       </div>
@@ -223,14 +220,22 @@ export default function AeolianSoundscapesPage() {
                     <div className="sm:col-span-9 lg:mt-8">
 
                       <p className="m-0 text-2xl leading-[1.2] sm:text-3xl">
-                        Fabrication + Assembly
+                        Fabrication + Assembly + Electrical Integration
                       </p>
 
                       <p className="m-0 mt-6 max-w-[600px] text-sm leading-[1.7] text-foreground/60">
-                        I contributed to the fabrication and physical assembly
-                        of the installation, working as part of the team
-                        responsible for translating the digital design into a
-                        full-scale built structure.
+                        I contributed to the fabrication and full-scale
+                        assembly of the installation, working as part of the
+                        team responsible for translating the digital design
+                        into the built structure.
+                      </p>
+
+                      <p className="m-0 mt-4 max-w-[600px] text-sm leading-[1.7] text-foreground/60">
+                        My role also extended into the electrical integration
+                        of the project, including planning cable routing,
+                        wiring components, specifying electrical hardware,
+                        determining required supplies, and sourcing and
+                        ordering materials for the installation.
                       </p>
 
                     </div>
@@ -247,7 +252,7 @@ export default function AeolianSoundscapesPage() {
         </section>
 
         {/* =====================================================
-            CREDITS
+            ELECTRICAL INTEGRATION
         ===================================================== */}
 
         <section className="border-t border-foreground/20 px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
@@ -262,116 +267,86 @@ export default function AeolianSoundscapesPage() {
                 </p>
 
                 <p className="m-0 mt-2 text-sm">
-                  Credits
+                  Electrical Integration
                 </p>
 
               </div>
 
               <div className="lg:col-span-9">
 
-                <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+                <p className="m-0 max-w-[900px] text-3xl leading-[1.2] sm:text-4xl">
+                  Integrating the electrical system into the architecture
+                  required coordinating wiring, hardware, and cable routing
+                  directly with the physical structure.
+                </p>
 
-                  {/* PROJECT LEADS */}
-
-                  <div>
-
-                    <p className="m-0 text-xs text-foreground/40">
-                      Project Leads
-                    </p>
-
-                    <div className="mt-4 space-y-1.5 text-sm">
-                      <p className="m-0">John Nguyen</p>
-                      <p className="m-0">Nicholas Hoban</p>
-                      <p className="m-0">Rahul Sehijpaul</p>
-                      <p className="m-0">Brady Peters</p>
-                    </div>
-
-                  </div>
-
-                  {/* DESIGN LEADS */}
+                <div className="mt-12 grid gap-10 border-t border-foreground/20 pt-6 sm:grid-cols-2 lg:grid-cols-4">
 
                   <div>
 
                     <p className="m-0 text-xs text-foreground/40">
-                      Design Leads
+                      01
                     </p>
 
-                    <div className="mt-4 space-y-1.5 text-sm">
-                      <p className="m-0">John Nguyen</p>
-                      <p className="m-0">Nicholas Hoban</p>
-                    </div>
+                    <p className="m-0 mt-3 text-lg">
+                      Cable Routing
+                    </p>
+
+                    <p className="m-0 mt-3 text-sm leading-[1.7] text-foreground/60">
+                      Planning wiring paths through the structure while
+                      maintaining access for installation and assembly.
+                    </p>
 
                   </div>
-
-                  {/* FABRICATION 1 */}
 
                   <div>
 
                     <p className="m-0 text-xs text-foreground/40">
-                      Fabrication + Assembly
+                      02
                     </p>
 
-                    <div className="mt-4 space-y-1.5 text-sm">
-                      <p className="m-0">Nermine Hassanin</p>
-                      <p className="m-0">Elham Khataei</p>
-                      <p className="m-0">Cameron Manore</p>
-                      <p className="m-0">Zhenxiao Yang</p>
-                      <p className="m-0">Selina Al Madanat</p>
-                      <p className="m-0">Renée Powell-Hines</p>
-                    </div>
+                    <p className="m-0 mt-3 text-lg">
+                      Wiring
+                    </p>
+
+                    <p className="m-0 mt-3 text-sm leading-[1.7] text-foreground/60">
+                      Preparing and connecting electrical components used
+                      throughout the installation.
+                    </p>
 
                   </div>
-
-                  {/* FABRICATION 2 */}
 
                   <div>
 
-                    <p className="m-0 text-xs text-transparent">
-                      Fabrication
+                    <p className="m-0 text-xs text-foreground/40">
+                      03
                     </p>
 
-                    <div className="mt-4 space-y-1.5 text-sm">
-                      <p className="m-0">Meera Thomas</p>
+                    <p className="m-0 mt-3 text-lg">
+                      Specification
+                    </p>
 
-                      <p className="m-0 font-medium">
-                        Liam Cassano
-                      </p>
-
-                      <p className="m-0">Paul Kozak</p>
-                      <p className="m-0">Zachary Mollica</p>
-                      <p className="m-0">Judy Liu</p>
-                    </div>
+                    <p className="m-0 mt-3 text-sm leading-[1.7] text-foreground/60">
+                      Identifying appropriate electrical hardware, cable,
+                      connectors, and supporting components.
+                    </p>
 
                   </div>
 
-                </div>
+                  <div>
 
-                {/* SUPPORT */}
+                    <p className="m-0 text-xs text-foreground/40">
+                      04
+                    </p>
 
-                <div className="mt-12 border-t border-foreground/20 pt-6">
+                    <p className="m-0 mt-3 text-lg">
+                      Procurement
+                    </p>
 
-                  <div className="grid gap-6 sm:grid-cols-4">
-
-                    <div>
-
-                      <p className="m-0 text-xs text-foreground/40">
-                        Funded + Supported By
-                      </p>
-
-                    </div>
-
-                    <div className="sm:col-span-3">
-
-                      <p className="m-0 text-sm">
-                        Government of Ontario
-                      </p>
-
-                      <p className="m-0 mt-2 max-w-[800px] text-sm text-foreground/60">
-                        University of Toronto — John H. Daniels Faculty of
-                        Architecture, Landscape, and Design
-                      </p>
-
-                    </div>
+                    <p className="m-0 mt-3 text-sm leading-[1.7] text-foreground/60">
+                      Developing the required supply list and sourcing and
+                      ordering components for fabrication and installation.
+                    </p>
 
                   </div>
 
@@ -408,15 +383,22 @@ export default function AeolianSoundscapesPage() {
 
                 </div>
 
+                <div className="lg:col-span-9">
+
+                  <p className="m-0 max-w-[600px] text-sm leading-[1.6] text-foreground/50">
+                    Fabrication, assembly, electrical integration, and
+                    installation of Lucid Frequencies.
+                  </p>
+
+                </div>
+
               </div>
 
             </div>
 
           </div>
 
-          {/* =====================================================
-              IMAGE FLOW
-          ===================================================== */}
+          {/* IMAGE FLOW */}
 
           <div className="w-full px-5 sm:px-8 lg:px-12">
 
@@ -429,7 +411,7 @@ export default function AeolianSoundscapesPage() {
                 >
                   <Image
                     src={`/images/${image}`}
-                    alt={`Aeolian Soundscapes — ${index + 1}`}
+                    alt={`Lucid Frequencies — ${index + 1}`}
                     width={2000}
                     height={1500}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
