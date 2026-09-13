@@ -8,6 +8,7 @@ import { ArrowUpRight } from 'lucide-react';
 type Slider = {
   color: string;
   src: string;
+  href: string;
 };
 
 type Props = {
@@ -31,39 +32,49 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
       ref={container}
       className="relative z-10 flex flex-col gap-[3vw] overflow-hidden bg-background"
     >
+      {/* SELECTED WORK ROW */}
+
       <motion.div
         style={{ x: x1 }}
-        className="relative left-[-10vw] flex w-max items-center gap-4 sm:gap-12"
+        className="relative left-[-10vw] flex w-max items-center gap-5 sm:gap-12"
       >
         {slider1.map((project, index) => (
-          <div
-            key={index}
-            className="flex h-60 shrink-0 items-center justify-center sm:h-80"
+          <Link
+            key={`${project.src}-${index}`}
+            href={project.href}
+            className="block shrink-0"
           >
-            <img
-              src={`/images/${project.src}`}
-              alt=""
-              className="h-full w-auto object-contain shadow-lg"
-            />
-          </div>
+            <div className="flex h-72 items-center justify-center sm:h-[26rem]">
+              <img
+                src={`/images/${project.src}`}
+                alt=""
+                className="h-full w-auto object-contain shadow-lg transition-transform duration-500 ease-out hover:scale-[1.02]"
+              />
+            </div>
+          </Link>
         ))}
       </motion.div>
 
+      {/* DESIGN-BUILD ROW */}
+
       <motion.div
         style={{ x: x2 }}
-        className="relative left-[-10vw] flex w-max items-center gap-4 sm:gap-12"
+        className="relative left-[-10vw] flex w-max items-center gap-5 sm:gap-12"
       >
         {slider2.map((project, index) => (
-          <div
-            key={index}
-            className="flex h-60 shrink-0 items-center justify-center sm:h-80"
+          <Link
+            key={`${project.src}-${index}`}
+            href={project.href}
+            className="block shrink-0"
           >
-            <img
-              src={`/images/${project.src}`}
-              alt=""
-              className="h-full w-auto object-contain shadow-lg"
-            />
-          </div>
+            <div className="flex h-72 items-center justify-center sm:h-[26rem]">
+              <img
+                src={`/images/${project.src}`}
+                alt=""
+                className="h-full w-auto object-contain shadow-lg transition-transform duration-500 ease-out hover:scale-[1.02]"
+              />
+            </div>
+          </Link>
         ))}
       </motion.div>
 

@@ -112,14 +112,14 @@ export default function Header() {
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
               <div className="flex flex-col">
                 <Magnetic>
-                  <Link href="/about">
-                    About
+                  <Link href="/projects">
+                    Projects
                   </Link>
                 </Magnetic>
 
                 <Magnetic>
-                  <Link href="/projects">
-                    Projects
+                  <Link href="/side-projects">
+                    Side Projects
                   </Link>
                 </Magnetic>
               </div>
@@ -130,8 +130,8 @@ export default function Header() {
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
               <div className="flex flex-col">
                 <Magnetic>
-                  <Link href="/side-projects">
-                    Side Projects
+                  <Link href="/about">
+                    About
                   </Link>
                 </Magnetic>
 

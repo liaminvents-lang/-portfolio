@@ -11,54 +11,126 @@ import Hero from '@/components/home/hero';
 const slider1 = [
   {
     color: 'white',
-    src: 'acadia.JPG'
+    src: 'DSC03168-Enhanced-NR.jpg',
+    href: '/projects/robotic-steam-bending'
   },
   {
     color: 'white',
-    src: 'thegripper.PNG'
+    src: 'robotmadepart2.JPG',
+    href: '/projects/robot-made-2025-uoft'
   },
   {
     color: 'white',
-    src: 'woodnrock.png'
+    src: 'final demonstrators-12 2.PNG',
+    href: '/projects/robotic-steam-bending'
   },
   {
     color: 'white',
-    src: 'Picture3.png'
+    src: 'Aeolian.jpg',
+    href: '/projects/aeolian-soundscapes-timber-tectonics'
   },
   {
     color: 'white',
-    src: 'Picture2.png'
+    src: 'CASSANO_A2-2-14 2.PNG',
+    href: '/projects/robotic-steam-bending'
   },
   {
     color: 'white',
-    src: 'Picture1.jpg'
+    src: 'geosphere.JPG',
+    href: '/projects/geosphere'
   },
   {
     color: 'white',
-    src: 'mirrorwall.png'
+    src: 'DSC09652 copy.jpg',
+    href: '/projects/learning-through-london-mews'
+  },
+  {
+    color: 'white',
+    src: 'lucid.jpg',
+    href: '/projects/lucid-frequencies'
+  },
+  {
+    color: 'white',
+    src: '280tower.jpeg',
+    href: '/projects/solar-responsive-tower'
+  },
+  {
+    color: 'white',
+    src: 'DSC03407.jpg',
+    href: '/projects/robot-made-2025-ubc-sala'
+  },
+  {
+    color: 'white',
+    src: 'woodnrock.png',
+    href: '/projects/readymade'
+  },
+  {
+    color: 'white',
+    src: 'RSGC-0421 3.JPG',
+    href: '/projects/lucid-frequencies'
   }
 ];
 
 const slider2 = [
   {
     color: 'white',
-    src: 'robotmadepart2.JPG'
+    src: 'UBCsalafront.JPG',
+    href: '/projects/robot-made-2025-ubc-sala'
   },
   {
     color: 'white',
-    src: 'UBCsalafront.JPG'
+    src: 'final demonstrators-13 2.PNG',
+    href: '/projects/robotic-steam-bending'
   },
   {
     color: 'white',
-    src: 'robotmadeuoft.JPG'
+    src: 'mirrorwall.png',
+    href: '/projects/imago-machina'
   },
   {
     color: 'white',
-    src: 'geosphere.JPG'
+    src: 'CASSANO_A2-2-15 2.PNG',
+    href: '/projects/robotic-steam-bending'
   },
   {
     color: 'white',
-    src: 'Claywall.jpg'
+    src: 'robotmadeuoft.JPG',
+    href: '/projects/robot-made-2024-uoft'
+  },
+  {
+    color: 'white',
+    src: 'mews.JPG',
+    href: '/projects/learning-through-london-mews'
+  },
+  {
+    color: 'white',
+    src: 'rebartie.png',
+    href: '/projects/robotic-wire-tying'
+  },
+  {
+    color: 'white',
+    src: 'acadia.JPG',
+    href: '/projects/robotic-steam-bending'
+  },
+  {
+    color: 'white',
+    src: 'Picture3.png',
+    href: '/projects/reversible-wood-composites'
+  },
+  {
+    color: 'white',
+    src: 'thegripper.PNG',
+    href: '/side-projects'
+  },
+  {
+    color: 'white',
+    src: 'Picture2.png',
+    href: '/projects/reversible-wood-composites'
+  },
+  {
+    color: 'white',
+    src: 'Picture1.jpg',
+    href: '/projects/reversible-wood-composites'
   }
 ];
 

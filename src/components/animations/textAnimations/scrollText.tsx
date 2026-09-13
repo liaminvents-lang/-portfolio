@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { MutableRefObject, useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,35 +16,13 @@ function getRandomRotation() {
   return Math.random() * 60 - 30;
 }
 
-const animateLettersOnScroll = (containerRef: MutableRefObject<any>) => {
-  const lettersContainer = containerRef.current;
-  const letterElements = lettersContainer?.querySelectorAll('.letter');
-
-  letterElements.forEach((letter: Element) => {
-    gsap.to(letter, {
-      y: (i, el) =>
-        (1 - parseFloat(el.getAttribute('data-speed') || '1')) *
-        window.innerHeight,
-      ease: 'power2.out',
-      duration: 0.8,
-      rotation: getRandomRotation(),
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top top',
-        end: '+=500',
-        invalidateOnRefresh: true,
-        scrub: 0.35
-      }
-    });
-  });
-};
-
 function LetterDisplay({ word }: { word: string }) {
   return word.split('').map((letter, index) => (
     <div
       key={index}
-      className="letter text-5xl font-semibold xs:text-[64px] xs:leading-none md:text-[84px] lg:text-[105px] xl:text-[130px]"
+      className="letter text-[64px] font-semibold leading-[0.88] xs:text-[78px] md:text-[105px] lg:text-[135px] xl:text-[165px] 2xl:text-[190px]"
       data-speed={getRandomSpeed()}
+      data-rotation={getRandomRotation()}
     >
       {letter === ' ' ? '\u00A0' : letter}
     </div>
@@ -52,21 +30,99 @@ function LetterDisplay({ word }: { word: string }) {
 }
 
 export function LetterCollision() {
-  const containerRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!containerRef.current) return;
+  useLayoutEffect(() => {
+    if (!sectionRef.current || !textRef.current) return;
 
-    animateLettersOnScroll(containerRef);
+    const ctx = gsap.context(() => {
+      const letters = gsap.utils.toArray<HTMLElement>('.letter');
+
+      /*
+        One continuous scroll-controlled timeline.
+
+        1. Letters explode.
+        2. Whole exploded group moves upward.
+        3. Reverse happens immediately when scrolling upward.
+      */
+
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: '+=850',
+          scrub: 0.45,
+          invalidateOnRefresh: true
+        }
+      });
+
+      /*
+        LETTER EXPLOSION
+      */
+
+      letters.forEach((letter) => {
+        const speed = parseFloat(letter.dataset.speed || '1');
+        const rotation = parseFloat(letter.dataset.rotation || '0');
+
+        timeline.to(
+          letter,
+          {
+            y: (1 - speed) * window.innerHeight,
+            rotation,
+            ease: 'none',
+            duration: 0.45
+          },
+          0
+        );
+      });
+
+      /*
+        PULL THE ENTIRE EXPLODED FIELD OFF SCREEN
+
+        Starts before the explosion is completely finished,
+        so the letters never sit frozen above the video.
+      */
+
+      timeline.to(
+        textRef.current,
+        {
+          y: -window.innerHeight * 1.15,
+          ease: 'none',
+          duration: 0.55
+        },
+        0.35
+      );
+
+      /*
+        Fade slightly as it exits.
+      */
+
+      timeline.to(
+        textRef.current,
+        {
+          opacity: 0,
+          ease: 'none',
+          duration: 0.2
+        },
+        0.8
+      );
+    }, sectionRef);
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ctx.revert();
     };
   }, []);
 
   return (
-    <div ref={containerRef} className="ml-20">
-      <div className="flex h-screen flex-col justify-center translate-y-10">
+    <div
+      ref={sectionRef}
+      className="relative h-screen w-full overflow-hidden"
+    >
+      <div
+        ref={textRef}
+        className="absolute bottom-[22vh] left-6 sm:left-10 md:left-14 lg:left-20"
+      >
         <div className="flex flex-wrap">
           <LetterDisplay word={line1} />
         </div>
