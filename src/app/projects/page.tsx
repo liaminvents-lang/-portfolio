@@ -24,6 +24,16 @@ const projects = [
     group: 'selected',
   },
   {
+    title: 'Robotic Wire Tying for Discrete Assembly',
+    src: '/images/rebartie.png',
+    description:
+      'Sensor-integrated connection-making for automated and multi-robot assembly.',
+    href: '/projects/robotic-wire-tying',
+    categories: ['Robotics', 'Fabrication', 'Research'],
+    year: '2026',
+    group: 'selected',
+  },
+  {
     title: 'Reversible Wood Composites',
     src: '/images/Picture3.png',
     description:
@@ -31,26 +41,6 @@ const projects = [
     href: '/projects/reversible-wood-composites',
     categories: ['Material Research', 'Circular Fabrication', 'Testing'],
     year: '2026',
-    group: 'selected',
-  },
-  {
-    title: 'Learning Through London Mews',
-    src: '/images/DSC09652 copy.jpg',
-    description:
-      'Architectural research exploring learning, community, and the spatial conditions of the London mews.',
-    href: '/projects/learning-through-london-mews',
-    categories: ['Architecture', 'Research', 'Design'],
-    year: '2025',
-    group: 'selected',
-  },
-  {
-    title: 'Solar Responsive Tower',
-    src: '/images/280tower.jpeg',
-    description:
-      'A responsive facade system developed through computational design and environmental analysis.',
-    href: '/projects/solar-responsive-tower',
-    categories: ['Architecture', 'Computational Design', 'Environment'],
-    year: '2024',
     group: 'selected',
   },
   {
@@ -64,23 +54,33 @@ const projects = [
     group: 'selected',
   },
   {
-    title: 'Imago Machina',
-    src: '/images/mirrorwall.png',
+    title: 'Learning Through London Mews',
+    src: '/images/mewsthumb1.png',
     description:
-      'An interactive installation exploring computation, physical systems, and responsive environments.',
-    href: '/projects/imago-machina',
-    categories: ['Interactive Systems', 'Installation', 'Fabrication'],
+      'Architectural research exploring learning, community, and the spatial conditions of the London mews.',
+    href: '',
+    categories: ['Architecture', 'Research', 'Design'],
+    year: '2025',
+    group: 'selected',
+  },
+  {
+    title: 'Solar Responsive Tower',
+    src: '/images/280tower1.png',
+    description:
+      'A responsive facade system developed through computational design and environmental analysis.',
+    href: '',
+    categories: ['Architecture', 'Computational Design', 'Environment'],
     year: '2024',
     group: 'selected',
   },
   {
-    title: 'Robotic Wire Tying for Discrete Assembly',
-    src: '/images/rebartie.png',
+    title: 'Imago Machina',
+    src: '/images/mirrorwall.png',
     description:
-      'Sensor-integrated connection-making for automated and multi-robot assembly.',
-    href: '/projects/robotic-wire-tying',
-    categories: ['Robotics', 'Fabrication', 'Research'],
-    year: '2026',
+      'An interactive installation exploring computation, physical systems, and responsive environments.',
+    href: '',
+    categories: ['Interactive Systems', 'Installation', 'Fabrication'],
+    year: '2024',
     group: 'selected',
   },
 
@@ -192,145 +192,172 @@ function ProjectRow({
   const specialThumbnail =
     isMews || isSolar || isJoinery;
 
+  const comingSoon = !project.href;
+
+  const content = (
+    <article
+      className={`grid gap-7 py-10 lg:grid-cols-12 lg:gap-10 lg:py-12 ${
+        comingSoon ? 'opacity-40' : ''
+      }`}
+    >
+      {/* IMAGE */}
+
+      <div className="lg:col-span-5">
+        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[18px] bg-white ring-1 ring-foreground/10">
+
+          {project.src ? (
+            specialThumbnail ? (
+              <div className="flex h-full w-full items-center justify-center overflow-hidden">
+
+                {isMews && (
+                  <Image
+                    src={project.src}
+                    alt={project.title}
+                    width={1600}
+                    height={1000}
+                    className="h-[108%] w-[108%] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                  />
+                )}
+
+                {isSolar && (
+                  <Image
+                    src={project.src}
+                    alt={project.title}
+                    width={1600}
+                    height={1000}
+                    className="h-[108%] w-[108%] -translate-y-[3%] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                  />
+                )}
+
+                {isJoinery && (
+                  <Image
+                    src={project.src}
+                    alt={project.title}
+                    width={1400}
+                    height={1000}
+                    className="h-[88%] w-[88%] object-contain object-center"
+                  />
+                )}
+
+              </div>
+            ) : (
+              <Image
+                src={project.src}
+                alt={project.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className={
+                  project.imageClassName
+                    ? `${project.imageClassName} transition-transform duration-700 ease-out group-hover:scale-[1.015]`
+                    : 'object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.015]'
+                }
+              />
+            )
+          ) : (
+            <div className="flex h-full w-full items-end bg-white p-5">
+              <p className="m-0 text-xs text-foreground/25">
+                Project image
+              </p>
+            </div>
+          )}
+
+        </div>
+      </div>
+
+      {/* TITLE + DESCRIPTION */}
+
+      <div className="flex flex-col justify-between lg:col-span-5">
+
+        <div>
+
+          <p className="m-0 text-xs text-foreground/35">
+            {String(index + 1).padStart(2, '0')}
+          </p>
+
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+
+            <h2
+              className={`m-0 max-w-[720px] text-2xl font-semibold leading-[1.15] tracking-tight sm:text-3xl ${
+                comingSoon ? 'text-foreground/40' : ''
+              }`}
+            >
+              {project.title}
+            </h2>
+
+            {comingSoon && (
+              <span className="rounded-full border border-foreground/15 px-3 py-1 text-[11px] text-foreground/35">
+                Coming Soon
+              </span>
+            )}
+
+          </div>
+
+          <p className="m-0 mt-5 max-w-[600px] text-base leading-[1.6] text-foreground/60">
+            {project.description}
+          </p>
+
+        </div>
+
+        <div className="mt-8">
+
+          <span
+            className={`inline-flex items-center rounded-full border px-5 py-2.5 text-sm ${
+              comingSoon
+                ? 'cursor-default border-foreground/20 text-foreground/45'
+                : 'border-foreground/25 transition-colors duration-300 group-hover:bg-foreground group-hover:text-background'
+            }`}
+          >
+            View Project
+
+            <span className="ml-4">
+              →
+            </span>
+          </span>
+
+        </div>
+
+      </div>
+
+      {/* METADATA */}
+
+      <div className="lg:col-span-2">
+
+        <div className="flex flex-col">
+
+          {project.categories.map((category) => (
+            <p
+              key={category}
+              className="m-0 text-sm leading-[1.65]"
+            >
+              {category}
+            </p>
+          ))}
+
+          <p className="m-0 mt-7 text-sm text-foreground/40">
+            {project.year}
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+  );
+
+  if (comingSoon) {
+    return (
+      <div className="border-t border-foreground/20">
+        {content}
+      </div>
+    );
+  }
+
   return (
     <Link
       href={project.href}
       className="group block border-t border-foreground/20"
     >
-      <article className="grid gap-7 py-10 lg:grid-cols-12 lg:gap-10 lg:py-12">
-
-        {/* IMAGE */}
-
-        <div className="lg:col-span-5">
-          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[18px] bg-white ring-1 ring-foreground/10">
-
-            {project.src ? (
-              specialThumbnail ? (
-                <div className="flex h-full w-full items-center justify-center overflow-hidden">
-
-                  {/* LONDON MEWS */}
-
-                  {isMews && (
-                    <Image
-                      src={project.src}
-                      alt={project.title}
-                      width={1600}
-                      height={1000}
-                      className="h-[108%] w-[108%] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-                    />
-                  )}
-
-                  {/* SOLAR */}
-
-                  {isSolar && (
-                    <Image
-                      src={project.src}
-                      alt={project.title}
-                      width={1600}
-                      height={1000}
-                      className="h-[108%] w-[108%] -translate-y-[3%] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-                    />
-                  )}
-
-                  {/* DIGITAL JOINERY */}
-
-                  {isJoinery && (
-                    <Image
-                      src={project.src}
-                      alt={project.title}
-                      width={1400}
-                      height={1000}
-                      className="h-[88%] w-[88%] object-contain object-center"
-                    />
-                  )}
-
-                </div>
-              ) : (
-                <Image
-                  src={project.src}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                  className={
-                    project.imageClassName
-                      ? `${project.imageClassName} transition-transform duration-700 ease-out group-hover:scale-[1.015]`
-                      : 'object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.015]'
-                  }
-                />
-              )
-            ) : (
-              <div className="flex h-full w-full items-end bg-white p-5">
-
-                <p className="m-0 text-xs text-foreground/25">
-                  Project image
-                </p>
-
-              </div>
-            )}
-
-          </div>
-        </div>
-
-        {/* TITLE + DESCRIPTION */}
-
-        <div className="flex flex-col justify-between lg:col-span-5">
-
-          <div>
-
-            <p className="m-0 text-xs text-foreground/35">
-              {String(index + 1).padStart(2, '0')}
-            </p>
-
-            <h2 className="m-0 mt-4 max-w-[720px] text-2xl font-semibold leading-[1.15] tracking-tight sm:text-3xl">
-              {project.title}
-            </h2>
-
-            <p className="m-0 mt-5 max-w-[600px] text-base leading-[1.6] text-foreground/60">
-              {project.description}
-            </p>
-
-          </div>
-
-          <div className="mt-8">
-
-            <span className="inline-flex items-center rounded-full border border-foreground/25 px-5 py-2.5 text-sm transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
-
-              View Project
-
-              <span className="ml-4 transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-
-            </span>
-
-          </div>
-
-        </div>
-
-        {/* METADATA */}
-
-        <div className="lg:col-span-2">
-
-          <div className="flex flex-col">
-
-            {project.categories.map((category) => (
-              <p
-                key={category}
-                className="m-0 text-sm leading-[1.65]"
-              >
-                {category}
-              </p>
-            ))}
-
-            <p className="m-0 mt-7 text-sm text-foreground/40">
-              {project.year}
-            </p>
-
-          </div>
-
-        </div>
-
-      </article>
+      {content}
     </Link>
   );
 }
@@ -344,9 +371,7 @@ export default function ProjectsHome() {
     <Layout title="">
       <main className="w-full bg-white pb-24">
 
-        {/* =====================================================
-            PAGE INTRO
-        ===================================================== */}
+        {/* PAGE INTRO */}
 
         <section className="px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-20 lg:pt-16">
 
@@ -378,9 +403,7 @@ export default function ProjectsHome() {
 
         </section>
 
-        {/* =====================================================
-            SELECTED WORK
-        ===================================================== */}
+        {/* SELECTED WORK */}
 
         <section className="px-5 sm:px-8 lg:px-12">
 
@@ -389,26 +412,21 @@ export default function ProjectsHome() {
             <div className="grid gap-6 pb-8 lg:grid-cols-12 lg:pb-10">
 
               <div className="lg:col-span-3">
-
                 <p className="m-0 text-sm text-foreground/40">
                   Selected Work
                 </p>
-
               </div>
 
               <div className="lg:col-span-9">
-
                 <p className="m-0 max-w-[650px] text-sm leading-[1.6] text-foreground/50">
                   Independent and academic work spanning architecture,
                   robotics, computation, and material research.
                 </p>
-
               </div>
 
             </div>
 
             <div>
-
               {selectedWork.map((project, index) => (
                 <ProjectRow
                   key={project.title}
@@ -416,7 +434,6 @@ export default function ProjectsHome() {
                   index={index}
                 />
               ))}
-
             </div>
 
             <div className="border-t border-foreground/20" />
@@ -425,9 +442,7 @@ export default function ProjectsHome() {
 
         </section>
 
-        {/* =====================================================
-            DESIGN-BUILD
-        ===================================================== */}
+        {/* DESIGN-BUILD */}
 
         <section className="px-5 pt-28 sm:px-8 lg:px-12 lg:pt-36">
 
@@ -436,26 +451,21 @@ export default function ProjectsHome() {
             <div className="grid gap-6 pb-8 lg:grid-cols-12 lg:pb-10">
 
               <div className="lg:col-span-3">
-
                 <p className="m-0 text-sm text-foreground/40">
                   Design-Build
                 </p>
-
               </div>
 
               <div className="lg:col-span-9">
-
                 <p className="m-0 max-w-[650px] text-sm leading-[1.6] text-foreground/50">
                   Full-scale collaborative work contributed to through robotic
                   fabrication, prototyping, assembly, and construction.
                 </p>
-
               </div>
 
             </div>
 
             <div>
-
               {designBuild.map((project, index) => (
                 <ProjectRow
                   key={project.title}
@@ -463,7 +473,6 @@ export default function ProjectsHome() {
                   index={index + selectedWork.length}
                 />
               ))}
-
             </div>
 
             <div className="border-t border-foreground/20" />

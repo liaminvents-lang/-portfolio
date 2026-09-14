@@ -13,30 +13,6 @@ const projects = [
     link: '/projects/steam-bending-gripper'
   },
   {
-    id: 'wood-steamer-cart',
-    title: 'Wood Steamer Cart',
-    description:
-      'Mobile steam-generation system developed for full-scale robotic wood bending experiments.',
-    imagePath: '/images/wood steamer render.png',
-    link: '/projects/custom-steamer'
-  },
-  {
-    id: 'compression-strap',
-    title: 'Compression Strap',
-    description:
-      'Custom compression system developed to control timber deformation during steam bending.',
-    imagePath: '/images/compression.png',
-    link: '/projects/compression-strap'
-  },
-  {
-    id: 'robotic-heat-gun-tool',
-    title: 'Robotic Heat Gun Tool',
-    description:
-      'Robot-mounted heating tool developed for controlled material forming experiments.',
-    imagePath: '',
-    link: '/projects/steam-bending-heat-tool'
-  },
-  {
     id: 'rebar-gripper',
     title: 'Rebar Gripper',
     description:
@@ -49,16 +25,64 @@ const projects = [
     title: 'Rebar Tying Tool',
     description:
       'Sensor-integrated robotic end-effector developed for automated wire tying and connection-making.',
-    imagePath: '',
+    imagePath: '/images/rebartiethumb.png',
     link: '/projects/rebar-tying-tool'
+  },
+  {
+    id: 'compression-strap',
+    title: 'Compression Strap',
+    description:
+      'Custom compression system developed to control timber deformation during steam bending.',
+    imagePath: '/images/compression.png',
+    link: '/projects/compression-strap'
+  },
+  {
+    id: 'wood-steamer-cart',
+    title: 'Wood Steamer Cart',
+    description:
+      'Mobile steam-generation system developed for full-scale robotic wood bending experiments.',
+    imagePath: '/images/wood steamer render.png',
+    link: '/projects/custom-steamer'
+  },
+  {
+    id: 'universal-testing-machine',
+    title: 'Universal Testing Machine',
+    description:
+      'Custom testing machine developed for quasi-static mechanical testing of fabricated connections.',
+    imagePath: '/images/Picture2.png',
+    link: '/projects/universal-testing-machine'
   },
   {
     id: 'light-painting-tool',
     title: 'Light Painting Tool',
     description:
       'Custom UR end-effector developed for robotic light painting and long-exposure photography.',
-    imagePath: '',
+    imagePath: '/images/swingylight.png',
     link: '/projects/light-painting-tool'
+  },
+  {
+    id: 'router-jig',
+    title: 'Router Jig',
+    description:
+      'Custom fabrication jig developed for controlled and repeatable routing operations.',
+    imagePath: '/images/router jig v1.png',
+    link: '/projects/router-jig'
+  },
+  {
+    id: 'astm-testing-molds',
+    title: 'ASTM Testing Molds',
+    description:
+      'Custom molds developed for repeatable material specimen fabrication and mechanical testing.',
+    imagePath: '/images/Picture1.jpg',
+    link: '/projects/astm-testing-molds'
+  },
+  {
+    id: 'robotic-heat-gun-tool',
+    title: 'Robotic Heat Gun Tool',
+    description:
+      'Robot-mounted heating tool developed for controlled material forming experiments.',
+    imagePath: '',
+    link: '/projects/steam-bending-heat-tool'
   },
   {
     id: 'pneumatic-fixture-jig',
@@ -67,22 +91,6 @@ const projects = [
       'Custom pneumatic fixture developed for repeatable positioning and fabrication workflows.',
     imagePath: '',
     link: '/projects/pneumatic-fixture-jig'
-  },
-  {
-    id: 'router-jig',
-    title: 'Router Jig',
-    description:
-      'Custom fabrication jig developed for controlled and repeatable routing operations.',
-    imagePath: '',
-    link: '/projects/router-jig'
-  },
-  {
-    id: 'universal-testing-machine',
-    title: 'Universal Testing Machine',
-    description:
-      'Custom testing machine developed for quasi-static mechanical testing of fabricated connections.',
-    imagePath: '',
-    link: '/projects/universal-testing-machine'
   },
   {
     id: 'heat-press',
@@ -107,14 +115,6 @@ const projects = [
       'Custom storage rack designed and fabricated for Peloton weights.',
     imagePath: '',
     link: '/projects/peloton-weight-rack'
-  },
-  {
-    id: 'astm-testing-molds',
-    title: 'ASTM Testing Molds',
-    description:
-      'Custom molds developed for repeatable material specimen fabrication and mechanical testing.',
-    imagePath: '',
-    link: '/projects/astm-testing-molds'
   },
   {
     id: 'lignin-3d-printing-extruder',
