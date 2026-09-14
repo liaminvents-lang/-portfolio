@@ -210,6 +210,34 @@ export default function ReversibleWoodCompositesPage() {
       </section>
 
       {/* =====================================================
+          IN PROGRESS
+      ===================================================== */}
+
+      <section className="px-5 pb-8 sm:px-8 lg:px-12">
+        <div className="mx-auto w-full max-w-[1800px]">
+
+          <div className="border-y border-foreground/20 py-5">
+
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+
+              <p className="m-0 text-sm font-medium">
+                Research in progress
+              </p>
+
+              <p className="m-0 max-w-[760px] text-sm leading-[1.6] text-foreground/50">
+                This page documents ongoing thesis research and is still being
+                developed as material testing, analysis, and fabrication
+                continue.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* =====================================================
           METADATA
       ===================================================== */}
 
@@ -268,6 +296,74 @@ export default function ReversibleWoodCompositesPage() {
             <p className="m-0 mt-2 text-sm">
               ASTM-Based Testing
             </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =====================================================
+          ACKNOWLEDGEMENTS
+      ===================================================== */}
+
+      <section className="border-t border-foreground/20 px-5 py-10 sm:px-8 lg:px-12 lg:py-12">
+        <div className="mx-auto grid w-full max-w-[1800px] gap-10 lg:grid-cols-12">
+
+          <div className="lg:col-span-3">
+
+            <p className="m-0 text-sm text-foreground/40">
+              Acknowledgements
+            </p>
+
+          </div>
+
+          <div className="grid gap-8 lg:col-span-9 lg:grid-cols-2 lg:gap-x-16">
+
+            <div className="space-y-8">
+
+              <p className="m-0 text-sm leading-[1.65]">
+                Nicholas Hoban
+              </p>
+
+              <p className="m-0 text-sm leading-[1.65]">
+                Brian Slocum, Mitchell Akiyama, Maria Yablonina, David Correa,
+                Zachary Mollica, Safoura Zahedi, Vincent Hui, AnnaLisa Meyboom,
+                Paul Howard Harrison
+              </p>
+
+              <p className="m-0 text-sm leading-[1.65]">
+                Anna Geng, Aylin Hasanova, Chidubem Nwokeocha, Julia Paulson,
+                Talayeh Youssef Pour, Phina Tu, Prasham Shah, Jack Simon,
+                Julia Song, Larissa Sonnenberg, Emily Sun, Sling Velasquez,
+                Brian Wong, Ryan Yee
+              </p>
+
+            </div>
+
+            <div className="space-y-8">
+
+              <p className="m-0 text-sm leading-[1.65]">
+                Christoph Klemm, Abby Prasad, Paul Piascik, Benjamin Kuttner
+                and Mohini Sain
+              </p>
+
+              <p className="m-0 text-sm leading-[1.65]">
+                Rahul Sehijpaul, Paul Kozak, Alexander Gaskin, Amy George,
+                Joseph Rogal, Eugene Wang
+              </p>
+
+              <p className="m-0 text-sm leading-[1.65]">
+                Annie Song, Zhenxiao Yang, Pablo Espial, Micha Fairfax-Angood,
+                Ivan Makhno, Nicole Quesnelle, Yashara Abeysinghe, Sarah Mak,
+                Sandy Nguyen, Lui Sanchez-Ma, Oscar Young Kait Ma, Aaron Di
+                Giacomo
+              </p>
+
+              <p className="m-0 text-sm leading-[1.65]">
+                My Parents :)
+              </p>
+
+            </div>
+
           </div>
 
         </div>
@@ -811,8 +907,6 @@ export default function ReversibleWoodCompositesPage() {
 
           </div>
 
-          {/* PROCESS */}
-
           <div className="mt-20 grid gap-0 border-t border-foreground/20 sm:grid-cols-2 lg:grid-cols-4">
 
             {[
@@ -856,8 +950,6 @@ export default function ReversibleWoodCompositesPage() {
             ))}
 
           </div>
-
-          {/* STANDARD CONDITION */}
 
           <div className="mt-20 border-t border-foreground/20 pt-12">
 
@@ -938,8 +1030,6 @@ export default function ReversibleWoodCompositesPage() {
 
           </div>
 
-          {/* SPECIES */}
-
           <div className="mt-20">
 
             {speciesData.map((item, index) => (
@@ -968,8 +1058,6 @@ export default function ReversibleWoodCompositesPage() {
             <div className="border-t border-foreground/20" />
 
           </div>
-
-          {/* SPF */}
 
           <div className="mt-20 grid gap-10 border-t border-foreground/20 pt-14 lg:grid-cols-12">
 
@@ -1273,8 +1361,6 @@ export default function ReversibleWoodCompositesPage() {
 
           </div>
 
-          {/* FIBRE SIZE */}
-
           <div className="mt-20 grid gap-8 lg:grid-cols-3">
 
             <div className="border-t border-foreground/20 pt-6">
@@ -1323,8 +1409,6 @@ export default function ReversibleWoodCompositesPage() {
             </div>
 
           </div>
-
-          {/* SPECIMEN SERIES */}
 
           <div className="mt-24 border-t border-foreground/20 pt-14">
 
@@ -1410,8 +1494,6 @@ export default function ReversibleWoodCompositesPage() {
 
           </div>
 
-          {/* TEST TYPES */}
-
           <div className="mt-20 grid gap-10 lg:grid-cols-3">
 
             <div className="border-t border-foreground/20 pt-6">
@@ -1468,8 +1550,6 @@ export default function ReversibleWoodCompositesPage() {
             </div>
 
           </div>
-
-          {/* RESULT SUMMARY */}
 
           <div className="mt-24 border-t border-foreground/20 pt-14">
 
@@ -1596,8 +1676,6 @@ export default function ReversibleWoodCompositesPage() {
             </div>
 
           </div>
-
-          {/* REPROCESSING */}
 
           <div className="mt-24 border-t border-foreground/20 pt-14">
 
@@ -1748,8 +1826,6 @@ export default function ReversibleWoodCompositesPage() {
             <div className="border-t border-foreground/20" />
 
           </div>
-
-          {/* FINAL STATEMENT */}
 
           <div className="mt-24">
 

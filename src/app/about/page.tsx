@@ -72,6 +72,18 @@ const publications = [
     title: 'MannLab',
     description:
       'Collaborated on the development of an autonomous robotic sensing platform for water-quality monitoring, integrating navigation, environmental sensing, and responsive data collection. Research submitted to IEEE.'
+  },
+  {
+    type: 'Research Paper · Currently Writing',
+    title: 'Robotic Wire Tying for Discrete Assembly',
+    description:
+      'Currently developing a research paper on sensor-integrated robotic wire tying for automated connection-making, examining connection performance, process sensing, multi-robot assembly, and geometric stability.'
+  },
+  {
+    type: 'Research Paper · Currently Writing',
+    title: 'Reversible Wood Composites',
+    description:
+      'Currently developing a research paper on lignin-based reversible wood composites, investigating material behavior, fabrication parameters, and their potential for circular and reversible architectural assemblies.'
   }
 ];
 
