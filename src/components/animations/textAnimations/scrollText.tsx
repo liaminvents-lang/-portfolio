@@ -20,7 +20,18 @@ function LetterDisplay({ word }: { word: string }) {
   return word.split('').map((letter, index) => (
     <div
       key={index}
-      className="letter text-[64px] font-semibold leading-[0.88] xs:text-[78px] md:text-[105px] lg:text-[135px] xl:text-[165px] 2xl:text-[190px]"
+      className="
+        letter
+        text-[42px]
+        font-semibold
+        leading-[0.88]
+        xs:text-[46px]
+        sm:text-[58px]
+        md:text-[105px]
+        lg:text-[135px]
+        xl:text-[165px]
+        2xl:text-[190px]
+      "
       data-speed={getRandomSpeed()}
       data-rotation={getRandomRotation()}
     >
@@ -39,27 +50,15 @@ export function LetterCollision() {
     const ctx = gsap.context(() => {
       const letters = gsap.utils.toArray<HTMLElement>('.letter');
 
-      /*
-        One continuous scroll-controlled timeline.
-
-        1. Letters explode.
-        2. Whole exploded group moves upward.
-        3. Reverse happens immediately when scrolling upward.
-      */
-
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
           end: '+=850',
           scrub: 0.45,
-          invalidateOnRefresh: true
-        }
+          invalidateOnRefresh: true,
+        },
       });
-
-      /*
-        LETTER EXPLOSION
-      */
 
       letters.forEach((letter) => {
         const speed = parseFloat(letter.dataset.speed || '1');
@@ -71,39 +70,28 @@ export function LetterCollision() {
             y: (1 - speed) * window.innerHeight,
             rotation,
             ease: 'none',
-            duration: 0.45
+            duration: 0.45,
           },
           0
         );
       });
-
-      /*
-        PULL THE ENTIRE EXPLODED FIELD OFF SCREEN
-
-        Starts before the explosion is completely finished,
-        so the letters never sit frozen above the video.
-      */
 
       timeline.to(
         textRef.current,
         {
           y: -window.innerHeight * 1.15,
           ease: 'none',
-          duration: 0.55
+          duration: 0.55,
         },
         0.35
       );
-
-      /*
-        Fade slightly as it exits.
-      */
 
       timeline.to(
         textRef.current,
         {
           opacity: 0,
           ease: 'none',
-          duration: 0.2
+          duration: 0.2,
         },
         0.8
       );
@@ -121,17 +109,27 @@ export function LetterCollision() {
     >
       <div
         ref={textRef}
-        className="absolute bottom-[22vh] left-6 sm:left-10 md:left-14 lg:left-20"
+        className="
+          absolute
+          bottom-[20vh]
+          left-4
+          right-4
+          sm:bottom-[22vh]
+          sm:left-10
+          sm:right-auto
+          md:left-14
+          lg:left-20
+        "
       >
-        <div className="flex flex-wrap">
+        <div className="flex flex-nowrap whitespace-nowrap">
           <LetterDisplay word={line1} />
         </div>
 
-        <div className="flex flex-wrap">
+        <div className="flex flex-nowrap whitespace-nowrap">
           <LetterDisplay word={line2} />
         </div>
 
-        <div className="flex flex-wrap">
+        <div className="flex flex-nowrap whitespace-nowrap">
           <LetterDisplay word={line3} />
         </div>
       </div>
