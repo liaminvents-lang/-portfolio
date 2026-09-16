@@ -4,8 +4,8 @@ import { useLayoutEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const line1 = 'Architecture';
-const line2 = 'Robotics';
+const line1 = 'Robotics';
+const line2 = 'Fabrication';
 const line3 = 'Research';
 
 function getRandomSpeed() {

@@ -138,7 +138,7 @@ export default function Header() {
                 </Magnetic>
 
                 <Magnetic>
-                  <Link href="/side-projects">Side Projects</Link>
+                  <Link href="/development">Development</Link>
                 </Magnetic>
               </div>
             </div>
@@ -210,11 +210,11 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/side-projects"
+              href="/development"
               onClick={() => setLogoMenuOpen(false)}
               className="border-b border-black/10 py-2.5 text-[24px] font-normal leading-none tracking-[-0.03em] sm:text-[30px] lg:text-[42px]"
             >
-              Side Projects
+              Development
             </Link>
 
             <Link
