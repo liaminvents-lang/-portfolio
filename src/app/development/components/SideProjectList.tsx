@@ -43,11 +43,7 @@ const projects = [
     imagePath: '',
     link: '/projects/adaptive-pneumatic-gripper',
     comingSoon: true,
-    tags: [
-      'Hardware Integration',
-      'Universal Robots',
-      'Pneumatics',
-    ],
+    tags: ['Hardware Integration', 'Universal Robots', 'Pneumatics'],
   },
   {
     id: 'rebar-tying-tool',
@@ -86,7 +82,7 @@ const projects = [
       'Mobile steam-generation system developed for full-scale robotic wood bending experiments.',
     imagePath: '/images/wood steamer render.png',
     link: '/projects/custom-steamer',
-    comingSoon: true,
+    comingSoon: false,
     tags: ['Hardware Integration', 'Process Improvement'],
   },
   {
@@ -96,7 +92,7 @@ const projects = [
       'Custom testing machine developed for quasi-static mechanical testing of fabricated connections.',
     imagePath: '/images/Picture2.png',
     link: '/projects/universal-testing-machine',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'C++',
@@ -142,7 +138,7 @@ const projects = [
       'Custom molds developed for repeatable material specimen fabrication and mechanical testing.',
     imagePath: '/images/Picture1.jpg',
     link: '/projects/astm-testing-molds',
-    comingSoon: true,
+    comingSoon: false,
     tags: ['Hardware Integration'],
   },
   {
@@ -185,7 +181,7 @@ const projects = [
       'Custom extrusion system developed for experimental additive manufacturing with lignin-based materials.',
     imagePath: '',
     link: '/projects/lignin-3d-printing-extruder',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -198,9 +194,9 @@ const projects = [
     title: 'Heat Press',
     description:
       'Custom heated press developed for material research and fabrication of lignin-based wood composites.',
-    imagePath: '',
+    imagePath: '/images/IMG_2264 4.JPG',
     link: '/projects/heat-press',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -301,7 +297,7 @@ const projects = [
     title: 'Desktop Mini Fridge',
     description:
       'Custom desktop cooling system developed to improve temperature control, efficiency, size, and enclosure design.',
-    imagePath: '',
+    imagePath: '/images/fridge.png',
     link: '/projects/desktop-mini-fridge',
     comingSoon: false,
     tags: [
@@ -319,9 +315,9 @@ const projects = [
     title: 'Cable Diagnostic System',
     description:
       'Portable electronic diagnostic system developed for testing multiple cable standards through a touchscreen interface.',
-    imagePath: '',
+    imagePath: '/images/cabletest.png',
     link: '/projects/cable-diagnostic-system',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -339,7 +335,7 @@ const projects = [
       '3D-printed remote-controlled air boat integrating wireless communication, motor control, electronics, and fabrication.',
     imagePath: '',
     link: '/projects/nrf24-rc-air-boat',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -356,7 +352,7 @@ const projects = [
       'Wireless payload-release system developed for remote deployment from a drone.',
     imagePath: '',
     link: '/projects/drone-drop-system',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -373,7 +369,7 @@ const projects = [
       'Progression from a breadboard ATmega328P circuit to a permanent soldered standalone microcontroller board.',
     imagePath: '',
     link: '/projects/atmega328p-development-boards',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -387,9 +383,9 @@ const projects = [
     title: 'CHUMP Computer',
     description:
       'Custom 4-bit computer developed through clock, counter, EEPROM, ALU, memory, and control-system integration.',
-    imagePath: '',
+    imagePath: '/images/chump.png',
     link: '/projects/chump-computer',
-    comingSoon: true,
+    comingSoon: false,
     tags: ['Hardware Integration', 'Electronics'],
   },
   {
@@ -399,7 +395,7 @@ const projects = [
       'Two-microcontroller communication project developed around serial communication and LCD interfaces.',
     imagePath: '',
     link: '/projects/ask-uno',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -415,17 +411,17 @@ const projects = [
       'Compact analog electronics project developed to explore circuit assembly and SMT soldering.',
     imagePath: '',
     link: '/projects/pb-machine',
-    comingSoon: true,
+    comingSoon: false,
     tags: ['Hardware Integration', 'Electronics'],
   },
   {
-    id: 'mechanical',
-    title: 'Mechanical',
+    id: 'photogrammetry-turntable',
+    title: 'Photogrammetry Turntable',
     description:
-      'Electromechanical project developed to explore stepper motors and mechanically actuated systems.',
+      'Motorized photography turntable developed using stepper control, joystick input, LCD feedback, and a custom 3D-printed enclosure.',
     imagePath: '',
-    link: '/projects/mechanical',
-    comingSoon: true,
+    link: '/projects/photogrammetry-turntable',
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -440,7 +436,7 @@ const projects = [
       'Analog electronics exercise exploring voltage division and H-bridge circuit principles.',
     imagePath: '',
     link: '/projects/voltage-h-bridge',
-    comingSoon: true,
+    comingSoon: false,
     tags: ['Hardware Integration', 'Electronics'],
   },
   {
@@ -450,7 +446,7 @@ const projects = [
       'Analog circuit developed to visualize capacitor charging and timing behavior.',
     imagePath: '',
     link: '/projects/capacitor-visualizer',
-    comingSoon: true,
+    comingSoon: false,
     tags: ['Hardware Integration', 'Electronics'],
   },
   {
@@ -460,77 +456,27 @@ const projects = [
       'Transistor-based oscillator developed to explore switching, resistance, capacitance, and timing.',
     imagePath: '',
     link: '/projects/analog-oscillator',
-    comingSoon: true,
+    comingSoon: false,
     tags: ['Hardware Integration', 'Electronics'],
   },
   {
-    id: 'analog-input',
-    title: 'Analog Input',
+    id: 'digital-logic-counting',
+    title: 'Digital Logic & Counting Circuits',
     description:
-      'Electronics exercise exploring analog input signals and their use within a physical circuit.',
+      'Progressive digital electronics project exploring NAND logic, oscillation, decimal counting, binary counting, decoding, and seven-segment display output.',
     imagePath: '',
-    link: '/projects/analog-input',
-    comingSoon: true,
-    tags: ['Hardware Integration', 'Electronics'],
-  },
-  {
-    id: 'nand-gate-oscillator',
-    title: 'NAND Gate Oscillator',
-    description:
-      'Digital electronics exercise exploring oscillator behavior using NAND logic gates.',
-    imagePath: '',
-    link: '/projects/nand-gate-oscillator',
-    comingSoon: true,
-    tags: ['Hardware Integration', 'Electronics'],
-  },
-  {
-    id: 'decade-counter',
-    title: 'Decade Counter',
-    description:
-      'Digital logic project exploring sequential counting and electronic output control.',
-    imagePath: '',
-    link: '/projects/decade-counter',
-    comingSoon: true,
-    tags: ['Hardware Integration', 'Electronics'],
-  },
-  {
-    id: 'binary-up-down-counter',
-    title: 'Binary Up/Down Counter',
-    description:
-      'Digital logic circuit developed to explore bidirectional binary counting.',
-    imagePath: '',
-    link: '/projects/binary-up-down-counter',
-    comingSoon: true,
-    tags: ['Hardware Integration', 'Electronics'],
-  },
-  {
-    id: 'binary-decimal-decoder',
-    title: 'Binary Decimal Decoder',
-    description:
-      'Digital electronics project exploring the translation of binary signals into decimal outputs.',
-    imagePath: '',
-    link: '/projects/binary-decimal-decoder',
-    comingSoon: true,
-    tags: ['Hardware Integration', 'Electronics'],
-  },
-  {
-    id: 'seven-segment-display',
-    title: 'Seven Segment Display',
-    description:
-      'Digital electronics exercise exploring numeric display control and logic.',
-    imagePath: '',
-    link: '/projects/seven-segment-display',
-    comingSoon: true,
+    link: '/projects/digital-logic-counting',
+    comingSoon: false,
     tags: ['Hardware Integration', 'Electronics'],
   },
   {
     id: 'analog-noise-level-meter',
     title: 'Analog Noise Level Meter',
     description:
-      'Analog sound-level display developed using a microphone input and cascaded LED driver circuits.',
+      'Analog sound-level display developed using a microphone input and four cascaded LM3914 circuits driving a 40-LED display.',
     imagePath: '',
     link: '/projects/analog-noise-level-meter',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -541,10 +487,10 @@ const projects = [
     id: 'pin-change-interrupt',
     title: 'Pin Change Interrupt',
     description:
-      'Microcontroller-based combination safe developed using register-level programming and hardware interrupts.',
+      'Microcontroller-based combination safe developed using register-level programming, a rotary encoder, and hardware interrupts.',
     imagePath: '',
     link: '/projects/pin-change-interrupt',
-    comingSoon: true,
+    comingSoon: false,
     tags: [
       'Hardware Integration',
       'Electronics',
@@ -563,22 +509,33 @@ export default function SideProjectList({
   activeFilter,
 }: SideProjectListProps) {
   const sortedProjects = useMemo(() => {
-    if (activeFilter === 'All') {
-      return projects;
-    }
-
     return projects
       .map((project, originalIndex) => ({
         ...project,
         originalIndex,
       }))
       .sort((a, b) => {
-        const aMatches = a.tags.includes(activeFilter);
-        const bMatches = b.tags.includes(activeFilter);
+        // Active filter matches come first
+        if (activeFilter !== 'All') {
+          const aMatches = a.tags.includes(activeFilter);
+          const bMatches = b.tags.includes(activeFilter);
 
-        if (aMatches && !bMatches) return -1;
-        if (!aMatches && bMatches) return 1;
+          if (aMatches && !bMatches) return -1;
+          if (!aMatches && bMatches) return 1;
+        }
 
+        // Keep Rebar Tying Tool near the top
+        const aProtected = a.id === 'rebar-tying-tool';
+        const bProtected = b.id === 'rebar-tying-tool';
+
+        // Push every other Coming Soon project to the bottom
+        const aBottom = a.comingSoon && !aProtected;
+        const bBottom = b.comingSoon && !bProtected;
+
+        if (!aBottom && bBottom) return -1;
+        if (aBottom && !bBottom) return 1;
+
+        // Preserve original order otherwise
         return a.originalIndex - b.originalIndex;
       });
   }, [activeFilter]);
