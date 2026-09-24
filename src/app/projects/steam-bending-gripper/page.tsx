@@ -37,67 +37,67 @@ export default function SteamBendingGripperPage() {
           </div>
         </section>
 
-{/* METADATA */}
+        {/* METADATA */}
 
-<section className="border-y border-foreground/20 px-5 sm:px-8 lg:px-12">
-  <div className="mx-auto grid w-full max-w-[1800px] grid-cols-2 lg:grid-cols-5">
+        <section className="border-y border-foreground/20 px-5 sm:px-8 lg:px-12">
+          <div className="mx-auto grid w-full max-w-[1800px] grid-cols-2 lg:grid-cols-5">
 
-    <div className="border-r border-foreground/20 py-6 pr-5">
-      <p className="m-0 text-xs text-foreground/40">
-        Type
-      </p>
+            <div className="border-r border-foreground/20 py-6 pr-5">
+              <p className="m-0 text-xs text-foreground/40">
+                Type
+              </p>
 
-      <p className="m-0 mt-2 text-sm">
-        Robotic End-Effector
-      </p>
-    </div>
+              <p className="m-0 mt-2 text-sm">
+                Robotic End-Effector
+              </p>
+            </div>
 
-    <div className="border-r border-foreground/20 px-5 py-6">
-      <p className="m-0 text-xs text-foreground/40">
-        Robot
-      </p>
+            <div className="border-r border-foreground/20 px-5 py-6">
+              <p className="m-0 text-xs text-foreground/40">
+                Robot
+              </p>
 
-      <p className="m-0 mt-2 text-sm">
-        KUKA KR150
-      </p>
-    </div>
+              <p className="m-0 mt-2 text-sm">
+                KUKA KR150
+              </p>
+            </div>
 
-    <div className="border-r border-foreground/20 px-5 py-6">
-      <p className="m-0 text-xs text-foreground/40">
-        Application
-      </p>
+            <div className="border-r border-foreground/20 px-5 py-6">
+              <p className="m-0 text-xs text-foreground/40">
+                Application
+              </p>
 
-      <p className="m-0 mt-2 text-sm">
-        Steam Bending
-      </p>
-    </div>
+              <p className="m-0 mt-2 text-sm">
+                Steam Bending
+              </p>
+            </div>
 
-    <div className="border-r border-foreground/20 px-5 py-6">
-      <p className="m-0 text-xs text-foreground/40">
-        Control
-      </p>
+            <div className="border-r border-foreground/20 px-5 py-6">
+              <p className="m-0 text-xs text-foreground/40">
+                Control
+              </p>
 
-      <p className="m-0 mt-2 text-sm">
-        KUKA|prc / Omron PLC
-      </p>
-    </div>
+              <p className="m-0 mt-2 text-sm">
+                KUKA|prc / Omron PLC
+              </p>
+            </div>
 
-    <div className="px-5 py-6">
-  <p className="m-0 text-xs text-foreground/40">
-    Fabrication
-  </p>
+            <div className="px-5 py-6">
+              <p className="m-0 text-xs text-foreground/40">
+                Fabrication
+              </p>
 
-  <p className="m-0 mt-2 text-sm leading-[1.6]">
-    SLS Nylon 3D Printing
-    <br />
-    CNC Milling
-    <br />
-    Waterjet Cutting
-  </p>
-</div>
+              <p className="m-0 mt-2 text-sm leading-[1.6]">
+                SLS Nylon 3D Printing
+                <br />
+                CNC Milling
+                <br />
+                Waterjet Cutting
+              </p>
+            </div>
 
-  </div>
-</section>
+          </div>
+        </section>
 
         {/* SECTION 01 — TOOL ASSEMBLY */}
 
@@ -135,7 +135,6 @@ export default function SteamBendingGripperPage() {
 
           <ScrollVideo src="/videos/gripperexlpodedani.mp4" />
         </section>
-
 
         {/* SECTION 02 — DESIGN PROBLEM */}
 
@@ -184,21 +183,20 @@ export default function SteamBendingGripperPage() {
           </div>
         </section>
 
-
         {/* SECTION 03 — CLAMPING + FORCE DISTRIBUTION */}
 
         <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
           <div className="mx-auto w-full max-w-[1800px]">
             <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
 
-              {/* LEFT — DIAGRAM / IMAGE */}
+              {/* LEFT — IMAGE */}
 
               <div className="lg:col-span-6">
-                <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-                  <p className="text-sm text-foreground/30">
-                    Clamping assembly diagram / image
-                  </p>
-                </div>
+                <img
+                  src="/images/figure3.JPG"
+                  alt="Clamping assembly and force distribution"
+                  className="aspect-[4/3] w-full object-cover"
+                />
               </div>
 
               {/* RIGHT — TEXT */}
@@ -246,7 +244,6 @@ export default function SteamBendingGripperPage() {
           </div>
         </section>
 
-
         {/* SECTION 04 — MOTION + ACTUATION */}
 
         <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
@@ -292,20 +289,19 @@ export default function SteamBendingGripperPage() {
                 </div>
               </div>
 
-              {/* RIGHT — DIAGRAM / IMAGE */}
+              {/* RIGHT — IMAGE */}
 
               <div className="lg:col-span-6">
-                <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-                  <p className="text-sm text-foreground/30">
-                    Pneumatic cylinder + linear rail diagram / image
-                  </p>
-                </div>
+                <img
+                  src="/images/figure4.png"
+                  alt="Pneumatic cylinder and linear rail system"
+                  className="aspect-[4/3] w-full object-cover"
+                />
               </div>
 
             </div>
           </div>
         </section>
-
 
         {/* SECTION 05 — PNEUMATIC CONTROL */}
 
@@ -313,14 +309,14 @@ export default function SteamBendingGripperPage() {
           <div className="mx-auto w-full max-w-[1800px]">
             <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
 
-              {/* LEFT — DIAGRAM / IMAGE */}
+              {/* LEFT — IMAGE */}
 
               <div className="lg:col-span-6">
-                <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-                  <p className="text-sm text-foreground/30">
-                    Pneumatic control + PLC diagram / image
-                  </p>
-                </div>
+                <img
+                  src="/images/figure5.png"
+                  alt="Pneumatic control and PLC integration"
+                  className="aspect-[4/3] w-full object-cover"
+                />
               </div>
 
               {/* RIGHT — TEXT */}
@@ -364,7 +360,6 @@ export default function SteamBendingGripperPage() {
             </div>
           </div>
         </section>
-
 
         {/* SECTION 06 — TOOL BODY + FABRICATION */}
 
@@ -412,14 +407,14 @@ export default function SteamBendingGripperPage() {
                 </div>
               </div>
 
-              {/* RIGHT — EXPLODED ASSEMBLY */}
+              {/* RIGHT — IMAGE */}
 
               <div className="lg:col-span-6">
-                <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-                  <p className="text-sm text-foreground/30">
-                    Complete exploded assembly diagram
-                  </p>
-                </div>
+                <img
+                  src="/images/figure6.JPG"
+                  alt="Tool body and fabricated gripper assembly"
+                  className="aspect-[4/3] w-full object-cover"
+                />
               </div>
 
             </div>
@@ -428,71 +423,70 @@ export default function SteamBendingGripperPage() {
 
         {/* SECTION 07 — WORKFLOW ADAPTATION */}
 
-<section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
-  <div className="mx-auto w-full max-w-[1800px]">
-    <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
+        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+          <div className="mx-auto w-full max-w-[1800px]">
+            <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
 
-      {/* LEFT — DIAGRAM / IMAGE */}
+              {/* LEFT — IMAGE */}
 
-      <div className="lg:col-span-6">
-        <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-          <p className="text-sm text-foreground/30">
-            Compression strap + final gripper configuration
-          </p>
-        </div>
-      </div>
+              <div className="lg:col-span-6">
+                <img
+                  src="/images/figure7.JPG"
+                  alt="Compression strap and final gripper configuration"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
 
-      {/* RIGHT — TEXT */}
+              {/* RIGHT — TEXT */}
 
-      <div className="lg:col-span-6">
-        <p className="m-0 text-sm text-foreground/40">
-          07
-        </p>
+              <div className="lg:col-span-6">
+                <p className="m-0 text-sm text-foreground/40">
+                  07
+                </p>
 
-        <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
-          Workflow Adaptation + Compression Strap
-        </h2>
+                <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
+                  Workflow Adaptation + Compression Strap
+                </h2>
 
-        <p className="m-0 mt-10 max-w-[800px] text-3xl font-normal leading-[1.25] sm:text-4xl">
-          As the steam-bending workflow developed, the introduction of a
-          compression strap changed how the timber needed to be held and
-          required the gripper to adapt around the new assembly.
-        </p>
+                <p className="m-0 mt-10 max-w-[800px] text-3xl font-normal leading-[1.25] sm:text-4xl">
+                  As the steam-bending workflow developed, the introduction of a
+                  compression strap changed how the timber needed to be held and
+                  required the gripper to adapt around the new assembly.
+                </p>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2">
+                <div className="mt-12 grid gap-8 sm:grid-cols-2">
 
-          <p className="m-0 text-base leading-[1.7]">
-            The compression strap was introduced to support the timber
-            during bending and reduce material failure. This added a new
-            physical layer around the workpiece, meaning the gripper could
-            no longer interact with the timber in the same way as the
-            original configuration.
-          </p>
+                  <p className="m-0 text-base leading-[1.7]">
+                    The compression strap was introduced to support the timber
+                    during bending and reduce material failure. This added a new
+                    physical layer around the workpiece, meaning the gripper could
+                    no longer interact with the timber in the same way as the
+                    original configuration.
+                  </p>
 
-          <div>
-            <p className="m-0 text-base leading-[1.7] text-foreground/60">
-              The final gripper configuration was therefore designed to grip
-              the assembly at the centre of the compression strap. This
-              maintained a stable connection to the workpiece while allowing
-              the strap and timber to function together as a single bending
-              assembly throughout robotic manipulation.
-            </p>
+                  <div>
+                    <p className="m-0 text-base leading-[1.7] text-foreground/60">
+                      The final gripper configuration was therefore designed to grip
+                      the assembly at the centre of the compression strap. This
+                      maintained a stable connection to the workpiece while allowing
+                      the strap and timber to function together as a single bending
+                      assembly throughout robotic manipulation.
+                    </p>
 
-            <Link
-              href="/projects/compression-strap"
-              className="mt-8 inline-block border-b border-foreground pb-1 text-sm transition-opacity hover:opacity-50"
-            >
-              View Compression Strap ↗
-            </Link>
+                    <Link
+                      href="/projects/compression-strap"
+                      className="mt-8 inline-block border-b border-foreground pb-1 text-sm transition-opacity hover:opacity-50"
+                    >
+                      View Compression Strap ↗
+                    </Link>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
           </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+        </section>
 
         {/* MAIN RESEARCH PROJECT */}
 

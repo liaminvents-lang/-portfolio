@@ -113,7 +113,9 @@ export default function About() {
     <div className="relative overflow-hidden">
       <Layout title="">
         <div>
-          {/* HEADER */}
+          {/* =====================================================
+              HEADER
+          ===================================================== */}
 
           <section className="px-5 pb-10 pt-4">
             <h1 className="m-0 text-5xl font-normal tracking-tight lg:text-7xl">
@@ -138,7 +140,9 @@ export default function About() {
 
           <div className="mx-5 border-t border-foreground/40" />
 
-          {/* INTRO */}
+          {/* =====================================================
+              INTRO
+          ===================================================== */}
 
           <section className="grid items-center gap-10 px-5 py-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
             <AnimatedSection animation="fade-right">
@@ -154,57 +158,37 @@ export default function About() {
               </div>
             </AnimatedSection>
 
-            <div className="space-y-8">
+            <div className="max-w-[1050px] space-y-6">
               <AnimatedSection animation="fade-up">
                 <TextReveal
-                  text="I work across architecture, robotics, fabrication, material research, and visual storytelling. I’m interested in how design ideas move from drawings and code into physical systems, prototypes, and built experiences."
-                  className="text-xl font-medium leading-relaxed text-foreground/90 sm:text-2xl"
+                  text="I’m a designer and builder working across robotics, automation, and digital fabrication. I’m especially interested in taking processes traditionally done by hand and translating them into robotic systems. My background in architecture has shaped how I approach these problems, combining design thinking with hands-on engineering, programming, fabrication, and testing. I enjoy working across the entire process, from an initial idea to a physical system that actually works."
+                  className="text-xl font-medium leading-[1.5] text-foreground/90 sm:text-2xl"
                   as="p"
                   highlightWords={[
                     'robotics',
-                    'fabrication',
-                    'material',
-                    'physical'
+                    'automation',
+                    'digital fabrication',
+                    'architecture',
+                    'engineering',
+                    'programming',
+                    'fabrication'
                   ]}
                   scrub={false}
                 />
               </AnimatedSection>
 
               <AnimatedSection animation="fade-up" delay={0.1}>
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    What I Work On
-                  </h3>
-
-                  <p className="leading-relaxed text-foreground/70">
-                    My work sits between architecture, computational design,
-                    robotic fabrication, material systems, and visual
-                    storytelling. I’m especially interested in projects that
-                    move beyond representation and become something that can be
-                    tested, built, documented, and refined.
-                  </p>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection animation="fade-up" delay={0.2}>
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    Outside the Studio
-                  </h3>
-
-                  <p className="leading-relaxed text-foreground/70">
-                    Outside of architecture, I spend time filming,
-                    photographing, travelling, and documenting projects. I’m
-                    drawn to the overlap between design, technology,
-                    storytelling, and making things that feel considered and
-                    memorable.
-                  </p>
-                </div>
+                <p className="m-0 max-w-[800px] text-base leading-[1.6] text-foreground/60">
+                  I’m drawn to ambitious problems, fast iteration, and building
+                  things that haven’t been done before.
+                </p>
               </AnimatedSection>
             </div>
           </section>
 
-          {/* EXPERIENCE / PUBLICATIONS / CERTIFICATIONS / EDUCATION */}
+          {/* =====================================================
+              EXPERIENCE / PUBLICATIONS / CERTIFICATIONS / EDUCATION
+          ===================================================== */}
 
           <section id="experience" className="py-16">
             <AnimatedSection animation="fade-up">
@@ -390,11 +374,16 @@ export default function About() {
                       </div>
                     </AnimatedSection>
 
-                    {/* TOOLS */}
+                    {/* =====================================================
+                        TOOLS
+                        Route matches:
+                        src/app/about/tools/page.tsx
+                        → /about/tools
+                    ===================================================== */}
 
                     <AnimatedSection animation="fade-up" delay={0.3}>
                       <Link
-                        href="/tools"
+                        href="/about/tools"
                         className="group flex items-center justify-between rounded-2xl border border-foreground/5 bg-white p-6 shadow-sm transition-all duration-300 hover:border-foreground/15 sm:p-8"
                       >
                         <div>

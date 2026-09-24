@@ -31,15 +31,11 @@ export function ProjectCard({
   const isUTM = imagePath === '/images/Picture2.png';
 
   const card = (
-    <div className="group h-full overflow-hidden rounded-2xl border border-foreground/10 bg-background shadow-sm">
+    <div className="group h-full overflow-hidden rounded-2xl border border-foreground/10 bg-white shadow-sm">
 
       {/* IMAGE */}
 
-      <div
-        className={`relative aspect-[4/3] w-full overflow-hidden ${
-          isGripper || isUTM ? 'bg-white' : 'bg-foreground/[0.03]'
-        }`}
-      >
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
         {imagePath ? (
           <Image
             src={imagePath}
@@ -55,7 +51,7 @@ export function ProjectCard({
             }
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center">
+          <div className="flex h-full w-full items-center justify-center bg-white">
             <p className="text-sm text-foreground/30">
               No image
             </p>
@@ -65,7 +61,7 @@ export function ProjectCard({
 
       {/* CONTENT */}
 
-      <div className="flex min-h-[280px] flex-col p-6 sm:p-8">
+      <div className="flex min-h-[280px] flex-col bg-white p-6 sm:p-8">
 
         <h2 className="m-0 text-2xl font-semibold leading-[1.1] tracking-tight">
           {title}
