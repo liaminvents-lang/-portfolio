@@ -10,6 +10,22 @@ export default function CustomSteamerPage() {
       <main className="w-full">
 
         {/* =====================================================
+            HERO VIDEO
+        ===================================================== */}
+
+        <section className="w-full">
+          <video
+            src="/videos/bendingspedup.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="h-auto w-full"
+          />
+        </section>
+
+        {/* =====================================================
             INTRO
         ===================================================== */}
 
@@ -46,43 +62,23 @@ export default function CustomSteamerPage() {
           <div className="mx-auto grid w-full max-w-[1800px] grid-cols-2 lg:grid-cols-5">
 
             <div className="border-r border-foreground/20 py-6 pr-5">
-              <p className="m-0 text-xs text-foreground/40">
-                Type
-              </p>
-
-              <p className="m-0 mt-2 text-sm">
-                Fabrication Tool
-              </p>
+              <p className="m-0 text-xs text-foreground/40">Type</p>
+              <p className="m-0 mt-2 text-sm">Fabrication Tool</p>
             </div>
 
             <div className="border-r border-foreground/20 px-5 py-6">
-              <p className="m-0 text-xs text-foreground/40">
-                Application
-              </p>
-
-              <p className="m-0 mt-2 text-sm">
-                Timber Steam Bending
-              </p>
+              <p className="m-0 text-xs text-foreground/40">Application</p>
+              <p className="m-0 mt-2 text-sm">Timber Steam Bending</p>
             </div>
 
             <div className="border-r border-foreground/20 px-5 py-6">
-              <p className="m-0 text-xs text-foreground/40">
-                Course
-              </p>
-
-              <p className="m-0 mt-2 text-sm">
-                ARC380
-              </p>
+              <p className="m-0 text-xs text-foreground/40">Course</p>
+              <p className="m-0 mt-2 text-sm">ARC380</p>
             </div>
 
             <div className="border-r border-foreground/20 px-5 py-6">
-              <p className="m-0 text-xs text-foreground/40">
-                Year
-              </p>
-
-              <p className="m-0 mt-2 text-sm">
-                2024
-              </p>
+              <p className="m-0 text-xs text-foreground/40">Year</p>
+              <p className="m-0 mt-2 text-sm">2024</p>
             </div>
 
             <div className="px-5 py-6">
@@ -109,9 +105,7 @@ export default function CustomSteamerPage() {
             <div className="mx-auto grid w-full max-w-[1800px] gap-8 lg:grid-cols-12">
 
               <div className="lg:col-span-3">
-                <p className="m-0 text-sm text-foreground/40">
-                  01
-                </p>
+                <p className="m-0 text-sm text-foreground/40">01</p>
 
                 <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
                   Tool Assembly
@@ -147,9 +141,7 @@ export default function CustomSteamerPage() {
             <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
 
               <div className="lg:col-span-3">
-                <p className="m-0 text-sm text-foreground/40">
-                  02
-                </p>
+                <p className="m-0 text-sm text-foreground/40">02</p>
 
                 <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
                   Design Problem
@@ -209,9 +201,7 @@ export default function CustomSteamerPage() {
               </div>
 
               <div className="lg:col-span-6">
-                <p className="m-0 text-sm text-foreground/40">
-                  03
-                </p>
+                <p className="m-0 text-sm text-foreground/40">03</p>
 
                 <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
                   Chamber Construction
@@ -258,9 +248,7 @@ export default function CustomSteamerPage() {
             <div className="grid items-center gap-16 lg:grid-cols-12 lg:gap-16">
 
               <div className="lg:col-span-6">
-                <p className="m-0 text-sm text-foreground/40">
-                  04
-                </p>
+                <p className="m-0 text-sm text-foreground/40">04</p>
 
                 <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
                   Steam Delivery + Condensation
@@ -393,6 +381,8 @@ export default function CustomSteamerPage() {
 
                   <div className="mt-5 grid gap-5 sm:grid-cols-3">
 
+                    {/* LEFT */}
+
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src="/images/IMG_9150.JPG"
@@ -401,21 +391,23 @@ export default function CustomSteamerPage() {
                       />
                     </div>
 
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <img
-                        src="/images/IMG_9151.JPG"
-                        alt="Drip tray forming"
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-
-                    {/* ROTATED 90 DEGREES */}
+                    {/* MIDDLE — ROTATED 90° */}
 
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
+                        src="/images/IMG_9151.JPG"
+                        alt="Drip tray forming"
+                        className="absolute left-1/2 top-1/2 h-[133.333%] w-[75%] max-w-none -translate-x-1/2 -translate-y-1/2 rotate-90 object-cover"
+                      />
+                    </div>
+
+                    {/* RIGHT */}
+
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
                         src="/images/IMG_9152.JPG"
                         alt="Drip tray fabrication"
-                        className="absolute left-1/2 top-1/2 h-[133.333%] w-[75%] max-w-none -translate-x-1/2 -translate-y-1/2 rotate-90 object-cover"
+                        className="h-full w-full object-cover"
                       />
                     </div>
 
@@ -443,15 +435,13 @@ export default function CustomSteamerPage() {
                   <img
                     src="/images/IMG_9129.JPG"
                     alt="Wood steamer cart configuration"
-                    className="h-full w-full object-cover object-[center_15%]"
+                    className="h-full w-full object-cover object-[center_85%]"
                   />
                 </div>
               </div>
 
               <div className="lg:col-span-6">
-                <p className="m-0 text-sm text-foreground/40">
-                  05
-                </p>
+                <p className="m-0 text-sm text-foreground/40">05</p>
 
                 <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
                   Cart Configuration
@@ -496,9 +486,7 @@ export default function CustomSteamerPage() {
             <div className="grid items-center gap-16 lg:grid-cols-12 lg:gap-16">
 
               <div className="lg:col-span-6">
-                <p className="m-0 text-sm text-foreground/40">
-                  06
-                </p>
+                <p className="m-0 text-sm text-foreground/40">06</p>
 
                 <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
                   Thermal Testing
@@ -566,9 +554,7 @@ export default function CustomSteamerPage() {
               </div>
 
               <div className="lg:col-span-6">
-                <p className="m-0 text-sm text-foreground/40">
-                  07
-                </p>
+                <p className="m-0 text-sm text-foreground/40">07</p>
 
                 <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
                   Final Tool
