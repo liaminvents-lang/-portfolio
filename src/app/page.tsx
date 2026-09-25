@@ -69,6 +69,69 @@ const slider1 = [
     src: 'RSGC-0421 3.JPG',
     href: '/projects/lucid-frequencies',
   },
+
+  /* NEW */
+
+  {
+    color: 'white',
+    src: 'wood steamer render.png',
+    href: '/projects/robotic-steam-bending',
+  },
+  {
+    color: 'white',
+    src: 'wiretie.jpg',
+    href: '/projects/robotic-wire-tying',
+  },
+  {
+    color: 'white',
+    src: 'urgriprender.png',
+    href: '/side-projects',
+  },
+  {
+    color: 'white',
+    src: 'swingylight.png',
+    href: '/side-projects',
+  },
+  {
+    color: 'white',
+    src: 'router jig v1.png',
+    href: '/side-projects',
+  },
+  {
+    color: 'white',
+    src: 'rebartiethumb.png',
+    href: '/projects/robotic-wire-tying',
+  },
+  {
+    color: 'white',
+    src: 'mewsthumb1.png',
+    href: '/projects/learning-through-london-mews',
+  },
+  {
+    color: 'white',
+    src: 'lignignextruderthumb.png',
+    href: '/side-projects',
+  },
+  {
+    color: 'white',
+    src: 'heatpressthumb.png',
+    href: '/side-projects',
+  },
+  {
+    color: 'white',
+    src: 'DSC03581.jpg',
+    href: '/projects',
+  },
+  {
+    color: 'white',
+    src: 'acadiafinalwide.png',
+    href: '/projects/robotic-steam-bending',
+  },
+  {
+    color: 'white',
+    src: '280tower1.png',
+    href: '/projects/solar-responsive-tower',
+  },
 ];
 
 const slider2 = [
@@ -131,6 +194,39 @@ const slider2 = [
     color: 'white',
     src: 'Picture1.jpg',
     href: '/projects/reversible-wood-composites',
+  },
+
+  /* NEW */
+
+  {
+    color: 'white',
+    src: 'wiretie.png',
+    href: '/projects/robotic-wire-tying',
+  },
+  {
+    color: 'white',
+    src: 'ligningdogbones.jpg',
+    href: '/projects/reversible-wood-composites',
+  },
+  {
+    color: 'white',
+    src: 'IMG_9120 2.JPG',
+    href: '/projects',
+  },
+  {
+    color: 'white',
+    src: 'DSC08431.JPG',
+    href: '/projects',
+  },
+  {
+    color: 'white',
+    src: 'clayphoto.png',
+    href: '/projects',
+  },
+  {
+    color: 'white',
+    src: 'acadia fig1.png',
+    href: '/projects/robotic-steam-bending',
   },
 ];
 
