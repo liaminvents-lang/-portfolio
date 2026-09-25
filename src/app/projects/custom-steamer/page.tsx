@@ -9,7 +9,9 @@ export default function CustomSteamerPage() {
     <Layout title="">
       <main className="w-full">
 
-        {/* INTRO */}
+        {/* =====================================================
+            INTRO
+        ===================================================== */}
 
         <section className="px-5 pb-20 pt-32 sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
           <div className="mx-auto w-full max-w-[1800px]">
@@ -36,7 +38,9 @@ export default function CustomSteamerPage() {
           </div>
         </section>
 
-        {/* METADATA */}
+        {/* =====================================================
+            METADATA
+        ===================================================== */}
 
         <section className="border-y border-foreground/20 px-5 sm:px-8 lg:px-12">
           <div className="mx-auto grid w-full max-w-[1800px] grid-cols-2 lg:grid-cols-5">
@@ -96,7 +100,9 @@ export default function CustomSteamerPage() {
           </div>
         </section>
 
-        {/* SECTION 01 — TOOL ASSEMBLY */}
+        {/* =====================================================
+            01 — TOOL ASSEMBLY
+        ===================================================== */}
 
         <section className="pt-20 lg:pt-28">
           <div className="px-5 pb-12 sm:px-8 lg:px-12">
@@ -132,7 +138,9 @@ export default function CustomSteamerPage() {
           <ScrollVideo src="/videos/wood steamer v14.mp4" />
         </section>
 
-        {/* SECTION 02 — DESIGN PROBLEM */}
+        {/* =====================================================
+            02 — DESIGN PROBLEM
+        ===================================================== */}
 
         <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
           <div className="mx-auto w-full max-w-[1800px]">
@@ -178,23 +186,27 @@ export default function CustomSteamerPage() {
           </div>
         </section>
 
-        {/* SECTION 03 — CHAMBER CONSTRUCTION */}
+        {/* =====================================================
+            03 — CHAMBER CONSTRUCTION
+        ===================================================== */}
 
-        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
           <div className="mx-auto w-full max-w-[1800px]">
-            <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
-
-              {/* LEFT — FIGURE PLACEHOLDER */}
+            <div className="grid items-center gap-16 lg:grid-cols-12 lg:gap-16">
 
               <div className="lg:col-span-6">
-                <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-                  <p className="text-sm text-foreground/30">
-                    Chamber section / construction figure
-                  </p>
+                <div className="flex aspect-[4/3] items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/explodedmaterials.png"
+                    alt="Exploded material assembly of the wood steamer chamber"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
-              </div>
 
-              {/* RIGHT — TEXT */}
+                <p className="m-0 mt-3 text-xs text-foreground/40">
+                  Exploded chamber material assembly
+                </p>
+              </div>
 
               <div className="lg:col-span-6">
                 <p className="m-0 text-sm text-foreground/40">
@@ -216,8 +228,8 @@ export default function CustomSteamerPage() {
                   <p className="m-0 text-base leading-[1.7]">
                     Wood walls and marine-grade plywood form the chamber
                     enclosure around a foam insulation layer. The door is held
-                    shut with a mechanical latch while still remaining
-                    accessible for loading and unloading timber.
+                    shut with a mechanical latch while remaining accessible for
+                    loading and unloading timber.
                   </p>
 
                   <p className="m-0 text-base leading-[1.7] text-foreground/60">
@@ -234,13 +246,16 @@ export default function CustomSteamerPage() {
           </div>
         </section>
 
-        {/* SECTION 04 — STEAM DELIVERY + CONDENSATION */}
+        {/* =====================================================
+            04 — STEAM DELIVERY + CONDENSATION
+        ===================================================== */}
 
-        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
           <div className="mx-auto w-full max-w-[1800px]">
-            <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
 
-              {/* LEFT — TEXT */}
+            {/* SECTION INTRO */}
+
+            <div className="grid items-center gap-16 lg:grid-cols-12 lg:gap-16">
 
               <div className="lg:col-span-6">
                 <p className="m-0 text-sm text-foreground/40">
@@ -275,37 +290,163 @@ export default function CustomSteamerPage() {
                 </div>
               </div>
 
-              {/* RIGHT — FIGURE PLACEHOLDER */}
-
               <div className="lg:col-span-6">
-                <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-                  <p className="text-sm text-foreground/30">
-                    Steam delivery + drainage figure
-                  </p>
+                <div className="flex aspect-[4/3] items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/steamer.png"
+                    alt="Steam generator used for the wood steamer"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
+
+                <p className="m-0 mt-3 text-xs text-foreground/40">
+                  Steam generator
+                </p>
               </div>
 
             </div>
+
+            {/* =================================================
+                04.1 — PIPING + INSULATION
+            ================================================= */}
+
+            <div className="mt-24 lg:mt-32">
+              <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+
+                <div className="lg:col-span-3">
+                  <p className="m-0 text-sm text-foreground/40">
+                    04.1
+                  </p>
+
+                  <h3 className="m-0 mt-3 text-2xl font-normal tracking-tight">
+                    Piping + Insulation
+                  </h3>
+
+                  <p className="m-0 mt-6 max-w-[340px] text-sm leading-[1.7] text-foreground/60">
+                    The steam supply was routed from the generator into the
+                    chamber and insulated to reduce heat loss before the vapour
+                    reached the internal distribution system.
+                  </p>
+                </div>
+
+                {/* SQUARE IMAGES */}
+
+                <div className="grid gap-5 sm:grid-cols-2 lg:col-span-9">
+
+                  <div className="aspect-square w-full overflow-hidden">
+                    <img
+                      src="/images/IMG_9082.JPG"
+                      alt="Wood steamer piping"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+
+                  <div className="aspect-square w-full overflow-hidden">
+                    <img
+                      src="/images/IMG_9087.JPG"
+                      alt="Insulated wood steamer piping"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            {/* =================================================
+                04.2 — DRIP TRAY
+            ================================================= */}
+
+            <div className="mt-24 lg:mt-32">
+              <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+
+                <div className="lg:col-span-3">
+                  <p className="m-0 text-sm text-foreground/40">
+                    04.2
+                  </p>
+
+                  <h3 className="m-0 mt-3 text-2xl font-normal tracking-tight">
+                    Drip Tray
+                  </h3>
+
+                  <p className="m-0 mt-6 max-w-[340px] text-sm leading-[1.7] text-foreground/60">
+                    A dedicated tray beneath the chamber collects condensation
+                    produced during steaming and directs water away from the
+                    timber enclosure and supporting cart.
+                  </p>
+                </div>
+
+                <div className="lg:col-span-9">
+
+                  {/* INSTALLED DRIP TRAY */}
+
+                  <div className="aspect-[16/8] overflow-hidden">
+                    <img
+                      src="/images/IMG_3162.JPG"
+                      alt="Drip tray installed beneath the wood steamer"
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+
+                  {/* FABRICATION */}
+
+                  <div className="mt-5 grid gap-5 sm:grid-cols-3">
+
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src="/images/IMG_9150.JPG"
+                        alt="Drip tray layout"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src="/images/IMG_9151.JPG"
+                        alt="Drip tray forming"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+
+                    {/* ROTATED 90 DEGREES */}
+
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <img
+                        src="/images/IMG_9152.JPG"
+                        alt="Drip tray fabrication"
+                        className="absolute left-1/2 top-1/2 h-[133.333%] w-[75%] max-w-none -translate-x-1/2 -translate-y-1/2 rotate-90 object-cover"
+                      />
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </section>
 
-        {/* SECTION 05 — CART CONFIGURATION */}
+        {/* =====================================================
+            05 — CART CONFIGURATION
+        ===================================================== */}
 
-        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
           <div className="mx-auto w-full max-w-[1800px]">
-            <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
 
-              {/* LEFT — FIGURE PLACEHOLDER */}
+            <div className="grid items-center gap-16 lg:grid-cols-12 lg:gap-16">
 
               <div className="lg:col-span-6">
-                <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-                  <p className="text-sm text-foreground/30">
-                    Complete cart configuration figure
-                  </p>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src="/images/IMG_9129.JPG"
+                    alt="Wood steamer cart configuration"
+                    className="h-full w-full object-cover object-[center_15%]"
+                  />
                 </div>
               </div>
-
-              {/* RIGHT — TEXT */}
 
               <div className="lg:col-span-6">
                 <p className="m-0 text-sm text-foreground/40">
@@ -316,7 +457,7 @@ export default function CustomSteamerPage() {
                   Cart Configuration
                 </h2>
 
-                <p className="m-0 mt-10 max-w-[800px] text-3xl font-normal leading-[1.25] sm:text-4xl">
+                <p className="m-0 mt-10 max-w-[760px] text-3xl font-normal leading-[1.25] sm:text-4xl">
                   The support frame organizes the complete steaming setup into
                   a mobile footprint that can move between fabrication tasks.
                 </p>
@@ -341,16 +482,18 @@ export default function CustomSteamerPage() {
               </div>
 
             </div>
+
           </div>
         </section>
 
-        {/* SECTION 06 — THERMAL TESTING */}
+        {/* =====================================================
+            06 — THERMAL TESTING
+        ===================================================== */}
 
-        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
           <div className="mx-auto w-full max-w-[1800px]">
-            <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
 
-              {/* LEFT — TEXT */}
+            <div className="grid items-center gap-16 lg:grid-cols-12 lg:gap-16">
 
               <div className="lg:col-span-6">
                 <p className="m-0 text-sm text-foreground/40">
@@ -361,7 +504,7 @@ export default function CustomSteamerPage() {
                   Thermal Testing
                 </h2>
 
-                <p className="m-0 mt-10 max-w-[800px] text-3xl font-normal leading-[1.25] sm:text-4xl">
+                <p className="m-0 mt-10 max-w-[760px] text-3xl font-normal leading-[1.25] sm:text-4xl">
                   Thermal imaging was used to inspect the chamber and supply
                   system while the steamer was operating.
                 </p>
@@ -377,44 +520,50 @@ export default function CustomSteamerPage() {
                   <p className="m-0 text-base leading-[1.7] text-foreground/60">
                     The test was used as a qualitative check for visible heat
                     loss and temperature differences across the system. It was
-                    not treated as a calibrated measurement of the chamber&apos;s
-                    internal temperature distribution.
+                    not treated as a calibrated measurement of the
+                    chamber&apos;s internal temperature distribution.
                   </p>
 
                 </div>
               </div>
 
-              {/* RIGHT — FIGURE PLACEHOLDER */}
-
               <div className="lg:col-span-6">
-                <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-                  <p className="text-sm text-foreground/30">
-                    FLIR thermal test figure
-                  </p>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src="/images/IMG_9140.JPG"
+                    alt="FLIR thermal imaging of the wood steamer"
+                    className="h-full w-full object-cover object-center"
+                  />
                 </div>
+
+                <p className="m-0 mt-3 text-xs text-foreground/40">
+                  Thermal imaging during operation
+                </p>
               </div>
 
             </div>
+
           </div>
         </section>
 
-        {/* SECTION 07 — FINAL TOOL */}
+        {/* =====================================================
+            07 — FINAL TOOL
+        ===================================================== */}
 
-        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+        <section className="px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
           <div className="mx-auto w-full max-w-[1800px]">
-            <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
 
-              {/* LEFT — FIGURE PLACEHOLDER */}
+            <div className="grid items-center gap-16 lg:grid-cols-12 lg:gap-16">
 
               <div className="lg:col-span-6">
-                <div className="flex aspect-[4/3] w-full items-center justify-center border border-foreground/20 bg-foreground/[0.02]">
-                  <p className="text-sm text-foreground/30">
-                    Finished steamer cart image
-                  </p>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src="/images/IMG_3157.JPG"
+                    alt="Completed custom wood steamer cart"
+                    className="h-full w-full object-cover object-center"
+                  />
                 </div>
               </div>
-
-              {/* RIGHT — TEXT */}
 
               <div className="lg:col-span-6">
                 <p className="m-0 text-sm text-foreground/40">
@@ -425,7 +574,7 @@ export default function CustomSteamerPage() {
                   Final Tool
                 </h2>
 
-                <p className="m-0 mt-10 max-w-[800px] text-3xl font-normal leading-[1.25] sm:text-4xl">
+                <p className="m-0 mt-10 max-w-[760px] text-3xl font-normal leading-[1.25] sm:text-4xl">
                   The completed cart provided a dedicated conditioning tool for
                   repeated timber steam-bending experiments.
                 </p>
@@ -448,10 +597,13 @@ export default function CustomSteamerPage() {
               </div>
 
             </div>
+
           </div>
         </section>
 
-        {/* MAIN RESEARCH PROJECT */}
+        {/* =====================================================
+            MAIN RESEARCH PROJECT
+        ===================================================== */}
 
         <section className="border-t border-foreground/20 px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
           <div className="mx-auto flex w-full max-w-[1800px] flex-col justify-between gap-8 sm:flex-row sm:items-end">
