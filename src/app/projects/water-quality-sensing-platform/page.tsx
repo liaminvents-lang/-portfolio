@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Layout from '@/components/layout';
 
 export default function WaterQualitySensingPlatformPage() {
@@ -21,24 +22,71 @@ export default function WaterQualitySensingPlatformPage() {
     ['Assorted Wiring', ''],
   ];
 
+  const developmentImages = [
+    {
+      src: '/images/hullprinting.png',
+      alt: '3D printing the watercraft hull',
+      caption: 'Hull Printing',
+    },
+    {
+      src: '/images/hullconstruction.png',
+      alt: 'Watercraft hull construction',
+      caption: 'Hull Construction',
+    },
+    {
+      src: '/images/waterepoxy.png',
+      alt: 'Waterproofing the watercraft hull with epoxy',
+      caption: 'Waterproofing',
+    },
+    {
+      src: '/images/propellortest.png',
+      alt: 'Propeller testing',
+      caption: 'Propulsion Testing',
+    },
+    {
+      src: '/images/floattest.png',
+      alt: 'Watercraft float testing',
+      caption: 'Float Testing',
+    },
+  ];
+
+  const maps = [
+    {
+      src: '/images/map1.png',
+      alt: 'Temperature data across Kelso Reservoir',
+      caption: 'Temperature',
+    },
+    {
+      src: '/images/map2.png',
+      alt: 'Optical clarity data across Kelso Reservoir',
+      caption: 'Optical Clarity',
+    },
+    {
+      src: '/images/map3.png',
+      alt: 'Conductivity data across Kelso Reservoir',
+      caption: 'Conductivity',
+    },
+  ];
+
   return (
     <Layout title="">
       <main className="w-full">
 
         {/* =====================================================
             HERO IMAGE
-
-            Replace with final watercraft image.
         ===================================================== */}
 
         <section className="px-5 pt-24 sm:px-8 lg:px-12 lg:pt-28">
           <div className="mx-auto w-full max-w-[1800px]">
 
-            <div className="flex aspect-[16/9] w-full items-center justify-center bg-foreground/[0.035]">
-              <p className="m-0 text-sm text-foreground/25">
-                Water Quality Sensing Platform Hero Image
-              </p>
-            </div>
+            <Image
+              src="/images/herothumbmannboat.png"
+              alt="Water Quality Sensing Platform"
+              width={1800}
+              height={1200}
+              priority
+              className="h-auto w-full"
+            />
 
           </div>
         </section>
@@ -321,11 +369,7 @@ export default function WaterQualitySensingPlatformPage() {
             </div>
 
 
-            {/* DEVELOPMENT + COMPONENTS */}
-
             <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-12">
-
-              {/* DEVELOPMENT */}
 
               <div className="lg:col-span-7">
 
@@ -406,8 +450,6 @@ export default function WaterQualitySensingPlatformPage() {
 
               </div>
 
-
-              {/* COMPONENTS */}
 
               <div className="lg:col-span-5">
 
@@ -531,29 +573,36 @@ export default function WaterQualitySensingPlatformPage() {
             </div>
 
 
-            {/* ONE LONG FIGURE */}
+            {/* DEVELOPMENT IMAGE SLIDER */}
 
             <div className="mt-16">
 
-              <div className="flex aspect-[21/9] w-full items-center justify-center bg-foreground/[0.035]">
+              <div className="-mx-5 overflow-x-auto px-5 pb-4 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
+                <div className="flex w-max gap-5">
 
-                <p className="m-0 text-sm text-foreground/25">
-                  Hull + Propulsion Development Figure
-                </p>
+                  {developmentImages.map((item) => (
+                    <figure
+                      key={item.src}
+                      className="m-0 w-[78vw] max-w-[620px] shrink-0 sm:w-[55vw] lg:w-[38vw]"
+                    >
 
-              </div>
+                      <div className="relative aspect-[4/3] w-full overflow-hidden bg-foreground/[0.035]">
+                        <Image
+                          src={item.src}
+                          alt={item.alt}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
 
+                      <figcaption className="mt-3 text-xs text-foreground/40">
+                        {item.caption}
+                      </figcaption>
 
-              <div className="mt-3 flex justify-between gap-6">
+                    </figure>
+                  ))}
 
-                <p className="m-0 text-xs text-foreground/40">
-                  Hull construction, waterproofing, and propulsion development
-                </p>
-
-                <p className="m-0 text-xs text-foreground/30">
-                  Water Quality Sensing Platform
-                </p>
-
+                </div>
               </div>
 
             </div>
@@ -662,46 +711,6 @@ export default function WaterQualitySensingPlatformPage() {
 
             </div>
 
-
-            {/* TWO FIGURES */}
-
-            <div className="mt-16 grid gap-5 sm:grid-cols-2">
-
-              <div>
-
-                <div className="flex aspect-[4/3] w-full items-center justify-center bg-foreground/[0.035]">
-
-                  <p className="m-0 text-sm text-foreground/25">
-                    Sensor Pod
-                  </p>
-
-                </div>
-
-                <p className="m-0 mt-3 text-xs text-foreground/40">
-                  Water quality sensor pod and electronics
-                </p>
-
-              </div>
-
-
-              <div>
-
-                <div className="flex aspect-[4/3] w-full items-center justify-center bg-foreground/[0.035]">
-
-                  <p className="m-0 text-sm text-foreground/25">
-                    Electronics Development
-                  </p>
-
-                </div>
-
-                <p className="m-0 mt-3 text-xs text-foreground/40">
-                  Sensing and data collection electronics
-                </p>
-
-              </div>
-
-            </div>
-
           </div>
         </section>
 
@@ -783,17 +792,15 @@ export default function WaterQualitySensingPlatformPage() {
             </div>
 
 
-            {/* FIELD TEST IMAGE */}
-
             <div className="mt-16">
 
-              <div className="flex aspect-[16/9] w-full items-center justify-center bg-foreground/[0.035]">
-
-                <p className="m-0 text-sm text-foreground/25">
-                  Watercraft Field Testing
-                </p>
-
-              </div>
+              <Image
+                src="/images/herothumbmannboat.png"
+                alt="Watercraft and sensor platform during field testing"
+                width={1800}
+                height={1200}
+                className="h-auto w-full"
+              />
 
               <p className="m-0 mt-3 text-xs text-foreground/40">
                 Final watercraft and sensor platform during field testing
@@ -809,7 +816,7 @@ export default function WaterQualitySensingPlatformPage() {
             06 DATA MAPPING
         ===================================================== */}
 
-        <section className="px-5 pb-36 pt-24 sm:px-8 lg:px-12 lg:pb-48 lg:pt-28">
+        <section className="px-5 pt-24 sm:px-8 lg:px-12 lg:pt-28">
           <div className="mx-auto w-full max-w-[1800px]">
 
             <div className="grid gap-14 lg:grid-cols-12 lg:gap-12">
@@ -857,32 +864,97 @@ export default function WaterQualitySensingPlatformPage() {
             </div>
 
 
-            {/* FINAL DATA MAP */}
+            {/* FULL-WIDTH DATA GRAPHS */}
 
             <div className="mt-16">
 
-              <div className="flex aspect-[16/9] w-full items-center justify-center bg-foreground/[0.035]">
+              <figure className="m-0">
 
-                <p className="m-0 text-sm text-foreground/25">
-                  Kelso Reservoir Environmental Data Map
+                <Image
+                  src="/images/graphskelso1.png"
+                  alt="Kelso Reservoir environmental data graph"
+                  width={1800}
+                  height={1200}
+                  className="h-auto w-full"
+                />
+
+              </figure>
+
+
+              <figure className="m-0 mt-12">
+
+                <Image
+                  src="/images/graphskelso2.png"
+                  alt="Kelso Reservoir environmental data graph"
+                  width={1800}
+                  height={1200}
+                  className="h-auto w-full"
+                />
+
+              </figure>
+
+            </div>
+
+
+            {/* KELSO RESERVOIR MAPS */}
+
+            <div className="mt-20">
+
+              <div className="mb-6 flex items-end justify-between gap-8">
+
+                <p className="m-0 text-sm">
+                  Temperature, Optical Clarity and Conductivity Data
+                </p>
+
+                <p className="m-0 text-xs text-foreground/40">
+                  Kelso Reservoir
                 </p>
 
               </div>
 
-              <div className="mt-3 flex justify-between gap-6">
 
-                <p className="m-0 text-xs text-foreground/40">
-                  Temperature, optical clarity, and conductivity data mapped
-                  across Kelso Reservoir
-                </p>
+              <div className="grid gap-5 lg:grid-cols-3">
 
-                <p className="m-0 text-xs text-foreground/30">
-                  Water Quality Sensing Platform
-                </p>
+                {maps.map((map) => (
+                  <figure key={map.src} className="m-0">
+
+                    <Image
+                      src={map.src}
+                      alt={map.alt}
+                      width={1200}
+                      height={800}
+                      className="h-auto w-full"
+                    />
+
+                    <figcaption className="mt-3 text-xs text-foreground/40">
+                      {map.caption}
+                    </figcaption>
+
+                  </figure>
+                ))}
 
               </div>
 
             </div>
+
+          </div>
+        </section>
+
+
+        {/* =====================================================
+            FINAL IMAGE
+        ===================================================== */}
+
+        <section className="px-5 pb-36 pt-24 sm:px-8 lg:px-12 lg:pb-48 lg:pt-28">
+          <div className="mx-auto w-full max-w-[1800px]">
+
+            <Image
+              src="/images/herothumbmannboat.png"
+              alt="Final Water Quality Sensing Platform"
+              width={1800}
+              height={1200}
+              className="h-auto w-full"
+            />
 
           </div>
         </section>

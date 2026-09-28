@@ -152,7 +152,7 @@ const projects = [
     title: 'CNC Wire Machine',
     description:
       'Automated machine developed for cutting, stripping, and bending breadboard wire.',
-    imagePath: '',
+    imagePath: '/images/thumbcncwire.png',
     link: '/projects/cnc-wire-machine',
     comingSoon: false,
     group: 'archive',
@@ -170,7 +170,7 @@ const projects = [
     title: 'Water Quality Sensing Platform',
     description:
       'Environmental sensing platform developed to collect and map water-quality data using a mobile watercraft and towed sensor pod.',
-    imagePath: '',
+    imagePath: '/images/herothumbmannboat.png',
     link: '/projects/water-quality-sensing-platform',
     comingSoon: false,
     group: 'archive',

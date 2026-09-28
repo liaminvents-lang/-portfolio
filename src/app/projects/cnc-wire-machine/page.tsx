@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Layout from '@/components/layout';
 
 export default function CNCWireMachinePage() {
@@ -39,10 +40,14 @@ export default function CNCWireMachinePage() {
         <section className="px-5 pt-24 sm:px-8 lg:px-12 lg:pt-28">
           <div className="mx-auto w-full max-w-[1800px]">
 
-            <div className="flex aspect-[16/9] w-full items-center justify-center bg-foreground/[0.035]">
-              <p className="m-0 text-sm text-foreground/25">
-                CNC Wire Machine Hero Image
-              </p>
+            <div className="relative aspect-[16/9] w-full overflow-hidden">
+              <Image
+                src="/images/thumbcncwire.png"
+                alt="CNC Wire Machine"
+                fill
+                priority
+                className="object-cover"
+              />
             </div>
 
           </div>
@@ -92,7 +97,7 @@ export default function CNCWireMachinePage() {
         ===================================================== */}
 
         <section className="border-y border-foreground/20 px-5 sm:px-8 lg:px-12">
-          <div className="mx-auto grid w-full max-w-[1800px] grid-cols-2 lg:grid-cols-5">
+          <div className="mx-auto grid w-full max-w-[1800px] grid-cols-2 lg:grid-cols-6">
 
             <div className="border-r border-foreground/20 py-6 pr-5">
 
@@ -102,6 +107,19 @@ export default function CNCWireMachinePage() {
 
               <p className="m-0 mt-2 text-sm">
                 Automated Machine
+              </p>
+
+            </div>
+
+
+            <div className="border-r border-foreground/20 px-5 py-6">
+
+              <p className="m-0 text-xs text-foreground/40">
+                Year
+              </p>
+
+              <p className="m-0 mt-2 text-sm">
+                2022
               </p>
 
             </div>
@@ -319,11 +337,7 @@ export default function CNCWireMachinePage() {
             </div>
 
 
-            {/* OPERATIONS + COMPONENTS */}
-
             <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-12">
-
-              {/* OPERATIONS */}
 
               <div className="lg:col-span-7">
 
@@ -397,8 +411,6 @@ export default function CNCWireMachinePage() {
 
               </div>
 
-
-              {/* COMPONENTS */}
 
               <div className="lg:col-span-5">
 
@@ -522,21 +534,15 @@ export default function CNCWireMachinePage() {
             </div>
 
 
-            {/* =================================================
-                ONE LONG FIGURE
-
-                Replace with the long bending and cutting figure
-                exported from the DER.
-            ================================================= */}
-
             <div className="mt-16">
 
-              <div className="flex aspect-[21/9] w-full items-center justify-center bg-foreground/[0.035]">
-
-                <p className="m-0 text-sm text-foreground/25">
-                  Bending + Cutting Mechanism Figure
-                </p>
-
+              <div className="relative aspect-[21/9] w-full overflow-hidden">
+                <Image
+                  src="/images/wirebenditterations.png"
+                  alt="CNC Wire bending and cutting mechanism iterations"
+                  fill
+                  className="object-contain"
+                />
               </div>
 
 
@@ -661,27 +667,21 @@ export default function CNCWireMachinePage() {
             </div>
 
 
-            {/* =================================================
-                TWO ELECTRONICS FIGURES
-
-                Replace each placeholder with one of the
-                electronics / PCB figures exported from the DER.
-            ================================================= */}
-
             <div className="mt-16 grid gap-5 sm:grid-cols-2">
 
               <div>
 
-                <div className="flex aspect-[4/3] w-full items-center justify-center bg-foreground/[0.035]">
-
-                  <p className="m-0 text-sm text-foreground/25">
-                    Custom PCB
-                  </p>
-
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src="/images/pcbrendering.png"
+                    alt="CNC Wire custom PCB rendering"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
 
                 <p className="m-0 mt-3 text-xs text-foreground/40">
-                  Custom PCB development and assembly
+                  Custom PCB rendering
                 </p>
 
               </div>
@@ -689,16 +689,17 @@ export default function CNCWireMachinePage() {
 
               <div>
 
-                <div className="flex aspect-[4/3] w-full items-center justify-center bg-foreground/[0.035]">
-
-                  <p className="m-0 text-sm text-foreground/25">
-                    Control Electronics
-                  </p>
-
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src="/images/Handsolderedpcb.png"
+                    alt="Hand-soldered CNC Wire PCB"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
 
                 <p className="m-0 mt-3 text-xs text-foreground/40">
-                  Integrated control electronics
+                  Hand-soldered PCB assembly
                 </p>
 
               </div>
