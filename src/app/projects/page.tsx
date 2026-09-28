@@ -79,6 +79,21 @@ const projects = [
     year: '2024',
     group: 'selected',
   },
+
+  /* =====================================================
+     DESIGN-BUILD
+  ===================================================== */
+
+  {
+    title: 'INTERSTICE — Afterglow',
+    src: '/images/afterglowthumb.png',
+    description:
+      'A full-scale light pavilion combining timber construction, hydroformed mirrored metal panels, and responsive illumination.',
+    href: '/projects/interstice-afterglow',
+    categories: ['Design-Build', 'Metal Fabrication', 'Timber'],
+    year: '2026',
+    group: 'design-build',
+  },
   {
     title: 'Aeolian Soundscapes / Timber Tectonics',
     src: '/images/Aeolian.jpg',

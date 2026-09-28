@@ -142,6 +142,17 @@ const projects = [
     group: 'development',
     tags: ['Hardware Integration'],
   },
+  {
+    id: 'steam-bent-wood-lamp',
+    title: 'Steam Bent Wood Lamp',
+    description:
+      'Custom lighting object developed through steam bending, timber fabrication, and iterative material forming.',
+    imagePath: '/images/final demonstrators-12 2.PNG',
+    link: '/projects/steam-bent-wood-lamp',
+    comingSoon: false,
+    group: 'development',
+    tags: ['Hardware Integration', 'Process Improvement'],
+  },
 
   /* =====================================================
      ARCHIVE
@@ -532,17 +543,6 @@ const projects = [
       'Experimental sheet-metal forming process developed through custom tooling, hydraulic pressure, and iterative material testing.',
     imagePath: '',
     link: '/projects/hydroformed-sheet-metal',
-    comingSoon: true,
-    group: 'coming-soon',
-    tags: ['Hardware Integration', 'Process Improvement'],
-  },
-  {
-    id: 'steam-bent-lamp',
-    title: 'Steam Bent Lamp',
-    description:
-      'Custom lighting object developed through steam bending, digital fabrication, and iterative material forming.',
-    imagePath: '',
-    link: '/projects/steam-bent-lamp',
     comingSoon: true,
     group: 'coming-soon',
     tags: ['Hardware Integration', 'Process Improvement'],

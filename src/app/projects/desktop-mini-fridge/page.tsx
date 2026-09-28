@@ -41,33 +41,15 @@ export default function DesktopMiniFridgePage() {
       <main className="w-full">
 
         {/* =====================================================
-            HERO IMAGE
-        ===================================================== */}
-
-        <section className="px-5 pt-24 sm:px-8 lg:px-12 lg:pt-28">
-          <div className="mx-auto w-full max-w-[1800px]">
-
-            <div className="flex aspect-[16/9] w-full items-center justify-center bg-foreground/[0.035]">
-              <p className="m-0 text-sm text-foreground/25">
-                Desktop Mini Fridge Hero Image
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-
-        {/* =====================================================
             TITLE
         ===================================================== */}
 
-        <section className="px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-20 lg:pt-12">
+        <section className="px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pb-20 lg:pt-40">
           <div className="mx-auto w-full max-w-[1800px]">
 
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
 
               <div className="lg:col-span-7">
-
                 <p className="m-0 text-sm text-foreground/40">
                   Product + Electronics Development
                 </p>
@@ -75,18 +57,14 @@ export default function DesktopMiniFridgePage() {
                 <h1 className="m-0 mt-3 max-w-[1100px] text-5xl font-normal leading-[0.95] tracking-tight sm:text-6xl lg:text-8xl">
                   Desktop Mini Fridge
                 </h1>
-
               </div>
 
-
               <div className="flex items-end lg:col-span-5">
-
                 <p className="m-0 max-w-[650px] text-xl leading-[1.45] sm:text-2xl">
                   A custom thermoelectric desktop refrigerator developed
                   around temperature control, compact packaging, insulation,
                   electronics, and a fully integrated enclosure.
                 </p>
-
               </div>
 
             </div>
@@ -103,7 +81,6 @@ export default function DesktopMiniFridgePage() {
           <div className="mx-auto grid w-full max-w-[1800px] grid-cols-2 lg:grid-cols-5">
 
             <div className="border-r border-foreground/20 py-6 pr-5">
-
               <p className="m-0 text-xs text-foreground/40">
                 Type
               </p>
@@ -111,12 +88,9 @@ export default function DesktopMiniFridgePage() {
               <p className="m-0 mt-2 text-sm">
                 Thermoelectric Refrigerator
               </p>
-
             </div>
 
-
             <div className="border-r border-foreground/20 px-5 py-6">
-
               <p className="m-0 text-xs text-foreground/40">
                 Period
               </p>
@@ -124,12 +98,9 @@ export default function DesktopMiniFridgePage() {
               <p className="m-0 mt-2 text-sm">
                 High School
               </p>
-
             </div>
 
-
             <div className="border-r border-foreground/20 px-5 py-6">
-
               <p className="m-0 text-xs text-foreground/40">
                 Controller
               </p>
@@ -137,12 +108,9 @@ export default function DesktopMiniFridgePage() {
               <p className="m-0 mt-2 text-sm">
                 ATmega328P
               </p>
-
             </div>
 
-
             <div className="border-r border-foreground/20 px-5 py-6">
-
               <p className="m-0 text-xs text-foreground/40">
                 Cooling
               </p>
@@ -150,12 +118,9 @@ export default function DesktopMiniFridgePage() {
               <p className="m-0 mt-2 text-sm">
                 Peltier Thermoelectric
               </p>
-
             </div>
 
-
             <div className="px-5 py-6">
-
               <p className="m-0 text-xs text-foreground/40">
                 Development
               </p>
@@ -165,7 +130,6 @@ export default function DesktopMiniFridgePage() {
                 <br />
                 Fabrication + Assembly
               </p>
-
             </div>
 
           </div>
@@ -182,16 +146,12 @@ export default function DesktopMiniFridgePage() {
             <div className="grid gap-8 lg:grid-cols-12">
 
               <div className="lg:col-span-3">
-
                 <p className="m-0 text-xs text-foreground/40">
                   Project Context
                 </p>
-
               </div>
 
-
               <div className="lg:col-span-5">
-
                 <p className="m-0 max-w-[600px] text-sm leading-[1.7] text-foreground/60">
                   Completed during high school as part of the Advanced Computer
                   Engineering School program at Royal St. George&apos;s College.
@@ -199,12 +159,9 @@ export default function DesktopMiniFridgePage() {
                   for storing solder paste and other temperature-sensitive
                   materials.
                 </p>
-
               </div>
 
-
               <div className="lg:col-span-4">
-
                 <p className="m-0 text-xs text-foreground/40 lg:text-right">
                   References
                 </p>
@@ -230,7 +187,6 @@ export default function DesktopMiniFridgePage() {
                   </a>
 
                 </div>
-
               </div>
 
             </div>
@@ -249,7 +205,6 @@ export default function DesktopMiniFridgePage() {
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-12">
 
               <div className="lg:col-span-3">
-
                 <p className="m-0 text-sm text-foreground/40">
                   01
                 </p>
@@ -257,9 +212,7 @@ export default function DesktopMiniFridgePage() {
                 <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
                   Project Overview
                 </h2>
-
               </div>
-
 
               <div className="lg:col-span-9">
 
@@ -269,7 +222,6 @@ export default function DesktopMiniFridgePage() {
                   enclosure design could be improved through a completely
                   custom-built system.
                 </p>
-
 
                 <div className="mt-12 grid gap-10 sm:grid-cols-2">
 
@@ -307,7 +259,6 @@ export default function DesktopMiniFridgePage() {
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
 
               <div className="lg:col-span-3">
-
                 <p className="m-0 text-sm text-foreground/40">
                   02
                 </p>
@@ -315,18 +266,14 @@ export default function DesktopMiniFridgePage() {
                 <h2 className="m-0 mt-3 text-3xl font-normal tracking-tight">
                   Thermal System
                 </h2>
-
               </div>
 
-
               <div className="lg:col-span-9">
-
                 <p className="m-0 max-w-[1050px] text-3xl font-normal leading-[1.25] sm:text-4xl">
                   Cooling was produced using a Peltier tile, creating a
                   solid-state refrigeration system without a conventional
                   compressor.
                 </p>
-
               </div>
 
             </div>
@@ -334,30 +281,23 @@ export default function DesktopMiniFridgePage() {
 
             <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-12">
 
-              {/* SYSTEM */}
-
               <div className="lg:col-span-7">
 
                 <div className="grid gap-5 border-t border-foreground/30 py-5 sm:grid-cols-12">
 
                   <div className="sm:col-span-3">
-
                     <p className="m-0 text-xs text-foreground/40">
                       01 / Cooling
                     </p>
-
                   </div>
 
-
                   <div className="sm:col-span-9">
-
                     <p className="m-0 max-w-[720px] text-base leading-[1.5]">
                       The refrigerator uses a thermoelectric cooler based on
                       the Peltier effect. Applying electrical current creates a
                       temperature difference across the tile, removing heat
                       from one side while depositing it on the other.
                     </p>
-
                   </div>
 
                 </div>
@@ -366,23 +306,18 @@ export default function DesktopMiniFridgePage() {
                 <div className="grid gap-5 border-t border-foreground/20 py-5 sm:grid-cols-12">
 
                   <div className="sm:col-span-3">
-
                     <p className="m-0 text-xs text-foreground/40">
                       02 / Heat Rejection
                     </p>
-
                   </div>
 
-
                   <div className="sm:col-span-9">
-
                     <p className="m-0 max-w-[720px] text-base leading-[1.5]">
                       Heat generated on the hot side of the Peltier tile is
                       transferred through a heat spreader and heat sink.
                       Twelve-volt CPU fans move air through the rear
                       compartment to remove heat from the system.
                     </p>
-
                   </div>
 
                 </div>
@@ -391,22 +326,17 @@ export default function DesktopMiniFridgePage() {
                 <div className="grid gap-5 border-y border-foreground/20 py-5 sm:grid-cols-12">
 
                   <div className="sm:col-span-3">
-
                     <p className="m-0 text-xs text-foreground/40">
                       03 / Temperature
                     </p>
-
                   </div>
 
-
                   <div className="sm:col-span-9">
-
                     <p className="m-0 max-w-[720px] text-base leading-[1.5]">
                       An LM35 temperature sensor provides temperature input to
                       the control electronics, connecting the thermal system
                       with the electronic control architecture.
                     </p>
-
                   </div>
 
                 </div>
@@ -414,14 +344,11 @@ export default function DesktopMiniFridgePage() {
               </div>
 
 
-              {/* COMPONENTS */}
-
               <div className="lg:col-span-5">
 
                 <div className="border-t border-foreground/30">
 
                   <div className="flex items-baseline justify-between border-b border-foreground/20 py-4">
-
                     <p className="m-0 text-sm">
                       Electronics + Thermal Components
                     </p>
@@ -429,20 +356,17 @@ export default function DesktopMiniFridgePage() {
                     <p className="m-0 text-xs text-foreground/40">
                       Qty.
                     </p>
-
                   </div>
 
 
                   <div className="grid gap-x-8 sm:grid-cols-2">
 
                     <div>
-
                       {electronics.slice(0, 10).map(([component, quantity]) => (
                         <div
                           key={component}
                           className="flex items-center justify-between gap-5 border-b border-foreground/20 py-[9px]"
                         >
-
                           <p className="m-0 text-xs">
                             {component}
                           </p>
@@ -450,21 +374,17 @@ export default function DesktopMiniFridgePage() {
                           <p className="m-0 shrink-0 text-xs text-foreground/40">
                             {quantity}
                           </p>
-
                         </div>
                       ))}
-
                     </div>
 
 
                     <div>
-
                       {electronics.slice(10).map(([component, quantity]) => (
                         <div
                           key={component}
                           className="flex items-center justify-between gap-5 border-b border-foreground/20 py-[9px]"
                         >
-
                           <p className="m-0 text-xs">
                             {component}
                           </p>
@@ -472,16 +392,37 @@ export default function DesktopMiniFridgePage() {
                           <p className="m-0 shrink-0 text-xs text-foreground/40">
                             {quantity}
                           </p>
-
                         </div>
                       ))}
-
                     </div>
 
                   </div>
 
                 </div>
 
+              </div>
+
+            </div>
+
+
+            {/* THERMAL SYSTEM FIGURES */}
+
+            <div className="mx-auto mt-16 grid max-w-[1250px] items-center gap-16 sm:grid-cols-2">
+
+              <div className="flex items-center justify-center">
+                <img
+                  src="/images/section201.png"
+                  alt="Peltier thermoelectric cooler"
+                  className="block h-auto max-h-[420px] max-w-full object-contain"
+                />
+              </div>
+
+              <div className="flex items-center justify-center">
+                <img
+                  src="/images/section202.png"
+                  alt="Thermoelectric refrigerator airflow diagram"
+                  className="block h-auto max-h-[420px] max-w-full object-contain"
+                />
               </div>
 
             </div>
@@ -539,27 +480,39 @@ export default function DesktopMiniFridgePage() {
             </div>
 
 
-            {/* ONE LONG FIGURE */}
+            {/* HEAT SPREADER FIGURES */}
 
-            <div className="mt-16">
+            <div className="mt-16 grid gap-8 sm:grid-cols-2">
 
-              <div className="flex aspect-[21/9] w-full items-center justify-center bg-foreground/[0.035]">
+              <div>
 
-                <p className="m-0 text-sm text-foreground/25">
-                  Heat Spreader Development + Thermal Simulation
+                <div className="flex h-[320px] w-full items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/section301.png"
+                    alt="Original heat spreader design"
+                    className="block h-[300px] w-full object-fill"
+                  />
+                </div>
+
+                <p className="m-0 mt-3 text-xs text-foreground/40">
+                  Original heat spreader design
                 </p>
 
               </div>
 
 
-              <div className="mt-3 flex justify-between gap-6">
+              <div>
 
-                <p className="m-0 text-xs text-foreground/40">
-                  Heat spreader design iterations and thermal simulation
-                </p>
+                <div className="flex h-[320px] w-full items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/section302.png"
+                    alt="Revised heat spreader design"
+                    className="block h-[300px] w-full object-fill"
+                  />
+                </div>
 
-                <p className="m-0 text-xs text-foreground/30">
-                  Desktop Mini Fridge
+                <p className="m-0 mt-3 text-xs text-foreground/40">
+                  Revised heat spreader design
                 </p>
 
               </div>
@@ -577,9 +530,11 @@ export default function DesktopMiniFridgePage() {
         <section className="px-5 py-24 sm:px-8 lg:px-12 lg:py-28">
           <div className="mx-auto w-full max-w-[1800px]">
 
-            <div className="grid gap-14 lg:grid-cols-12 lg:gap-12">
+            <div className="grid items-start gap-16 lg:grid-cols-12 lg:gap-16">
 
-              <div className="lg:col-span-3">
+              {/* LEFT — TEXT */}
+
+              <div className="lg:col-span-7">
 
                 <p className="m-0 text-sm text-foreground/40">
                   04
@@ -589,18 +544,13 @@ export default function DesktopMiniFridgePage() {
                   Enclosure Development
                 </h2>
 
-              </div>
-
-
-              <div className="lg:col-span-9">
-
-                <p className="m-0 max-w-[1100px] text-3xl font-normal leading-[1.25] sm:text-4xl">
+                <p className="m-0 mt-10 max-w-[850px] text-3xl font-normal leading-[1.25] sm:text-4xl">
                   The enclosure was designed around five interdependent parts:
                   the back, heat wall, outer shell, liner, and door.
                 </p>
 
 
-                <div className="mt-14 grid gap-x-12 gap-y-10 lg:grid-cols-2">
+                <div className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2">
 
                   <div className="border-t border-foreground/20 pt-5">
 
@@ -608,7 +558,7 @@ export default function DesktopMiniFridgePage() {
                       Rear Compartment
                     </p>
 
-                    <p className="m-0 mt-4 max-w-[650px] text-base leading-[1.7]">
+                    <p className="m-0 mt-4 text-base leading-[1.7]">
                       The design began at the back of the refrigerator, where
                       the heat spreader, control electronics, ventilation, and
                       user inputs had to be integrated into a compact service
@@ -624,7 +574,7 @@ export default function DesktopMiniFridgePage() {
                       Heat Wall
                     </p>
 
-                    <p className="m-0 mt-4 max-w-[650px] text-base leading-[1.7]">
+                    <p className="m-0 mt-4 text-base leading-[1.7]">
                       The middle section and heat wall went through ten
                       revisions. The final design separated the thermal zones
                       while allowing the front section to remain removable and
@@ -640,7 +590,7 @@ export default function DesktopMiniFridgePage() {
                       Shell + Liner
                     </p>
 
-                    <p className="m-0 mt-4 max-w-[650px] text-base leading-[1.7]">
+                    <p className="m-0 mt-4 text-base leading-[1.7]">
                       The outer shell created a rigid exterior around the
                       insulation while the internal liner produced a clean
                       refrigerator cavity. The space between them also provided
@@ -657,7 +607,7 @@ export default function DesktopMiniFridgePage() {
                       Door
                     </p>
 
-                    <p className="m-0 mt-4 max-w-[650px] text-base leading-[1.7]">
+                    <p className="m-0 mt-4 text-base leading-[1.7]">
                       The door was developed around the completed enclosure and
                       incorporated an inset for the perimeter seal, creating a
                       tight interface with the refrigerator body.
@@ -669,45 +619,31 @@ export default function DesktopMiniFridgePage() {
 
               </div>
 
+
+              {/* RIGHT — SINGLE ENCLOSURE PHOTO */}
+
+              <div className="flex items-center justify-center lg:col-span-5">
+
+                <img
+                  src="/images/section402.png"
+                  alt="Desktop mini fridge interior enclosure"
+                  className="block h-auto max-h-[700px] max-w-full object-contain"
+                />
+
+              </div>
+
             </div>
 
 
-            {/* TWO FIGURES */}
+            {/* ENCLOSURE CAD BELOW */}
 
-            <div className="mt-16 grid gap-5 sm:grid-cols-2">
+            <div className="mt-20 flex w-full items-center justify-center">
 
-              <div>
-
-                <div className="flex aspect-[4/3] w-full items-center justify-center bg-foreground/[0.035]">
-
-                  <p className="m-0 text-sm text-foreground/25">
-                    Enclosure Development
-                  </p>
-
-                </div>
-
-                <p className="m-0 mt-3 text-xs text-foreground/40">
-                  Enclosure and internal component development
-                </p>
-
-              </div>
-
-
-              <div>
-
-                <div className="flex aspect-[4/3] w-full items-center justify-center bg-foreground/[0.035]">
-
-                  <p className="m-0 text-sm text-foreground/25">
-                    Final Enclosure
-                  </p>
-
-                </div>
-
-                <p className="m-0 mt-3 text-xs text-foreground/40">
-                  Outer shell, liner, heat wall, and door assembly
-                </p>
-
-              </div>
+              <img
+                src="/images/enclosurecad.png"
+                alt="Desktop mini fridge enclosure CAD development"
+                className="block h-auto w-full object-contain"
+              />
 
             </div>
 
@@ -722,9 +658,11 @@ export default function DesktopMiniFridgePage() {
         <section className="px-5 py-24 sm:px-8 lg:px-12 lg:py-28">
           <div className="mx-auto w-full max-w-[1800px]">
 
-            <div className="grid gap-14 lg:grid-cols-12 lg:gap-12">
+            <div className="grid items-stretch gap-16 lg:grid-cols-12 lg:gap-16">
 
-              <div className="lg:col-span-3">
+              {/* LEFT — ALL TEXT */}
+
+              <div className="lg:col-span-7">
 
                 <p className="m-0 text-sm text-foreground/40">
                   05
@@ -734,19 +672,14 @@ export default function DesktopMiniFridgePage() {
                   Electronics + Interface
                 </h2>
 
-              </div>
-
-
-              <div className="lg:col-span-9">
-
-                <p className="m-0 max-w-[1100px] text-3xl font-normal leading-[1.25] sm:text-4xl">
+                <p className="m-0 mt-10 max-w-[900px] text-3xl font-normal leading-[1.25] sm:text-4xl">
                   Temperature control, cooling hardware, lighting, and the user
                   interface were brought together through a custom electronic
                   control system.
                 </p>
 
 
-                <div className="mt-14 grid gap-x-12 gap-y-10 lg:grid-cols-2">
+                <div className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2">
 
                   <div className="border-t border-foreground/20 pt-5">
 
@@ -754,7 +687,7 @@ export default function DesktopMiniFridgePage() {
                       Controller
                     </p>
 
-                    <p className="m-0 mt-4 max-w-[650px] text-base leading-[1.7]">
+                    <p className="m-0 mt-4 text-base leading-[1.7]">
                       An ATmega328P forms the main microcontroller platform,
                       connecting the temperature sensor, display, controls, and
                       supporting electronics within the refrigerator.
@@ -769,7 +702,7 @@ export default function DesktopMiniFridgePage() {
                       PCB Development
                     </p>
 
-                    <p className="m-0 mt-4 max-w-[650px] text-base leading-[1.7]">
+                    <p className="m-0 mt-4 text-base leading-[1.7]">
                       A PCB was designed in Autodesk Eagle using a ground plane
                       for the higher current requirements. Data traces were
                       created using the autorouter while power connections were
@@ -785,7 +718,7 @@ export default function DesktopMiniFridgePage() {
                       Control Circuits
                     </p>
 
-                    <p className="m-0 mt-4 max-w-[650px] text-base leading-[1.7]">
+                    <p className="m-0 mt-4 text-base leading-[1.7]">
                       The electronics design contained two main circuits: a 555
                       latch and the temperature-control circuit. A Perma-Proto
                       board was ultimately used to assemble the final control
@@ -801,7 +734,7 @@ export default function DesktopMiniFridgePage() {
                       Display
                     </p>
 
-                    <p className="m-0 mt-4 max-w-[650px] text-base leading-[1.7]">
+                    <p className="m-0 mt-4 text-base leading-[1.7]">
                       A 1.8-inch 128 × 160 colour TFT display communicates
                       through SPI and provides the visual interface. Although
                       the display included touchscreen functionality, it was
@@ -815,43 +748,16 @@ export default function DesktopMiniFridgePage() {
 
               </div>
 
-            </div>
 
+              {/* RIGHT — PCB BESIDE ALL TEXT */}
 
-            {/* TWO FIGURES */}
+              <div className="flex min-h-[760px] items-center justify-center overflow-hidden lg:col-span-5">
 
-            <div className="mt-16 grid gap-5 sm:grid-cols-2">
-
-              <div>
-
-                <div className="flex aspect-[4/3] w-full items-center justify-center bg-foreground/[0.035]">
-
-                  <p className="m-0 text-sm text-foreground/25">
-                    Electronics + PCB Development
-                  </p>
-
-                </div>
-
-                <p className="m-0 mt-3 text-xs text-foreground/40">
-                  Electronic control system development
-                </p>
-
-              </div>
-
-
-              <div>
-
-                <div className="flex aspect-[4/3] w-full items-center justify-center bg-foreground/[0.035]">
-
-                  <p className="m-0 text-sm text-foreground/25">
-                    TFT Interface
-                  </p>
-
-                </div>
-
-                <p className="m-0 mt-3 text-xs text-foreground/40">
-                  Integrated colour TFT interface and physical controls
-                </p>
+                <img
+                  src="/images/pcbfridge.png"
+                  alt="Desktop mini fridge PCB design"
+                  className="block w-[650px] max-w-none rotate-90 object-contain"
+                />
 
               </div>
 
@@ -910,7 +816,7 @@ export default function DesktopMiniFridgePage() {
                 </div>
 
 
-                {/* ASSEMBLY PARTS */}
+                {/* ASSEMBLY COMPONENTS */}
 
                 <div className="mt-14 max-w-[760px] border-t border-foreground/30">
 
@@ -1039,27 +945,39 @@ export default function DesktopMiniFridgePage() {
             </div>
 
 
-            {/* FINAL IMAGE */}
+            {/* FINAL PRODUCT IMAGES */}
 
-            <div className="mt-16">
+            <div className="mt-16 grid items-start gap-8 sm:grid-cols-2">
 
-              <div className="flex aspect-[16/9] w-full items-center justify-center bg-foreground/[0.035]">
+              <div>
 
-                <p className="m-0 text-sm text-foreground/25">
-                  Final Desktop Mini Fridge
+                <div className="flex w-full items-start justify-center">
+                  <img
+                    src="/images/outsidefridge.png"
+                    alt="Completed desktop mini fridge exterior"
+                    className="block h-auto max-h-[800px] max-w-full object-contain"
+                  />
+                </div>
+
+                <p className="m-0 mt-3 text-xs text-foreground/40">
+                  Completed refrigerator exterior
                 </p>
 
               </div>
 
 
-              <div className="mt-3 flex justify-between gap-6">
+              <div>
 
-                <p className="m-0 text-xs text-foreground/40">
-                  Completed thermoelectric desktop refrigerator
-                </p>
+                <div className="flex w-full items-start justify-center">
+                  <img
+                    src="/images/insidefridge.png"
+                    alt="Completed desktop mini fridge interior"
+                    className="block h-auto max-h-[800px] max-w-full object-contain"
+                  />
+                </div>
 
-                <p className="m-0 text-xs text-foreground/30">
-                  Desktop Mini Fridge
+                <p className="m-0 mt-3 text-xs text-foreground/40">
+                  Interior refrigerator cavity
                 </p>
 
               </div>
